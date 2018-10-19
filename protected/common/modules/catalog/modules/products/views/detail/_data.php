@@ -40,16 +40,16 @@ $widgetParams   = [
                                             ],
                                             [
                                                 'attribute' => 'stock_status',
-                                                'value'     => $model['stock_status'] == Product::IN_STOCK ? UsniAdaptor::t('products', 'In Stock') : UsniAdaptor::t('products', 'Out of Stock')
+                                                'value'     => $model['stock_status'] == Product::IN_STOCK ? UsniAdaptor::t('products', 'En Stock') : UsniAdaptor::t('products', 'Agotado')
                                             ],
                                             [
                                                 'attribute' => 'subtract_stock',
-                                                'value'     => $model['subtract_stock'] == 1 ? UsniAdaptor::t('application', 'Yes') : UsniAdaptor::t('application', 'No'),
+                                                'value'     => $model['subtract_stock'] == 1 ? UsniAdaptor::t('application', 'Si') : UsniAdaptor::t('application', 'No'),
 
                                             ],
                                             [
                                                 'attribute' => 'requires_shipping',
-                                                'value'     => $model['requires_shipping'] == 1 ? UsniAdaptor::t('application', 'Yes') : UsniAdaptor::t('application', 'No'),
+                                                'value'     => $model['requires_shipping'] == 1 ? UsniAdaptor::t('application', 'Si') : UsniAdaptor::t('application', 'No'),
 
                                             ],
                                             [
@@ -63,7 +63,7 @@ $widgetParams   = [
                                             ],
                                             [
                                                 'attribute' => 'is_featured',
-                                                'value'     => $model['is_featured'] == 1 ? UsniAdaptor::t('application', 'Yes') : UsniAdaptor::t('application', 'No')
+                                                'value'     => $model['is_featured'] == 1 ? UsniAdaptor::t('application', 'Si') : UsniAdaptor::t('application', 'No')
                                             ]
                                         ]
                     ];

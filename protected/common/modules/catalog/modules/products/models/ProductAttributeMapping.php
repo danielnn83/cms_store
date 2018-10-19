@@ -52,7 +52,7 @@ class ProductAttributeMapping extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('application', 'Manage') . ' ' . ProductAttribute::getLabel(2);
+        return UsniAdaptor::t('application', 'Administrar') . ' ' . ProductAttribute::getLabel(2);
     }
 
     /**

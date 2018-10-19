@@ -13,7 +13,7 @@ use taxes\models\ProductTaxClass;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('tax', 'Manage Product Tax Classes');
+$title          = UsniAdaptor::t('tax', 'Administrar Clases de impuestos al producto');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

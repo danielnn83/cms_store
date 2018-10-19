@@ -35,7 +35,8 @@ else
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="robots" content="noindex,nofollow"/>
-        <link rel="icon" type="image/ico" href="<?php echo $this->getFavIcon(); ?>" />
+        
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->getFavIcon(); ?>" />
         <?php echo Html::csrfMetaTags() ?>
         <title><?php echo Html::encode($this->title); ?></title>
         <?php $this->head() ?>
@@ -50,13 +51,14 @@ else
     else
     {
     ?>
-            <body class="<?php echo $this->bodyClass;?>">
+                  <body><div class="wrapper"> <!--class="<?php //echo $this->bodyClass;?>"-->
     <?php
     }
         $this->beginBody();
         echo $this->renderHeader();
-        echo $this->renderNavBar();
         echo $this->renderBreadcrumb();
+        //echo $this->renderNavBar();
+        
         if ($numberOfColumns == 3 || $numberOfColumns == 2)
         {
         ?>
@@ -104,6 +106,7 @@ else
         echo $this->renderFooter();
         $this->endBody(); 
         ?>
+    </div>
     </body>
 </html>
 <?php $this->endPage();

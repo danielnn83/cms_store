@@ -14,11 +14,11 @@ use usni\library\bootstrap\FormButtons;
 $model              = $formDTO->getModel();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('currency', 'Currency');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('currency', 'Moneda');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('currency', 'Currency');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('currency', 'Moneda');
 }
 $form = ActiveForm::begin([
         'id' => 'currencyeditview',

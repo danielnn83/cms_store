@@ -6,8 +6,8 @@ use usni\library\utils\Html;
 <table id="productimage-value-table" class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
-            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Caption');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('application', 'Image');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Subtítulo');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('application', 'Imagen');?></td>
             <td></td>
         </tr>
     </thead>

@@ -14,7 +14,7 @@ use taxes\models\Zone;
 /* @var $gridViewDTO \taxes\dto\ZoneGridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('tax', 'Manage Zones');
+$title          = UsniAdaptor::t('tax', 'Administrar Zonas');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 $countryData    = $gridViewDTO->getCountryDropdownData();
 $stateData      = $gridViewDTO->getStateDropdownData();

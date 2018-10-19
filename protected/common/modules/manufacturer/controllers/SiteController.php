@@ -47,7 +47,7 @@ class SiteController extends BaseController
             }
             else
             {
-                throw new \yii\base\InvalidParamException(UsniAdaptor::t('application', 'Invalid search param'));
+                throw new \yii\base\InvalidParamException(UsniAdaptor::t('application', 'Parámetro de búsqueda no válido'));
             }
         }        
     }

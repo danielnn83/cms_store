@@ -6,12 +6,19 @@
 use usni\fontawesome\FA;
 use usni\UsniAdaptor;
 ?>
-<form id="navbarsearchformview" class="navbar-search" action="<?php echo UsniAdaptor::createUrl('site/default/search');?>" method="get">
-    <div id="search" class="input-group">
-        <input type="text" id="navbarsearchform-keyword" class="form-control input-lg" name="SearchForm[keyword]" placeholder="Search">
-        <span class="input-group-btn">
-            <button type="submit" class="btn btn-default btn-lg" name="navsearch"><?php echo FA::icon('search');?></button>
-        </span>
+<div class="header-search header-search-2 f-left">
+    <div class="header-search-inner">
+        <button class="search-toggle">
+            <i class="zmdi zmdi-search"></i>
+        </button>
+        <form id="navbarsearchformview" class="navbar-search" action="<?php echo UsniAdaptor::createUrl('site/default/search');?>" method="get">
+            <div class="top-search-box">
+                <input type="text" id="navbarsearchform-keyword" placeholder="Buscar..." name="SearchForm[keyword]">
+                <button type="submit" name="navsearch">
+                    <i class="zmdi zmdi-search"></i>
+                </button>
+            </div>
+        </form> 
     </div>
-</form>
+</div>
 

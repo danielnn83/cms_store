@@ -46,18 +46,18 @@ class OrderAddressDetails extends ActiveRecord
 	{
 		$labels = [
                     'email'        => UsniAdaptor::t('users', 'Email'),
-                    'firstname'    => UsniAdaptor::t('users','First Name'),
-                    'lastname'     => UsniAdaptor::t('users','Last Name'),
-                    'mobilephone'  => UsniAdaptor::t('users','Mobile'),
-                    'officephone'  => UsniAdaptor::t('users','Office Phone'),
-                    'address1'     => UsniAdaptor::t('users', 'Address1'),
-                    'address2'     => UsniAdaptor::t('users', 'Address2'),
-                    'city'         => UsniAdaptor::t('city', 'City'),
-                    'state'        => UsniAdaptor::t('state', 'State'),
-                    'country'      => UsniAdaptor::t('country', 'Country'),
-                    'postal_code'  => UsniAdaptor::t('users', 'Postal Code'),
-                    'type'         => UsniAdaptor::t('application', 'Type'),
-                    'order_id'     => UsniAdaptor::t('order', 'Order'),
+                    'firstname'    => UsniAdaptor::t('users','Nombres'),
+                    'lastname'     => UsniAdaptor::t('users','Apellidos'),
+                    'mobilephone'  => UsniAdaptor::t('users','Celular'),
+                    'officephone'  => UsniAdaptor::t('users','Teléfono de Oficina'),
+                    'address1'     => UsniAdaptor::t('users', 'Dirección 1'),
+                    'address2'     => UsniAdaptor::t('users', 'Dirección 2'),
+                    'city'         => UsniAdaptor::t('city', 'Ciudad'),
+                    'state'        => UsniAdaptor::t('state', 'Estado'),
+                    'country'      => UsniAdaptor::t('country', 'País'),
+                    'postal_code'  => UsniAdaptor::t('users', 'Código Postal'),
+                    'type'         => UsniAdaptor::t('application', 'Tipo'),
+                    'order_id'     => UsniAdaptor::t('order', 'Pedido'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -67,7 +67,7 @@ class OrderAddressDetails extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('order', 'Order Address');
+        return UsniAdaptor::t('order', 'Dirección del pedido');
     }
     
     /**

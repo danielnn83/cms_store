@@ -15,11 +15,11 @@ $model              = $formDTO->getModel();
 
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('tax', 'Product Tax Class');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('tax', 'Clase de impuesto al producto');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('tax', 'Product Tax Class');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('tax', 'Clase de impuesto al producto');
 }
 $form = ActiveForm::begin([
         'id' => 'producttaxclasseditview',

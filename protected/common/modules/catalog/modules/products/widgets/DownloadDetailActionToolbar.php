@@ -25,11 +25,11 @@ class DownloadDetailActionToolbar extends \usni\library\widgets\DetailActionTool
      */
     public function getListItems()
     {
-        $items[]    = ['label' => FA::icon('pencil') . "\n" . UsniAdaptor::t('application', 'Edit'), 
+        $items[]    = ['label' => FA::icon('pencil') . "\n" . UsniAdaptor::t('application', 'Actualizar'), 
                        'url' => $this->editUrl];
-        $items[]    = ['label' => FA::icon('trash-o') . "\n" . UsniAdaptor::t('application', 'Delete'), 
+        $items[]    = ['label' => FA::icon('trash-o') . "\n" . UsniAdaptor::t('application', 'Borrar'), 
                        'url' => $this->deleteUrl];
-        $items[]    = ['label' => FA::icon('pencil') . "\n" . UsniAdaptor::t('products', 'Download'), 
+        $items[]    = ['label' => FA::icon('pencil') . "\n" . UsniAdaptor::t('products', 'Descargar'), 
                        'url' => $this->downloadUrl];
         return $items;
     }

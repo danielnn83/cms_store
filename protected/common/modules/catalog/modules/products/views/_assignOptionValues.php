@@ -8,12 +8,12 @@ $items        = ArrayUtil::map($optionValues, 'id', 'value');
 <table id="option-value-table" class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
-            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Option Value');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Quantity');?></td>
-            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Subtract Stock');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Price');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Weight');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('application', 'Action');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Valor de la opción');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Cantidad');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Restar Stock');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Precio');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Peso');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('application', 'Acción');?></td>
         </tr>
     </thead>
     <tbody>
@@ -26,12 +26,12 @@ $items        = ArrayUtil::map($optionValues, 'id', 'value');
                         <?php echo Html::dropDownList('ProductOptionMapping[option_value_id][]', $optionMapping['option_value_id'], $items, ['class' => 'form-control']);?>
                     </td>
                     <td class="text-right">
-                        <input type="text" name="ProductOptionMapping[quantity][]" value="<?php echo $optionMapping['quantity'];?>" placeholder="<?php echo UsniAdaptor::t('products', 'Quantity');?>" class="form-control">
+                        <input type="text" name="ProductOptionMapping[quantity][]" value="<?php echo $optionMapping['quantity'];?>" placeholder="<?php echo UsniAdaptor::t('products', 'Cantidad');?>" class="form-control">
                     </td>
                     <td class="text-left">
                         <?php echo Html::dropDownList('ProductOptionMapping[subtract_stock][]', 
                                                         $optionMapping['subtract_stock'], 
-                                                        ['1' => UsniAdaptor::t('application', 'Yes'),
+                                                        ['1' => UsniAdaptor::t('application', 'Si'),
                                                          '0' => UsniAdaptor::t('application', 'No')],
                                                         ['class' => 'form-control']
                                                        )
@@ -45,7 +45,7 @@ $items        = ArrayUtil::map($optionValues, 'id', 'value');
                                                         ['class' => 'form-control']
                                                        )
                         ?>
-                        <input type="text" name="ProductOptionMapping[price][]" value="<?php echo $optionMapping['price'];?>" placeholder="<?php echo UsniAdaptor::t('products', 'Price');?>" class="form-control"></td>
+                        <input type="text" name="ProductOptionMapping[price][]" value="<?php echo $optionMapping['price'];?>" placeholder="<?php echo UsniAdaptor::t('products', 'Precio');?>" class="form-control"></td>
                     <td class="text-right">
                         <?php echo Html::dropDownList('ProductOptionMapping[weight_prefix][]', 
                                                         $optionMapping['weight_prefix'], 
@@ -54,10 +54,10 @@ $items        = ArrayUtil::map($optionValues, 'id', 'value');
                                                         ['class' => 'form-control']
                                                        )
                         ?>
-                        <input type="text" name="ProductOptionMapping[weight][]" value="<?php echo $optionMapping['weight'];?>" placeholder="<?php echo UsniAdaptor::t('products', 'Weight');?>" class="form-control"></td>
+                        <input type="text" name="ProductOptionMapping[weight][]" value="<?php echo $optionMapping['weight'];?>" placeholder="<?php echo UsniAdaptor::t('products', 'Peso');?>" class="form-control"></td>
                     <td class="text-right">
                         <button type="button" id="remove-option-value-row" onclick="$(this).tooltip('destroy');
-                            $(this).closest('.option-value-row').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Remove');?>">
+                            $(this).closest('.option-value-row').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Borrar');?>">
                                 <i class="fa fa-minus-circle"></i>
                         </button>
                     </td>
@@ -69,7 +69,7 @@ $items        = ArrayUtil::map($optionValues, 'id', 'value');
     <tfoot>
         <tr>
             <td colspan="6" class="text-right">
-                <button type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="<?php echo UsniAdaptor::t('products', 'Add Option Value');?>" id="add-option-value-row">
+                <button type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="<?php echo UsniAdaptor::t('products', 'Agregar valor de opción');?>" id="add-option-value-row">
                     <i class="fa fa-plus-circle"></i>
                 </button>
             </td>

@@ -68,17 +68,17 @@ trait DimensionTrait
             switch($currentStoreLengthClassName)
             {
                 case 'Meter':
-                    $dimensions = UsniAdaptor::t('products', 'Dimensions'). '(m): ' . $dimensions;
+                    $dimensions = UsniAdaptor::t('products', 'Dimensiones'). '(m): ' . $dimensions;
                     break;
                 case 'Centimeter':
-                    $dimensions = UsniAdaptor::t('products', 'Dimensions'). '(cm): ' . $dimensions;
+                    $dimensions = UsniAdaptor::t('products', 'Dimensiones'). '(cm): ' . $dimensions;
                     break;
                 case 'Inch':
-                    $inchLabel  = UsniAdaptor::t('lengthclass', 'inch');
-                    $dimensions = UsniAdaptor::t('products', 'Dimensions'). '(' . $inchLabel . '): ' . $dimensions;
+                    $inchLabel  = UsniAdaptor::t('lengthclass', 'Pulgadas');
+                    $dimensions = UsniAdaptor::t('products', 'Dimensiones'). '(' . $inchLabel . '): ' . $dimensions;
                     break;
                 case 'Millimeter':
-                    $dimensions = UsniAdaptor::t('products', 'Dimensions'). '(mm): ' . $dimensions;
+                    $dimensions = UsniAdaptor::t('products', 'Dimensiones'). '(mm): ' . $dimensions;
                     break;
             }
         }

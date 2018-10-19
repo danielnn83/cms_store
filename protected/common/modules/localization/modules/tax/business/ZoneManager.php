@@ -56,7 +56,7 @@ class ZoneManager extends Manager
         }
         else
         {
-            $model['country']   = UsniAdaptor::t('localization', 'All Countries');
+            $model['country']   = UsniAdaptor::t('localization', 'Todos los países');
         }
         if($model['state_id'] != -1)
         {
@@ -65,7 +65,7 @@ class ZoneManager extends Manager
         }
         else
         {
-            $model['state']     = UsniAdaptor::t('localization', 'All States');
+            $model['state']     = UsniAdaptor::t('localization', 'Todos los estados');
         }
         $zip                = $this->getZip($model);
         $model['zip']       = $zip;
@@ -97,7 +97,7 @@ class ZoneManager extends Manager
     public function fetchCountryDropdownData()
     {
         $countries          = $this->getCountryDropdownData();
-        $countryData[-1]    = UsniAdaptor::t('localization', 'All Countries');
+        $countryData[-1]    = UsniAdaptor::t('localization', 'Todos los países');
         return ArrayUtil::merge($countryData, $countries);
     }
     
@@ -111,7 +111,7 @@ class ZoneManager extends Manager
         //States
         if($model['country_id'] == -1)
         {
-            $stateData[-1] = UsniAdaptor::t('localization', 'All States');
+            $stateData[-1] = UsniAdaptor::t('localization', 'Todos los estados');
         }
         else
         {
@@ -147,8 +147,8 @@ class ZoneManager extends Manager
         }
         elseif($zone['is_zip_range'] == true)
         {
-            return UsniAdaptor::t('tax', 'From Zip') . '  ' . $zone['from_zip'] . '  ' . UsniAdaptor::t('application', 'To Zip') . '  ' . $zone['to_zip'];
+            return UsniAdaptor::t('tax', 'Desde Zip') . '  ' . $zone['from_zip'] . '  ' . UsniAdaptor::t('application', 'Comprimir') . '  ' . $zone['to_zip'];
         }
-        return UsniAdaptor::t('application',  '(not set)');
+        return UsniAdaptor::t('application',  '(no establecido/perteneciente)');
     }
 }

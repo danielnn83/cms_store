@@ -69,8 +69,8 @@ class ProductReview extends TranslatableActiveRecord
     public function attributeLabels()
     {
         return [
-                    'name'             => UsniAdaptor::t('application', 'Name'),
-                    'review'           => UsniAdaptor::t('products', 'Review'),
+                    'name'             => UsniAdaptor::t('application', 'Nombre'),
+                    'review'           => UsniAdaptor::t('products', 'Revisión'),
                     'email'            => UsniAdaptor::t('users', 'Email')
                ];
     }
@@ -81,8 +81,8 @@ class ProductReview extends TranslatableActiveRecord
     public function attributeHints()
     {
         return [
-                    'name'             => UsniAdaptor::t('application', 'Enter your name'),
-                    'review'           => UsniAdaptor::t('products', 'Max characters allowed are 200'), 
+                    'name'             => UsniAdaptor::t('application', 'Ingresa tu nombre'),
+                    'review'           => UsniAdaptor::t('products', 'El número máximo de caracteres son 200'), 
                ];
     }
 
@@ -91,7 +91,7 @@ class ProductReview extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Review') : UsniAdaptor::t('products', 'Reviews');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Revisión') : UsniAdaptor::t('products', 'Revisiones');
     }
     
     /**

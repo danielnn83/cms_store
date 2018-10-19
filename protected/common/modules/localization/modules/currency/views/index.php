@@ -16,7 +16,7 @@ use common\modules\localization\modules\currency\models\Currency;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('currency', 'Manage Currencies');
+$title          = UsniAdaptor::t('currency', 'Administrar monedas');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -27,7 +27,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'currencygridview',
     'pjaxId'        => 'currencygridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('currency', 'Currency') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('currency', 'Moneda') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'currencybulkeditview',
     'permissionPrefix'  => 'currency'

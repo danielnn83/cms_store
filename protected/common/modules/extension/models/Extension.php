@@ -44,14 +44,14 @@ class Extension extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		return [
-                    'name'          => UsniAdaptor::t('application', 'Name'),
-                    'author'        => UsniAdaptor::t('application', 'Author'),
-                    'version'       => UsniAdaptor::t('application', 'Version'),
-                    'product_version'     => UsniAdaptor::t('application', 'Product Version'),
-                    'status'        => UsniAdaptor::t('application', 'Status'),
-                    'data'          => UsniAdaptor::t('extension', 'Configuration Data'),
-                    'category'      => UsniAdaptor::t('application', 'Category'),
-                    'code'          => UsniAdaptor::t('extension', 'Code')
+                    'name'          => UsniAdaptor::t('application', 'Nombre'),
+                    'author'        => UsniAdaptor::t('application', 'Autor'),
+                    'version'       => UsniAdaptor::t('application', 'Versión'),
+                    'product_version'     => UsniAdaptor::t('application', 'Versión del producto'),
+                    'status'        => UsniAdaptor::t('application', 'Estatus'),
+                    'data'          => UsniAdaptor::t('extension', 'Configuración de los datos'),
+                    'category'      => UsniAdaptor::t('application', 'Categoría'),
+                    'code'          => UsniAdaptor::t('extension', 'Código')
                ];
 	}
     
@@ -60,7 +60,7 @@ class Extension extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('extension', 'Extension') : UsniAdaptor::t('extension', 'Extensions');
+        return ($n == 1) ? UsniAdaptor::t('extension', 'Extension') : UsniAdaptor::t('extension', 'Extensiones');
     }
     
     /**

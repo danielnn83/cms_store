@@ -9,14 +9,14 @@
 use usni\UsniAdaptor;
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('products', 'Attributes'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('products', 'Atributos'),
         'url' => ['/catalog/products/attribute/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Create')
+        'label' => UsniAdaptor::t('application', 'Agregar')
     ]
 ];
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Attribute');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Atributos');
 echo $this->render("/productattribute/_form", ['formDTO' => $formDTO]);
 

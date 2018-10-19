@@ -13,10 +13,10 @@ $rows = $detailViewDTO->getHistoryRecords();
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th><?php echo UsniAdaptor::t('customer', 'Status'); ?></th>
-                    <th><?php echo UsniAdaptor::t('customer', 'Date Added'); ?></th>
-                    <th><?php echo UsniAdaptor::t('application', 'Comment'); ?></th>
-                    <th><?php echo UsniAdaptor::t('customer', 'Customer Notified'); ?></th>
+                    <th><?php echo UsniAdaptor::t('customer', 'Estatus'); ?></th>
+                    <th><?php echo UsniAdaptor::t('customer', 'Fecha de registro'); ?></th>
+                    <th><?php echo UsniAdaptor::t('application', 'Comentario'); ?></th>
+                    <th><?php echo UsniAdaptor::t('customer', 'Cliente notificado'); ?></th>
                 </tr>
             </thead>
             <?php
@@ -32,7 +32,7 @@ $rows = $detailViewDTO->getHistoryRecords();
                             <td><?php echo StatusLabel::widget(['model' => $row]);?></td>
                             <td><?php echo DateTimeUtil::getFormattedDateTime($row['created_datetime']) ?></td>
                             <td><?php echo $row['comment'] ?></td>
-                            <td><?php echo (bool) $row['notify_customer'] == true ? UsniAdaptor::t('application', 'Yes') : UsniAdaptor::t('application', 'No') ?></td>
+                            <td><?php echo (bool) $row['notify_customer'] == true ? UsniAdaptor::t('application', 'Si') : UsniAdaptor::t('application', 'No') ?></td>
                         </tr>
                         <?php
                     }
@@ -44,7 +44,7 @@ $rows = $detailViewDTO->getHistoryRecords();
             {
                 ?>
                 <tbody>
-                    <tr><td colspan="6"><?php echo \Yii::t('yii', 'No results found.'); ?></td></tr>
+                    <tr><td colspan="6"><?php echo \Yii::t('yii', 'No se han encontrado resultados.'); ?></td></tr>
                 </tbody>
                 <?php
             }

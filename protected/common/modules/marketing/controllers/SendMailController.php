@@ -49,7 +49,7 @@ class SendMailController extends \usni\library\web\Controller
         $manager->processCreate($formDTO);
         if($formDTO->getIsTransactionSuccess() === true)
         {
-            FlashUtil::setMessage('success', UsniAdaptor::t('marketing', 'Mail has been sent successfully.'));
+            FlashUtil::setMessage('success', UsniAdaptor::t('marketing', 'El correo ha sido enviado exitosamente.'));
             return $this->refresh();
         }
         else

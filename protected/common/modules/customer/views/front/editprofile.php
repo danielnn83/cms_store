@@ -5,12 +5,12 @@
  */
 use usni\UsniAdaptor;
 
-$title              = UsniAdaptor::t('users', 'Edit Profile');
+$title              = UsniAdaptor::t('users', 'Editar Perfil');
 $this->title        = $title;
 $this->leftnavView  = '/front/_sidebar'; 
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('customer', 'My Account'),
+                                        'label' => UsniAdaptor::t('customer', 'Mi cuenta'),
                                         'url'   => ['/customer/site/my-account']
                                     ],
                                     [

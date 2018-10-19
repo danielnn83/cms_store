@@ -4,9 +4,9 @@ use cart\widgets\HeaderCartSubView;
 /* @var $this \frontend\web\View */
 
 ?>
-<div id="cart" class="btn-group btn-block">
-    <?php echo HeaderCartSubView::widget();?>
-</div>
+
+<?php echo HeaderCartSubView::widget();?>
+
 <?php
 $script = "$('body').on('click', '#cart > .heading a', function() {
                     $('#cart').addClass('active');

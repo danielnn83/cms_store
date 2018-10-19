@@ -17,7 +17,7 @@ if(UsniAdaptor::app()->user->can('access.catalog'))
 {
     return [    
                 'label'       => MenuUtil::getSidebarMenuIcon('shopping-cart') .
-                                     MenuUtil::wrapLabel(UsniAdaptor::t('catalog', 'Catalog')),
+                                     MenuUtil::wrapLabel(UsniAdaptor::t('catalog', 'Catálogo')),
                 'url'         => '#',
                 'itemOptions' => ['class' => 'navblock-header'],
                 'items' => $sidebarItems

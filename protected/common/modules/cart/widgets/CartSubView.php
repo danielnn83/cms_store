@@ -219,7 +219,7 @@ class CartSubView extends \yii\bootstrap\Widget
      */
     protected function renderEmptyText()
     {
-        return Html::tag('p', UsniAdaptor::t('cart', 'Your shopping cart is empty!'), ['class' => 'text-center']);
+        return Html::tag('p', UsniAdaptor::t('cart', 'Tu carrito de compras está vacío!'), ['class' => 'text-center']);
     }
 
 

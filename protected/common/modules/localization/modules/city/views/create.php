@@ -11,13 +11,13 @@ use usni\UsniAdaptor;
 
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('city', 'Cities'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('city', 'Ciudades'),
         'url' => ['/localization/city/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Create')
+        'label' => UsniAdaptor::t('application', 'Agregar')
     ]
 ];
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('city', 'City');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('city', 'Ciudad');
 echo $this->render("/_form", ['formDTO' => $formDTO]);

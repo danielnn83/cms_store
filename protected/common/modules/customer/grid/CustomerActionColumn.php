@@ -44,7 +44,7 @@ class CustomerActionColumn extends ActionColumn
     {
         if($this->checkAccess($model, 'change-password'))
         {
-            $label = UsniAdaptor::t('users', 'Change Password');
+            $label = UsniAdaptor::t('users', 'Cambiar Password');
             $icon  = FA::icon('lock');
             $url   = UsniAdaptor::createUrl("customer/default/change-password", ["id" => $model['id']]);
             return Html::a($icon, $url, [
@@ -68,13 +68,13 @@ class CustomerActionColumn extends ActionColumn
         {
             if($model['status'] == User::STATUS_ACTIVE)
             {
-                $label = UsniAdaptor::t('users', 'Deactivate');
+                $label = UsniAdaptor::t('users', 'Desactivar');
                 $icon  = FA::icon('close');
                 $url   = UsniAdaptor::createUrl("customer/default/change-status", array("id" => $model['id'], 'status' => User::STATUS_INACTIVE));
             }
             elseif($model['status'] == User::STATUS_INACTIVE || $model['status'] == User::STATUS_PENDING)
             {
-                $label = UsniAdaptor::t('users', 'Activate');
+                $label = UsniAdaptor::t('users', 'Activar');
                 $icon  = FA::icon('check');
                 $url   = UsniAdaptor::createUrl("customer/default/change-status", array("id" => $model['id'], 'status' => User::STATUS_ACTIVE));
             }

@@ -21,7 +21,7 @@ class TopNavCompareProducts extends \yii\bootstrap\Widget
     {
         $compareProducts   = ApplicationUtil::getCompareProducts();
         $count             = $compareProducts->getCount();
-        $content           = UsniAdaptor::t('products', 'Compare');
+        $content           = UsniAdaptor::t('products', 'Comparar');
         if($count > 0)
         {
             return $content . ' (' . $count . ')';

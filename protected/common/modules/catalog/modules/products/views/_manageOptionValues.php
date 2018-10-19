@@ -5,7 +5,7 @@ use usni\fontawesome\FA;
 
 /* @var $formDTO \products\dto\FormDTO */
 
-$editLabel  = FA::icon('pencil') . "\n" . UsniAdaptor::t('application', 'Edit');
+$editLabel  = FA::icon('pencil') . "\n" . UsniAdaptor::t('application', 'Editar');
 $editLink   = Html::a($editLabel, UsniAdaptor::createUrl("catalog/products/option/assign", ["productId" => $formDTO->model->id]), 
                                 ['class' => 'btn btn-default', 'id' => 'options-edit-link']);
 echo $editLink . "<br/><br/>";

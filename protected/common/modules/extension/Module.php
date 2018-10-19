@@ -65,7 +65,7 @@ class Module extends SecuredModule
         unset($permissions['Extension']['extension.viewother']);
         unset($permissions['Extension']['extension.bulk-edit']);
         unset($permissions['Extension']['extension.bulk-delete']);
-        $permissions['Extension']['extension.manageother'] = UsniAdaptor::t('extension', 'Manager Others Extension');
+        $permissions['Extension']['extension.manageother'] = UsniAdaptor::t('extension', 'Administrar otras extensiones');
         return $permissions;
     }
 }

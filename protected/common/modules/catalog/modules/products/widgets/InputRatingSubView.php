@@ -68,11 +68,11 @@ class InputRatingSubView extends \yii\bootstrap\Widget
     {
         if($this->product['rating'] == 0)
         {
-            return "<strong>" . UsniAdaptor::t('products', 'Rate this') . "</strong>";
+            return "<strong>" . UsniAdaptor::t('products', 'Califica esto') . "</strong>";
         }
         else
         {
-            return "<strong>" . UsniAdaptor::t('products', 'Your rating') . "</strong>";
+            return "<strong>" . UsniAdaptor::t('products', 'Tu calificación') . "</strong>";
         }
     }
     

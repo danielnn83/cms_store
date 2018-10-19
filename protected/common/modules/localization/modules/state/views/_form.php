@@ -15,11 +15,11 @@ $model          = $formDTO->getModel();
 $countryData    = $formDTO->getCountryDropdownData();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('state', 'State');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('state', 'Estado');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('state', 'State');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('state', 'Estado');
 }
 $form = ActiveForm::begin([
         'id' => 'stateeditview',

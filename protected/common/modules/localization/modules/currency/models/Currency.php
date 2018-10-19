@@ -55,13 +55,13 @@ class Currency extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                        'name'					 => UsniAdaptor::t('application', 'Name'),
-                        'code'					 => UsniAdaptor::t('localization', 'Code'),
-                        'symbol_left'			 => UsniAdaptor::t('currency', 'Symbol Left'),
-                        'symbol_right'			 => UsniAdaptor::t('currency', 'Symbol Right'),
-                        'decimal_place'			 => UsniAdaptor::t('currency', 'Decimal Places'),
-                        'value'					 => UsniAdaptor::t('application', 'Value'),
-                        'status'				 => UsniAdaptor::t('application', 'Status'),
+                        'name'					 => UsniAdaptor::t('application', 'Nombre'),
+                        'code'					 => UsniAdaptor::t('localization', 'Código'),
+                        'symbol_left'			 => UsniAdaptor::t('currency', 'Símbolo izquierdo'),
+                        'symbol_right'			 => UsniAdaptor::t('currency', 'Símbolo a la derecha'),
+                        'decimal_place'			 => UsniAdaptor::t('currency', 'Lugares decimales'),
+                        'value'					 => UsniAdaptor::t('application', 'Valor'),
+                        'status'				 => UsniAdaptor::t('application', 'Estatus'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -71,7 +71,7 @@ class Currency extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('currency', 'Currency') : UsniAdaptor::t('currency', 'Currencies');
+        return ($n == 1) ? UsniAdaptor::t('currency', 'Moneda') : UsniAdaptor::t('currency', 'Monedas');
     }
     
     /**

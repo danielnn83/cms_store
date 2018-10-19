@@ -9,19 +9,19 @@ use usni\library\utils\Html;
         {
             foreach($assignedOptions as $assignedOption)
             {
-                $isRequired     = $assignedOption['required'] ? UsniAdaptor::t('application', 'Yes') : UsniAdaptor::t('application', 'No');
-                $optionLabel    = Html::tag('strong', UsniAdaptor::t('products', 'Option')) .  ': ' . $assignedOption['display_name'] . ' ' . 
-                                    Html::tag('strong', UsniAdaptor::t('products', 'Required')) . ': ' . $isRequired;
+                $isRequired     = $assignedOption['required'] ? UsniAdaptor::t('application', 'Si') : UsniAdaptor::t('application', 'No');
+                $optionLabel    = Html::tag('strong', UsniAdaptor::t('products', 'Opción')) .  ': ' . $assignedOption['display_name'] . ' ' . 
+                                    Html::tag('strong', UsniAdaptor::t('products', 'Requerida')) . ': ' . $isRequired;
             ?>
             <tr>
                 <td colspan="5"><?php echo $optionLabel;?></td>
             </tr>
             <tr>
-                <td><?php echo UsniAdaptor::t('products', 'Option Value');?></td>
-                <td><?php echo UsniAdaptor::t('products', 'Quantity');?></td>
-                <td><?php echo UsniAdaptor::t('products', 'Subtract Stock');?></td>
-                <td><?php echo UsniAdaptor::t('products', 'Price');?></td>
-                <td><?php echo UsniAdaptor::t('products', 'Weight');?></td>
+                <td><?php echo UsniAdaptor::t('products', 'Valor de la opción');?></td>
+                <td><?php echo UsniAdaptor::t('products', 'Cantidad');?></td>
+                <td><?php echo UsniAdaptor::t('products', 'Restar stock');?></td>
+                <td><?php echo UsniAdaptor::t('products', 'Precio');?></td>
+                <td><?php echo UsniAdaptor::t('products', 'Peso');?></td>
             </tr>
             
             <?php
@@ -37,7 +37,7 @@ use usni\library\utils\Html;
                             <?php echo $optionValueRecord['quantity'];?>
                         </td>
                         <td>
-                            <?php echo $optionValueRecord['subtract_stock'] == 1 ? UsniAdaptor::t('application', 'Yes'): UsniAdaptor::t('application', 'No');?>
+                            <?php echo $optionValueRecord['subtract_stock'] == 1 ? UsniAdaptor::t('application', 'Si'): UsniAdaptor::t('application', 'No');?>
                         </td>
                         <td>
                             <?php echo $optionValueRecord['price_prefix'] . $optionValueRecord['price'];?> 
@@ -54,7 +54,7 @@ use usni\library\utils\Html;
         {
         ?>
             <tr>
-                <td colspan='6'> <?php echo UsniAdaptor::t('application', 'No results found');?></td>
+                <td colspan='6'> <?php echo UsniAdaptor::t('application', 'No se encontraron resultados');?></td>
             </tr>
         <?php
             }

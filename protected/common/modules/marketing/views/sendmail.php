@@ -12,7 +12,7 @@ use usni\library\bootstrap\FormButtons;
 use common\modules\marketing\utils\MarketingUtil;
 use marqu3s\summernote\Summernote;
 
-$title  = UsniAdaptor::t('marketing', 'Send Mail');
+$title  = UsniAdaptor::t('marketing', 'Enviar Email');
 $model  = $formDTO->getModel();
 $storeDropdownData      = $formDTO->getStoreDropdownData();
 $customerDropdownData   = $formDTO->getCustomerDropdownData();
@@ -37,7 +37,7 @@ $form = ActiveForm::begin([
 <?= $form->field($model, 'product_id')->select2input($productDropdownData, true, ['multiple'=>'multiple']);?>
 <?= $form->field($model, 'subject')->textInput(); ?>
 <?= $form->field($model, 'content')->widget(Summernote::className()); ?>
-<?= FormButtons::widget(['showCancelButton' => false, 'submitButtonLabel' => UsniAdaptor::t('marketing', 'Send')]);?>
+<?= FormButtons::widget(['showCancelButton' => false, 'submitButtonLabel' => UsniAdaptor::t('marketing', 'Enviar')]);?>
 <?php ActiveForm::end(); ?>
 <?php
 $this->registerJs("$(document).ready(function() {

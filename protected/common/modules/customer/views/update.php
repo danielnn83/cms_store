@@ -14,11 +14,11 @@ use usni\library\modules\users\widgets\BrowseDropdown;
 $customer = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('customer', 'Customers'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('customer', 'Clientes'),
                                         'url'   => ['/customer/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $customer['id']
+                                        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $customer['id']
                                     ]
                                ];
 $browseParams   = ['permission' => 'customer.updateother',
@@ -26,5 +26,5 @@ $browseParams   = ['permission' => 'customer.updateother',
                    'model' => $customer,
                    'textAttribute' => 'username'];
 echo BrowseDropdown::widget($browseParams);
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('customer', 'Customer');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('customer', 'Cliente');
 echo $this->render('/_tabform', ['formDTO' => $formDTO]);

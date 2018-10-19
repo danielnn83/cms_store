@@ -7,13 +7,13 @@ use usni\UsniAdaptor;
 
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('customer', 'Customer Groups'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('customer', 'Grupos de clientes'),
                                         'url'   => ['/customer/group/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Create')
+                                        'label' => UsniAdaptor::t('application', 'Agregar')
                                     ]
                                ];
 
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('customer', 'Customer Groups');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('customer', 'Grupos de clientes');
 echo $this->render('/groups/_form', ['formDTO' => $formDTO]);

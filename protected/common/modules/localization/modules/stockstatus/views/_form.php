@@ -10,11 +10,11 @@ use usni\library\bootstrap\FormButtons;
 $model = $formDTO->getModel();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('stockstatus', 'Stock Status');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('stockstatus', 'Estado de Stock');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('stockstatus', 'Stock Status');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('stockstatus', 'Estado de Stock');
 }
 
 $form = ActiveForm::begin([

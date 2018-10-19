@@ -1,0 +1,61 @@
+Message-ID: <e9c9df481e1a4791416ea79780b9b27a@localhost>
+Date: Sun, 07 Oct 2018 02:38:58 -0500
+Subject: Registro de nuevo cliente
+From: Super Admin <danielnn84@yahoo.com.mx>
+To: danielnn83@yahoo.com.mx
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1538897938_de8b2b22d68db19e36da9ea0ea95daa6_=_"
+
+
+--_=_swift_v4_1538897938_de8b2b22d68db19e36da9ea0ea95daa6_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Bienvenido Daniel Nava. Tu cuenta ha sido agregada exitosamente en=C2=A0 ad=
+mon
+
+La informaci=C3=B3n de tu cuenta es la siguiente:
+Username: danielnn84
+Password: ZVf31r8myu&
+
+Please confirm your email by clicking the link b=
+elow to activate your account.
+Confirm your email account Gracias,
+Administrador del sistema
+
+--_=_swift_v4_1538897938_de8b2b22d68db19e36da9ea0ea95daa6_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <p>Bienvenido Daniel Nava. Tu cuenta ha sido agregada exitosamente en&n=
+bsp; admon</p>
+
+<p>La informaci=C3=B3n de tu cuenta es la siguiente:<br><br>
+    <strong>Username:</strong> danielnn84<br>
+    <strong>Password</strong>: ZVf31r8myu&</p>
+
+Please confirm your email by clicking the link below to activate your accou=
+nt.<br/><br/>
+<a href=3D'http://localhost/whatacart/customer/site/validate-email-address?=
+hash=3DJDJ5JDEzJGk3M1pwQlJrMVpjWURTcGtESWNZeU9kcGl6YkptTzJBOUozNXZ3TzhvdVlW=
+RmZyT3ZpSDM2&email=3Ddanielnn83@yahoo.com.mx'>Confirm your email account</a=
+><br/><br/> Gracias,<br>
+Administrador del sistema
+
+    </body>
+</html>
+
+
+--_=_swift_v4_1538897938_de8b2b22d68db19e36da9ea0ea95daa6_=_--

@@ -49,7 +49,7 @@ class NewsletterCustomers extends ActiveRecord
     public function attributeLabels()
     {
         $labels =   [
-                        'customer_id'   => UsniAdaptor::t('customer', 'Customer'),
+                        'customer_id'   => UsniAdaptor::t('customer', 'Cliente'),
                         'email'         => UsniAdaptor::t('users', 'Email')
                     ];
         return parent::getTranslatedAttributeLabels($labels);
@@ -60,6 +60,6 @@ class NewsletterCustomers extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('newsletter', 'Newsletter Customer') : UsniAdaptor::t('newsletter', 'Newsletter Customers');
+        return ($n == 1) ? UsniAdaptor::t('newsletter', 'Cliente del boletín') : UsniAdaptor::t('newsletter', 'Clientes del boletín');
     }
 }

@@ -9,13 +9,13 @@ use usni\UsniAdaptor;
 
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Product Downloads'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Descargas de productos'),
                                         'url'   => ['/catalog/products/download/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Create')
+                                        'label' => UsniAdaptor::t('application', 'Agregar')
                                     ]
                                ];
 
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Product Download');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Descargas de producto');
 echo $this->render('/productdownloads/_form', ['formDTO' => $formDTO]);

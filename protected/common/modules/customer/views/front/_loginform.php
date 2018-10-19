@@ -12,11 +12,11 @@ use yii\helpers\Html;
 $title              = UsniAdaptor::t('users', 'Login');
 $this->title        = $title;
 $model              = $formDTO->getModel();
-$forgotPasswordLink = Html::a(UsniAdaptor::t('users', 'Forgot Password'), UsniAdaptor::createUrl('customer/site/forgot-password'));
+$forgotPasswordLink = Html::a(UsniAdaptor::t('users', 'Se te olvidó tu contraseña?'), UsniAdaptor::createUrl('customer/site/forgot-password'));
 $passwordTemplate   = "{beginLabel}\n{labelTitle}\n{endLabel}\n{input}\n" . $forgotPasswordLink . "{error}";
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('customer', 'My Account'),
+                                        'label' => UsniAdaptor::t('customer', 'Mi cuenta'),
                                         'url'   => ['/customer/site/my-account']
                                     ],
                                     [
@@ -30,8 +30,8 @@ $form = ActiveForm::begin([
                                     'decoratorView' => false
                                ]);
 ?>
-<h2><?php echo UsniAdaptor::t('customer', 'Returning Customer');?></h2>
-<p><strong><?php echo UsniAdaptor::t('customer', 'I am a returning customer')?></strong></p>
+<h2><?php echo UsniAdaptor::t('customer', 'Soy Cliente');?></h2>
+<p><strong><?php echo UsniAdaptor::t('customer', 'Yo soy cliente')?></strong></p>
 <?= $form->field($model, 'username')->textInput();?>
 <?= $form->field($model, 'password', ['template' => $passwordTemplate])->passwordInput();?>
 <?= $form->field($model, 'rememberMe', ['horizontalCssClasses' => ['wrapper'   => '', 'offset' => '']])->checkbox();?>

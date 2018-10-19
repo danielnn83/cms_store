@@ -50,11 +50,11 @@ class PaymentManager extends \common\business\Manager
         $orderPaymentTransaction->payment_status = 'Completed';
         if($orderPaymentTransaction->amount > $orderPaymentTransaction->pendingAmount)
         {
-            $orderPaymentTransaction->addError('amount', UsniAdaptor::t('order', 'Paid amount can not be greater than the pending amount'));
+            $orderPaymentTransaction->addError('amount', UsniAdaptor::t('order', 'El monto pagado no puede ser mayor que el monto pendiente'));
         }
         elseif($orderPaymentTransaction->amount == 0)
         {
-            $orderPaymentTransaction->addError('amount', UsniAdaptor::t('order', 'Paid amount should be greater than 0'));
+            $orderPaymentTransaction->addError('amount', UsniAdaptor::t('order', 'El monto pagado debe ser mayor que 0'));
         }
         elseif($orderPaymentTransaction->save())
         {

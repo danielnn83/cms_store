@@ -13,7 +13,7 @@ $model = $this->params['model'];
 <?php
 $form = ActiveForm::begin([
         'id' => 'searchformview',
-        'caption' => UsniAdaptor::t('application', 'Search Criteria'),
+        'caption' => UsniAdaptor::t('application', 'Criterios de búsqueda'),
         'method' => 'get',
         'action'  => UsniAdaptor::createUrl('site/default/search'),
         'fieldConfig' => [ 'template' => "{beginLabel}{labelTitle}{endLabel}{beginWrapper}{input}{error}{endWrapper}",
@@ -28,7 +28,7 @@ $form = ActiveForm::begin([
 ?>
 <?= $form->field($model, 'keyword')->textInput(); ?>
 <?= $form->field($model, 'categoryId')->dropDownList($this->params['categoryList'], ['prompt' => Html::getDefaultPrompt()]); ?>
-<?= FormButtons::widget(['submitButtonLabel' => UsniAdaptor::t('application', 'Search'),
+<?= FormButtons::widget(['submitButtonLabel' => UsniAdaptor::t('application', 'Buscar'),
                          'showCancelButton' => false]);
 ActiveForm::end();
 ?>

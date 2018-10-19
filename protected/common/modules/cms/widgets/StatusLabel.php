@@ -55,19 +55,19 @@ class StatusLabel extends \yii\bootstrap\Widget
     {
         if ($this->model['status'] == Module::STATUS_PUBLISHED)
         {
-            return UsniAdaptor::t('cms', 'Published');
+            return UsniAdaptor::t('cms', 'Publicado');
         }
         elseif($this->model['status'] == Module::STATUS_UNPUBLISHED)
         {
-            return UsniAdaptor::t('cms', 'Unpublished');
+            return UsniAdaptor::t('cms', 'No Publicado');
         }
         elseif ($this->model['status'] == Module::STATUS_ARCHIVED)
         {
-            return UsniAdaptor::t('cms', 'Archived');
+            return UsniAdaptor::t('cms', 'Archivado');
         }
         elseif ($this->model['status'] == Module::STATUS_TRASHED)
         {
-            return UsniAdaptor::t('cms', 'Trashed');
+            return UsniAdaptor::t('cms', 'A la basura');
         }
     }
 }

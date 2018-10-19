@@ -256,7 +256,7 @@ class DefaultController extends \usni\library\web\Controller
                 }
                 else
                 {
-                    FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "There should be atleast one item in the cart before you proceed for checkout."));
+                    FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "Debe haber al menos un artículo en el carrito antes de proceder a pagar."));
                 }
             }
             $products = ProductDAO::getAll(UsniAdaptor::app()->languageManager->selectedLanguage);
@@ -282,7 +282,7 @@ class DefaultController extends \usni\library\web\Controller
             $cart = ApplicationUtil::getCart();
             if($cart->shouldProceedForCheckout() === false)
             {
-                FlashUtil::setMessage('error', UsniAdaptor::t('cartflash', "Either products in the cart are not in stock or out of stock checkout is not allowed. Please contact system admin."));
+                FlashUtil::setMessage('error', UsniAdaptor::t('cartflash', "O bien los productos en el carrito no están en stock o no están disponibles en stock. Por favor contacte al administrador del sistema."));
                 return $this->redirect(UsniAdaptor::createUrl('order/default/add-to-cart'));
             }
             $checkoutDTO    = new AdminCheckoutDTO();
@@ -320,7 +320,7 @@ class DefaultController extends \usni\library\web\Controller
         $title      = null;
         if(!empty($options))
         {
-            $title      = Html::tag('h4', UsniAdaptor::t('products', 'Available Option(s)'));
+            $title      = Html::tag('h4', UsniAdaptor::t('products', 'Opcion(es) disponibles'));
         }
         echo $title . $options;
     }
@@ -382,7 +382,7 @@ class DefaultController extends \usni\library\web\Controller
         $cart = ApplicationUtil::getCart();
         if($cart->shouldProceedForCheckout() === false)
         {
-            FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "Either products in the cart are not in stock or out of stock checkout is not allowed. Please contact system admin."));
+            FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "O bien los productos en el carrito no están en stock o no están disponibles en stock. Por favor contacte al administrador del sistema."));
             return $this->redirect(UsniAdaptor::createUrl('cart/default/view'));
         }
         $checkout                       = ApplicationUtil::getCheckout();
@@ -457,7 +457,7 @@ class DefaultController extends \usni\library\web\Controller
     private function redirectOnNonGuestCheckout()
     {
         $checkout = ApplicationUtil::getCheckout();
-        FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "The guest checkout is not allowed for the selected store."));
+        FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "El proceso de pago de invitados no está permitido para la tienda seleccionada."));
         if($checkout->order->id == null)
         {
             return $this->redirect(UsniAdaptor::createUrl('order/default/create'));

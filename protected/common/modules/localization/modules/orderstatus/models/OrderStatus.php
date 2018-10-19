@@ -47,7 +47,7 @@ class OrderStatus extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                     'name'             => UsniAdaptor::t('application', 'Name'),
+                     'name'             => UsniAdaptor::t('application', 'Nombre'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -57,7 +57,7 @@ class OrderStatus extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('orderstatus', 'Order Status');
+        return UsniAdaptor::t('orderstatus', 'Estado del pedido');
     }
     
     /**

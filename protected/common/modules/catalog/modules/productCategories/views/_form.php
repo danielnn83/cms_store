@@ -20,11 +20,11 @@ $parentOptions  = $formDTO->getParentDropdownOptions();
 
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('productCategories', 'Product Category');
+    $caption = UsniAdaptor::t('application', 'Crear') . ' ' . UsniAdaptor::t('productCategories', 'Categoría del producto');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('productCategories', 'Product Category');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('productCategories', 'Categoría del producto');
 }
 $form = ActiveForm::begin([
         'id' => 'productcategoryeditview',

@@ -301,7 +301,7 @@ div.required .control-label:before {
 }
 
 /* footer */
-footer {
+/*footer {
 	margin-top: 30px;
 	padding-top: 30px;
 	background-color: #303030;
@@ -323,7 +323,7 @@ footer h5 {
 	font-size: 13px;
 	font-weight: bold;
 	color: #fff;
-}
+}*/
 /* alert */
 .alert {
 	padding: 8px 14px 8px 14px;

@@ -9,14 +9,14 @@ if(!$isEmpty)
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <td class="text-center"><?php echo UsniAdaptor::t('application', 'Image')?></td>
-                    <td class="text-left"><?php echo UsniAdaptor::t('application', 'Name')?></td>
-                    <td class="text-left"><?php echo UsniAdaptor::t('products', 'Model')?></td>
-                    <td class="text-left"><?php echo UsniAdaptor::t('products', 'Options')?></td>
-                    <td class="text-left"><?php echo UsniAdaptor::t('products', 'Quantity')?></td>
-                    <td class="text-right"><?php echo UsniAdaptor::t('products', 'Unit Price')?></td>
-                    <td class="text-right"><?php echo UsniAdaptor::t('tax', 'Tax')?></td>
-                    <td class="text-right"><?php echo UsniAdaptor::t('products', 'Total Price')?></td>
+                    <td class="text-center"><?php echo UsniAdaptor::t('application', 'Imagen')?></td>
+                    <td class="text-left"><?php echo UsniAdaptor::t('application', 'Nombre')?></td>
+                    <td class="text-left"><?php echo UsniAdaptor::t('products', 'Modelo')?></td>
+                    <td class="text-left"><?php echo UsniAdaptor::t('products', 'Opciones')?></td>
+                    <td class="text-left"><?php echo UsniAdaptor::t('products', 'Cantidad')?></td>
+                    <td class="text-right"><?php echo UsniAdaptor::t('products', 'Precio unitario')?></td>
+                    <td class="text-right"><?php echo UsniAdaptor::t('tax', 'Impuesto')?></td>
+                    <td class="text-right"><?php echo UsniAdaptor::t('products', 'Precio total')?></td>
                 </tr>
             </thead>
             <tbody>
@@ -33,7 +33,7 @@ if(!$isEmpty)
                     <td class="text-right"><?php echo $this->getFormattedPrice($totalUnitPrice, $currencyCode);?></td>
                 </tr>
                 <tr>
-                  <td class="text-right"><strong><?php echo UsniAdaptor::t('tax', 'Tax');?></strong></td>
+                  <td class="text-right"><strong><?php echo UsniAdaptor::t('tax', 'Impuesto');?></strong></td>
                   <td class="text-right"><?php echo $this->getFormattedPrice($totalTax, $currencyCode);?></td>
                 </tr>
                 <?php
@@ -41,7 +41,7 @@ if(!$isEmpty)
                 {
                 ?>
                     <tr>
-                        <td class="text-right"><strong><?php echo UsniAdaptor::t('shipping', 'Shipping Cost');?></strong></td>
+                        <td class="text-right"><strong><?php echo UsniAdaptor::t('shipping', 'Costo de envío');?></strong></td>
                         <td class="text-right"><?php echo $this->getFormattedPrice($shippingPrice, $currencyCode);?></td>
                     </tr>
                 <?php

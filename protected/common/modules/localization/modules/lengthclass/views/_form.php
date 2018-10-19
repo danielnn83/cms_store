@@ -13,11 +13,11 @@ use usni\library\bootstrap\FormButtons;
 $model  = $formDTO->getModel();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('lengthclass', 'Length Class');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('lengthclass', 'Clase de longitud');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('lengthclass', 'Length Class');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('lengthclass', 'Clase de longitud');
 }
 $form = ActiveForm::begin([
         'id' => 'lengthclasseditview',

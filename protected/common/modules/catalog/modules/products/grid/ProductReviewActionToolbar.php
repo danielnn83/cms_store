@@ -100,7 +100,7 @@ class ProductReviewActionToolbar extends ActionToolbar
     {
         if($this->showBulkApprove && UsniAdaptor::app()->user->can($this->bulkApprovePermission))
         {
-            $button = Html::button(FA::icon('check') . "\n" . UsniAdaptor::t('application', 'Bulk Approve'), 
+            $button = Html::button(FA::icon('check') . "\n" . UsniAdaptor::t('application', 'Aprobación masiva'), 
                                                                                           ["id" => "action-toolbar-bulkapprove",
                                                                                           "class" => "btn btn-default bulk-approve-btn"]);
             return Html::tag('div', $button, ['class' => "btn-group"]);
@@ -116,7 +116,7 @@ class ProductReviewActionToolbar extends ActionToolbar
     {
         if($this->showBulkUnapprove && UsniAdaptor::app()->user->can($this->bulkApprovePermission))
         {
-            $button = Html::button(FA::icon('remove') . "\n" . UsniAdaptor::t('application', 'Bulk Disapprove'), 
+            $button = Html::button(FA::icon('remove') . "\n" . UsniAdaptor::t('application', 'Desaprobación masiva'), 
                                                                                           ["id" => "action-toolbar-bulkunapprove",
                                                                                           "class" => "btn btn-default bulk-unapprove-btn"]);
             return Html::tag('div', $button, ['class' => "btn-group"]);
@@ -132,7 +132,7 @@ class ProductReviewActionToolbar extends ActionToolbar
     {
         if($this->showTrash && UsniAdaptor::app()->user->can($this->deletePermission))
         {
-            $label      = FA::icon('trash') . "\n" . UsniAdaptor::t('products', 'Trash');
+            $label      = FA::icon('trash') . "\n" . UsniAdaptor::t('products', 'Basura');
             $url        = UsniAdaptor::createUrl('catalog/products/review/trash');
             $trashLink  = Html::a($label, $url, ['class' => 'btn btn-default']);
             return $trashLink;

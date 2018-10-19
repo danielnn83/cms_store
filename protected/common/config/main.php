@@ -10,14 +10,14 @@ return ArrayHelper::merge(
                                             'installed'     => $installed,
                                             'name'          => $siteName,
                                             'version'       => '2.0.1',
-                                            'poweredByName' => 'WhatACart',
-                                            'poweredByUrl'  => 'http://whatacart.com',
+                                            'poweredByName' => '',
+                                            'poweredByUrl'  => '',
                                             'environment'   => $environment,
                                             'components' => [
                                                 'authorizationManager' => ['class' => 'usni\library\modules\auth\business\AuthManager'],
                                                 'cache' => [
                                                                 'class'     => 'yii\caching\FileCache',
-                                                                'keyPrefix' => 'whatacart', //This is very important as it differntiates application cache
+                                                                'keyPrefix' => '', //This is very important as it differntiates application cache
                                                                 'cachePath' => APPLICATION_PATH . '/runtime/cache'
                                                            ],
                                                 'productWeightManager'      => ['class' => 'products\managers\ProductWeightManager'],

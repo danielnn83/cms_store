@@ -12,12 +12,12 @@ use usni\library\widgets\BrowseDropdown;
 $model  = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('tax', 'Zones'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('tax', 'Zonas'),
         'url' => ['/localization/tax/zone/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model->id
+        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model->id
     ]
 ];
 
@@ -26,5 +26,5 @@ $browseParams   = ['permission' => 'zone.updateother',
                    'model'  => $model];
 echo BrowseDropdown::widget($browseParams);
 
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('tax', 'Zone');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('tax', 'Zona');
 echo $this->render("/zone/_form", ['formDTO' => $formDTO]);

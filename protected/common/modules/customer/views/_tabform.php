@@ -15,11 +15,11 @@ use usni\library\utils\ArrayUtil;
 
 if($formDTO->getScenario() == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('customer', 'Customer');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('customer', 'Cliente');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('customer', 'Customer');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('customer', 'Cliente');
 }
 $errors = ArrayUtil::merge($formDTO->getModel()->errors, $formDTO->getPerson()->errors, $formDTO->getAddress()->errors);
 echo TabbedActiveFormAlert::widget(['model' => $formDTO->getModel(), 'errors' => $errors]);
@@ -37,13 +37,13 @@ $form = TabbedActiveForm::begin([
             ];
             $items[] = [
                 'options' => ['id' => 'tabperson'],
-                'label' => UsniAdaptor::t('users', 'Person'),
+                'label' => UsniAdaptor::t('users', 'Persona'),
                 'content' => $this->render('@usni/library/modules/users/views/_personedit', 
                                             ['form' => $form, 'formDTO' => $formDTO, 'deleteUrl' => UsniAdaptor::createUrl('customer/default/delete-image')])
             ];
             $items[] = [
                 'options' => ['id' => 'tabaddress'],
-                'label' => UsniAdaptor::t('users', 'Address'),
+                'label' => UsniAdaptor::t('users', 'Dirección'),
                 'content' => $this->render('@usni/library/modules/users/views/_addressedit', ['formDTO' => $formDTO, 'form' => $form])
             ];
             echo Tabs::widget(['items' => $items]);

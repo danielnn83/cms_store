@@ -148,7 +148,7 @@ class DefaultController extends \usni\library\web\Controller
         $result     = $manager->processChangeStatus($data);
         if($result === false)
         {
-            throw new ForbiddenHttpException(\Yii::t('yii','You are not authorized to perform this action.'));
+            throw new ForbiddenHttpException(\Yii::t('yii','Tú no estas autorizado para realizar está acción.'));
         }
         return $this->redirect(UsniAdaptor::createUrl('customer/default/index'));
     }

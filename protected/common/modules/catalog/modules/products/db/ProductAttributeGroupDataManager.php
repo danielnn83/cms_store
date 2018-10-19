@@ -30,11 +30,11 @@ class ProductAttributeGroupDataManager extends DataManager
     {
         return [
                     [
-                        'name'          => UsniAdaptor::t('products', 'Memory'),
+                        'name'          => UsniAdaptor::t('products', 'Memoria'),
                         'sort_order'    => 1, 
                     ],
                     [
-                        'name'          => UsniAdaptor::t('products', 'Motherboard'),
+                        'name'          => UsniAdaptor::t('products', 'Tarjeta madre'),
                         'sort_order'    => 2, 
                     ],
                 ];

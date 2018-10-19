@@ -56,7 +56,7 @@ class Module extends SecuredModule
     public function getPermissions()
     {
         $permissions = parent::getPermissions();
-        $permissions['ProductReview']['productreview.approve'] = UsniAdaptor::t('products', 'Approve');
+        $permissions['ProductReview']['productreview.approve'] = UsniAdaptor::t('products', 'Aprobar');
         $permissions['ProductReview']['productreview.spam'] = UsniAdaptor::t('products', 'Spam');
         return $permissions;
     }

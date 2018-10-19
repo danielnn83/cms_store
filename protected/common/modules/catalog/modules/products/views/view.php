@@ -15,15 +15,15 @@ use products\behaviors\PriceBehavior;
 
 $this->attachBehavior('priceBehavior', PriceBehavior::className());
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('products', 'Product');
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('products', 'Producto');
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('products', 'Products'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('products', 'Productos'),
                                         'url' => ['/catalog/products/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'View') . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Ver') . ' #' . $model['id']
                                     ]
                                 ];
 
@@ -52,44 +52,44 @@ $toolbarParams  = ['editUrl'            => UsniAdaptor::createUrl('catalog/produ
             ];
             $items[] = [
                 'options' => ['id' => 'tabdata'],
-                'label' => UsniAdaptor::t('products', 'Data'),
+                'label' => UsniAdaptor::t('products', 'Datos'),
                 'content' => $this->render('/detail/_data', ['detailViewDTO' => $detailViewDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'tabspec'],
-                'label' => UsniAdaptor::t('products', 'Specifications'),
+                'label' => UsniAdaptor::t('products', 'Especificaciones'),
                 'content' => $this->render('/detail/_specifications', ['detailViewDTO' => $detailViewDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'tabrelated'],
-                'label' => UsniAdaptor::t('products', 'Related'),
+                'label' => UsniAdaptor::t('products', 'Relacionado'),
                 'content' => $this->render('/detail/_related', ['detailViewDTO' => $detailViewDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'taboptions'],
-                'label' => UsniAdaptor::t('products', 'Options'),
+                'label' => UsniAdaptor::t('products', 'Opciones'),
                 'content' => $this->render('/_manageOptionValuesSubView', ['assignedOptions' => $model['assignedOptions']])
             ];
             $items[] = [
                 'options' => ['id' => 'tabattributes'],
-                'label' => UsniAdaptor::t('products', 'Attributes'),
+                'label' => UsniAdaptor::t('products', 'Atributos'),
                 'content' => $this->render('/_assignedAttributesGridView', ['dataProvider' => $model['attributesDataProvider'],
                                             'layout' => "<div class='panel panel-content'><div class='panel-body'>{summary}\n{items}\n</div></div>",
                                             'showActionColumn' => false])
             ];
             $items[] = [
                 'options' => ['id' => 'tabdiscount'],
-                'label' => UsniAdaptor::t('products', 'Discounts'),
+                'label' => UsniAdaptor::t('products', 'Descuentos'),
                 'content' => $this->render('/detail/_discount', ['productDiscounts' => $model['productDiscounts']])
             ];
             $items[] = [
                 'options' => ['id' => 'tabspecial'],
-                'label' => UsniAdaptor::t('products', 'Specials'),
+                'label' => UsniAdaptor::t('products', 'Especiales'),
                 'content' => $this->render('/detail/_special', ['productSpecials' => $model['productSpecials']])
             ];
             $items[] = [
                 'options' => ['id' => 'tabimages'],
-                'label' => UsniAdaptor::t('products', 'Images'),
+                'label' => UsniAdaptor::t('products', 'Imagenes'),
                 'content' => $this->render('/detail/_images', ['productImages' => $model['productImages']])
             ];
             echo Tabs::widget(['items' => $items]);

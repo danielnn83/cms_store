@@ -9,14 +9,14 @@
 use usni\UsniAdaptor;
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('manufacturer', 'Manufacturers'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('manufacturer', 'Fabricantes'),
         'url' => ['/manufacturer/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Create')
+        'label' => UsniAdaptor::t('application', 'Agregar')
     ]
 ];
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('manufacturer', 'Manufacturer');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('manufacturer', 'Fabricantes');
 echo $this->render("/_form", ['model' => $formDTO->getModel()]);
 

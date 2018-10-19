@@ -28,7 +28,7 @@ class ShippingAddress extends Address
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('customer', 'Shipping Address');
+        return UsniAdaptor::t('customer', 'Dirección de envío');
     }
     
     /**

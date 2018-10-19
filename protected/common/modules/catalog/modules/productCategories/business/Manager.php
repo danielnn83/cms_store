@@ -34,7 +34,7 @@ class Manager extends \common\business\Manager
                             'uploadInstanceAttribute' => 'uploadInstance',
                             'type'              => 'image',
                             'savedAttribute'    => 'savedImage',
-                            'fileMissingError'  => UsniAdaptor::t('application', 'Please upload image'),
+                            'fileMissingError'  => UsniAdaptor::t('application', 'Subir Imagen'),
                       ];
             $uploadInstanceManager = new UploadInstanceManager($config);
             $result = $uploadInstanceManager->processUploadInstance();
@@ -165,7 +165,7 @@ class Manager extends \common\business\Manager
         $isValid = $this->isValidCategory($detailViewDTO->getId());
         if($isValid == false)
         {
-            throw new InvalidParamException(UsniAdaptor::t('productCategories', "Invalid product category"));
+            throw new InvalidParamException(UsniAdaptor::t('productCategories', "Categoría de producto no válida"));
         }
         parent::processDetail($detailViewDTO);
         $model          = $detailViewDTO->getModel();
@@ -177,7 +177,7 @@ class Manager extends \common\business\Manager
         }
         else
         {
-            $model['parent_name'] = UsniAdaptor::t('application', '(not set)');
+            $model['parent_name'] = UsniAdaptor::t('application', '(no establecido/perteneciente)');
         }
         if(!empty($dataCategory))
         {
@@ -185,7 +185,7 @@ class Manager extends \common\business\Manager
         }
         else
         {
-            $model['data_category'] = UsniAdaptor::t('application', '(not set)');
+            $model['data_category'] = UsniAdaptor::t('application', '(no establecido/perteneciente)');
         }
         $detailViewDTO->setModel($model);
     }

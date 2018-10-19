@@ -87,12 +87,12 @@ class Order extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                     'customer_id'          => UsniAdaptor::t('customer', 'Customer'),
-                     'shipping'             => UsniAdaptor::t('shipping', 'Shipping'),
-                     'shipping_comments'    => UsniAdaptor::t('shipping', 'Shipping Comments'),
-                     'shipping_fee'        => UsniAdaptor::t('shipping', 'Shipping Fees'),
-                     'status'               => UsniAdaptor::t('application', 'Status'),
-                     'store_id'             => UsniAdaptor::t('stores', 'Store')
+                     'customer_id'          => UsniAdaptor::t('customer', 'Cliente'),
+                     'shipping'             => UsniAdaptor::t('shipping', 'Envío'),
+                     'shipping_comments'    => UsniAdaptor::t('shipping', 'Comentarios de envío'),
+                     'shipping_fee'        => UsniAdaptor::t('shipping', 'Gastos de envío'),
+                     'status'               => UsniAdaptor::t('application', 'Estatus'),
+                     'store_id'             => UsniAdaptor::t('stores', 'Tienda')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -102,7 +102,7 @@ class Order extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('order', 'Order') : UsniAdaptor::t('order', 'Orders');
+        return ($n == 1) ? UsniAdaptor::t('order', 'Pedido') : UsniAdaptor::t('order', 'Pedidos');
     }
     
     /**

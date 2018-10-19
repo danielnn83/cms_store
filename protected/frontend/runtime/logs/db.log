@@ -1,0 +1,346 @@
+2018-10-07 03:20:56 [::1][-][lnpg8lln38fr8cbofu146742o5][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'solatext_cms_use'@'localhost' (using password: YES)' in C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'solatext_cms_us...', 'ZVf31r8myu99253...', NULL)
+#1 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#8 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\wamp64\www\whatacart\vendor\ushainformatique\yiichimp\library\modules\language\business\Manager.php(78): yii\db\ActiveQuery->all()
+#10 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(105): usni\library\modules\language\business\Manager->getList()
+#11 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(49): backend\web\BeforeActionBehavior->setLanguageData()
+#12 C:\wamp64\www\whatacart\protected\frontend\web\BeforeActionBehavior.php(35): backend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#13 [internal function]: frontend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#14 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#15 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#16 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#17 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#18 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#19 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\wamp64\www\whatacart\index.php(47): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'solatext_cms_use'@'localhost' (using password: YES)' in C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#6 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\wamp64\www\whatacart\vendor\ushainformatique\yiichimp\library\modules\language\business\Manager.php(78): yii\db\ActiveQuery->all()
+#8 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(105): usni\library\modules\language\business\Manager->getList()
+#9 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(49): backend\web\BeforeActionBehavior->setLanguageData()
+#10 C:\wamp64\www\whatacart\protected\frontend\web\BeforeActionBehavior.php(35): backend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#11 [internal function]: frontend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#12 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#13 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#14 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#15 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#16 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#17 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\wamp64\www\whatacart\index.php(47): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-10-07 03:20:56 [::1][-][lnpg8lln38fr8cbofu146742o5][info][application] $_COOKIE = [
+    'PHPFRONTSESSID' => 'lnpg8lln38fr8cbofu146742o5'
+    '_frontendCSRF' => 'e95a1ec27a67e76ac690ecc222c7e9450585e019c5f77da36c14f0a79743d124a:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"i-mBsl0pGi4SpjlU8icJlEPO3YYAdETe\";}'
+    'whatacartFrontContentLanguage' => '1e9303449001b8a8aa1733d17f8a059e3134e7a72847779adfd3530835b5836ca:2:{i:0;s:29:\"whatacartFrontContentLanguage\";i:1;s:5:\"en-US\";}'
+    'PHPBACKSESSID' => 'nks3ajsaf0ifgeoaorhoh9mkp4'
+    '_csrf' => 'b515118720d8abbbbe378cb770fe4fb2efbe45c6baaf1733ce61c7aeefb7da63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZFclfbuPam3ziIsgZXi15wAeK9Pvo7fB\";}'
+    '_backendUser' => 'e698f2e3d090c6e0f05e54f9837e641956b0096f061f609e699ae45abaf547a0a:2:{i:0;s:12:\"_backendUser\";i:1;s:46:\"[1,\"_GT3oHnCe0oAPCycXZ9LAbEgqIeSAXcQ\",2592000]\";}'
+    'whatacartAdminContentLanguage' => '8f179adbf0ff41fb3d5b2c4bb16a46a5c83e7f6d9d50558565077e1bdba8e8faa:2:{i:0;s:29:\"whatacartAdminContentLanguage\";i:1;s:5:\"en-US\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'guest_1' => 'O:25:\"frontend\\components\\Guest\":6:{s:4:\"cart\";O:16:\"cart\\models\\Cart\":6:{s:9:\"itemsList\";O:26:\"cart\\models\\ItemCollection\":1:{s:34:\"\0cart\\models\\ItemCollection\0_items\";a:0:{}}s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:8:\"wishlist\";O:24:\"wishlist\\models\\Wishlist\":3:{s:9:\"itemsList\";a:0:{}s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:15:\"compareproducts\";O:31:\"products\\models\\CompareProducts\":3:{s:9:\"itemsList\";a:0:{}s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:8:\"checkout\";O:20:\"cart\\models\\Checkout\":10:{s:5:\"order\";O:33:\"common\\modules\\order\\models\\Order\":13:{s:36:\"\0yii\\db\\BaseActiveRecord\0_attributes\";a:0:{}s:39:\"\0yii\\db\\BaseActiveRecord\0_oldAttributes\";N;s:33:\"\0yii\\db\\BaseActiveRecord\0_related\";a:0:{}s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:5:{s:12:\"beforeInsert\";a:2:{i:0;a:2:{i:0;a:2:{i:0;r:19;i:1;s:19:\"updateCreatedFields\";}i:1;N;}i:1;a:2:{i:0;a:2:{i:0;r:19;i:1;s:20:\"updateModifiedFields\";}i:1;N;}}s:12:\"beforeUpdate\";a:1:{i:0;a:2:{i:0;a:2:{i:0;r:19;i:1;s:20:\"updateModifiedFields\";}i:1;N;}}s:9:\"afterFind\";a:1:{i:0;a:2:{i:0;a:2:{i:0;r:19;i:1;s:12:\"onFindRecord\";}i:1;N;}}s:11:\"afterInsert\";a:1:{i:0;a:2:{i:0;a:2:{i:0;r:19;i:1;s:11:\"afterInsert\";}i:1;N;}}s:11:\"afterUpdate\";a:1:{i:0;a:2:{i:0;a:2:{i:0;r:19;i:1;s:11:\"afterUpdate\";}i:1;N;}}}s:30:\"\0yii\\base\\Component\0_behaviors\";a:0:{}s:8:\"relation\";s:12:\"translations\";s:11:\"localeField\";s:8:\"language\";s:21:\"translationAttributes\";a:1:{i:0;s:17:\"shipping_comments\";}s:10:\"\0*\0_models\";a:0:{}s:51:\"\0usni\\library\\db\\TranslatableActiveRecord\0_language\";N;}s:19:\"billingInfoEditForm\";O:31:\"cart\\models\\BillingInfoEditForm\":16:{s:5:\"email\";N;s:9:\"firstname\";N;s:8:\"lastname\";N;s:11:\"mobilephone\";N;s:11:\"officephone\";N;s:8:\"address1\";N;s:4:\"city\";N;s:7:\"country\";N;s:11:\"postal_code\";N;s:8:\"address2\";N;s:5:\"state\";N;s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:20:\"deliveryInfoEditForm\";O:32:\"cart\\models\\DeliveryInfoEditForm\":17:{s:20:\"sameAsBillingAddress\";N;s:5:\"email\";N;s:9:\"firstname\";N;s:8:\"lastname\";N;s:11:\"mobilephone\";N;s:11:\"officephone\";N;s:8:\"address1\";N;s:4:\"city\";N;s:7:\"country\";N;s:11:\"postal_code\";N;s:8:\"address2\";N;s:5:\"state\";N;s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:23:\"deliveryOptionsEditForm\";O:35:\"cart\\models\\DeliveryOptionsEditForm\":8:{s:8:\"shipping\";N;s:8:\"comments\";N;s:12:\"shipping_fee\";N;s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:21:\"paymentMethodEditForm\";O:33:\"cart\\models\\PaymentMethodEditForm\":8:{s:14:\"payment_method\";N;s:8:\"comments\";N;s:5:\"agree\";N;s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:23:\"\0yii\\base\\Model\0_errors\";N;s:27:\"\0yii\\base\\Model\0_validators\";N;s:25:\"\0yii\\base\\Model\0_scenario\";s:7:\"default\";s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}s:27:\"\0yii\\base\\Component\0_events\";a:0:{}s:30:\"\0yii\\base\\Component\0_behaviors\";N;}'
+    'globalMenuItems' => [
+        0 => [
+            'id' => '1'
+            'image' => 'NGMxZDU0N2bano.jpg'
+            'parent_id' => '0'
+            'level' => '0'
+            'status' => '1'
+            'displayintopmenu' => '1'
+            'data_category_id' => '1'
+            'code' => 'BN'
+            'path' => '1'
+            'created_by' => '1'
+            'modified_by' => '1'
+            'created_datetime' => '2018-09-03 10:32:19'
+            'modified_datetime' => '2018-10-07 01:55:40'
+            'name' => 'Baño'
+            'description' => 'Información de la categoria de baño<br>'
+            'alias' => 'ba-o'
+        ]
+        1 => [
+            'id' => '2'
+            'image' => 'MWI2Mjg1MD7.png'
+            'parent_id' => '0'
+            'level' => '0'
+            'status' => '1'
+            'displayintopmenu' => '1'
+            'data_category_id' => '1'
+            'code' => 'LTNB'
+            'path' => '2'
+            'created_by' => '1'
+            'modified_by' => '1'
+            'created_datetime' => '2018-09-03 10:32:19'
+            'modified_datetime' => '2018-10-07 01:56:22'
+            'name' => 'Playa'
+            'description' => 'Información de playa<br>'
+            'alias' => 'playa'
+        ]
+        2 => [
+            'id' => '3'
+            'image' => 'ZTQ0NWYzNGcocina.jpg'
+            'parent_id' => '0'
+            'level' => '0'
+            'status' => '1'
+            'displayintopmenu' => '1'
+            'data_category_id' => '1'
+            'code' => 'CM'
+            'path' => '3'
+            'created_by' => '1'
+            'modified_by' => '1'
+            'created_datetime' => '2018-09-03 10:32:19'
+            'modified_datetime' => '2018-10-07 01:57:15'
+            'name' => 'Cocina'
+            'description' => 'Información de cocina<br>'
+            'alias' => 'cocina'
+        ]
+    ]
+    '__captcha/site/default/captcha' => 'buvocjy'
+    '__captcha/site/default/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPFRONTSESSID=lnpg8lln38fr8cbofu146742o5; _frontendCSRF=e95a1ec27a67e76ac690ecc222c7e9450585e019c5f77da36c14f0a79743d124a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22i-mBsl0pGi4SpjlU8icJlEPO3YYAdETe%22%3B%7D; whatacartFrontContentLanguage=1e9303449001b8a8aa1733d17f8a059e3134e7a72847779adfd3530835b5836ca%3A2%3A%7Bi%3A0%3Bs%3A29%3A%22whatacartFrontContentLanguage%22%3Bi%3A1%3Bs%3A5%3A%22en-US%22%3B%7D; PHPBACKSESSID=nks3ajsaf0ifgeoaorhoh9mkp4; _csrf=b515118720d8abbbbe378cb770fe4fb2efbe45c6baaf1733ce61c7aeefb7da63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZFclfbuPam3ziIsgZXi15wAeK9Pvo7fB%22%3B%7D; _backendUser=e698f2e3d090c6e0f05e54f9837e641956b0096f061f609e699ae45abaf547a0a%3A2%3A%7Bi%3A0%3Bs%3A12%3A%22_backendUser%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22_GT3oHnCe0oAPCycXZ9LAbEgqIeSAXcQ%22%2C2592000%5D%22%3B%7D; whatacartAdminContentLanguage=8f179adbf0ff41fb3d5b2c4bb16a46a5c83e7f6d9d50558565077e1bdba8e8faa%3A2%3A%7Bi%3A0%3Bs%3A29%3A%22whatacartAdminContentLanguage%22%3Bi%3A1%3Bs%3A5%3A%22en-US%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\PROGRA~2\\IBM\\CLIENT~1;C:\\PROGRA~2\\IBM\\CLIENT~1\\Shared;C:\\PROGRA~2\\IBM\\CLIENT~1\\Emulator;C:\\Program Files (x86)\\Aspel\\Aspel-NOI 7.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\wamp64\\bin\\php\\php7.2.4;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/whatacart/index.php'
+    'REMOTE_PORT' => '61785'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/whatacart/'
+    'SCRIPT_NAME' => '/whatacart/index.php'
+    'PHP_SELF' => '/whatacart/index.php'
+    'REQUEST_TIME_FLOAT' => 1538900456.396
+    'REQUEST_TIME' => 1538900456
+]
+2018-10-10 02:24:29 [::1][-][csbu2ajismdog8o5vr733nnaq4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'solatext_cms_use'@'localhost' (using password: YES)' in C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'solatext_cms_us...', 'ZVf31r8myu99253...', NULL)
+#1 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#8 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\wamp64\www\whatacart\vendor\ushainformatique\yiichimp\library\modules\language\business\Manager.php(78): yii\db\ActiveQuery->all()
+#10 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(105): usni\library\modules\language\business\Manager->getList()
+#11 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(49): backend\web\BeforeActionBehavior->setLanguageData()
+#12 C:\wamp64\www\whatacart\protected\frontend\web\BeforeActionBehavior.php(35): backend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#13 [internal function]: frontend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#14 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#15 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#16 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#17 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#18 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#19 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\wamp64\www\whatacart\index.php(47): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'solatext_cms_use'@'localhost' (using password: YES)' in C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#6 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\wamp64\www\whatacart\vendor\ushainformatique\yiichimp\library\modules\language\business\Manager.php(78): yii\db\ActiveQuery->all()
+#8 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(105): usni\library\modules\language\business\Manager->getList()
+#9 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(49): backend\web\BeforeActionBehavior->setLanguageData()
+#10 C:\wamp64\www\whatacart\protected\frontend\web\BeforeActionBehavior.php(35): backend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#11 [internal function]: frontend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#12 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#13 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#14 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#15 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#16 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#17 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\wamp64\www\whatacart\index.php(47): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-10-10 02:24:29 [::1][-][csbu2ajismdog8o5vr733nnaq4][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\PROGRA~2\\IBM\\CLIENT~1;C:\\PROGRA~2\\IBM\\CLIENT~1\\Shared;C:\\PROGRA~2\\IBM\\CLIENT~1\\Emulator;C:\\Program Files (x86)\\Aspel\\Aspel-NOI 7.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\wamp64\\bin\\php\\php7.2.4;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/whatacart/index.php'
+    'REMOTE_PORT' => '59192'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/whatacart/'
+    'SCRIPT_NAME' => '/whatacart/index.php'
+    'PHP_SELF' => '/whatacart/index.php'
+    'REQUEST_TIME_FLOAT' => 1539156269.506
+    'REQUEST_TIME' => 1539156269
+]
+2018-10-10 02:24:38 [::1][-][csbu2ajismdog8o5vr733nnaq4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'solatext_cms_use'@'localhost' (using password: YES)' in C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php:630
+Stack trace:
+#0 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(630): PDO->__construct('mysql:host=loca...', 'solatext_cms_us...', 'ZVf31r8myu99253...', NULL)
+#1 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#3 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#6 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#8 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#9 C:\wamp64\www\whatacart\vendor\ushainformatique\yiichimp\library\modules\language\business\Manager.php(78): yii\db\ActiveQuery->all()
+#10 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(105): usni\library\modules\language\business\Manager->getList()
+#11 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(49): backend\web\BeforeActionBehavior->setLanguageData()
+#12 C:\wamp64\www\whatacart\protected\frontend\web\BeforeActionBehavior.php(35): backend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#13 [internal function]: frontend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#14 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#15 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#16 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#17 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#18 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#19 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\wamp64\www\whatacart\index.php(47): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'solatext_cms_use'@'localhost' (using password: YES)' in C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php:568
+Stack trace:
+#0 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(896): yii\db\Connection->open()
+#1 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(896): yii\db\Command->prepare(true)
+#4 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#6 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 C:\wamp64\www\whatacart\vendor\ushainformatique\yiichimp\library\modules\language\business\Manager.php(78): yii\db\ActiveQuery->all()
+#8 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(105): usni\library\modules\language\business\Manager->getList()
+#9 C:\wamp64\www\whatacart\protected\backend\web\BeforeActionBehavior.php(49): backend\web\BeforeActionBehavior->setLanguageData()
+#10 C:\wamp64\www\whatacart\protected\frontend\web\BeforeActionBehavior.php(35): backend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#11 [internal function]: frontend\web\BeforeActionBehavior->handleOnBeforeAction(Object(yii\base\ActionEvent))
+#12 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#13 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#14 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#15 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#16 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#17 C:\wamp64\www\whatacart\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\wamp64\www\whatacart\index.php(47): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-10-10 02:24:38 [::1][-][csbu2ajismdog8o5vr733nnaq4][info][application] $_COOKIE = [
+    'PHPFRONTSESSID' => 'csbu2ajismdog8o5vr733nnaq4'
+    '_frontendCSRF' => '2d2ca0258b0215fb38a041ff1015c72cd47066d6a8051a7262725f5270d478b4a:2:{i:0;s:13:\"_frontendCSRF\";i:1;s:32:\"JqUb5iAxpOIUu6UXkEqcRUyRc1q4asQg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/whatacart/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.9'
+    'HTTP_COOKIE' => 'PHPFRONTSESSID=csbu2ajismdog8o5vr733nnaq4; _frontendCSRF=2d2ca0258b0215fb38a041ff1015c72cd47066d6a8051a7262725f5270d478b4a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_frontendCSRF%22%3Bi%3A1%3Bs%3A32%3A%22JqUb5iAxpOIUu6UXkEqcRUyRc1q4asQg%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\PROGRA~2\\IBM\\CLIENT~1;C:\\PROGRA~2\\IBM\\CLIENT~1\\Shared;C:\\PROGRA~2\\IBM\\CLIENT~1\\Emulator;C:\\Program Files (x86)\\Aspel\\Aspel-NOI 7.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\wamp64\\bin\\php\\php7.2.4;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.33 (Win64) PHP/5.6.35 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.33 (Win64) PHP/5.6.35'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/whatacart/index.php'
+    'REMOTE_PORT' => '59221'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/whatacart/index.php'
+    'SCRIPT_NAME' => '/whatacart/index.php'
+    'PHP_SELF' => '/whatacart/index.php'
+    'REQUEST_TIME_FLOAT' => 1539156278.202
+    'REQUEST_TIME' => 1539156278
+]

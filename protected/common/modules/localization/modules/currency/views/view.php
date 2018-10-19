@@ -12,15 +12,15 @@ use usni\library\widgets\StatusLabel;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('currency', 'View Currency');
+$this->title    = UsniAdaptor::t('currency', 'Ver moneda');
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('currency', 'Currencies'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('currency', 'Monedas'),
                                         'url' => ['/localization/currency/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'View') . ' ' . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Ver') . ' ' . ' #' . $model['id']
                                     ]
                                 ];
 $editUrl        = UsniAdaptor::createUrl('localization/currency/default/update', ['id' => $model['id']]);

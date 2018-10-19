@@ -10,14 +10,14 @@
 use usni\UsniAdaptor;
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('orderstatus', 'Order Status'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('orderstatus', 'Estado del pedido'),
         'url' => ['/localization/orderstatus/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Create')
+        'label' => UsniAdaptor::t('application', 'Agregar')
     ]
 ];
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('orderstatus', 'Order Status');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('orderstatus', 'Estado del pedido');
 echo $this->render("/_form", ['formDTO' => $formDTO]);
 

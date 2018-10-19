@@ -293,7 +293,7 @@ class ProductBehavior extends \yii\base\Behavior
         }
         else
         {
-            $availability = $product['stock_status'] == 1 ? UsniAdaptor::t('products', 'In Stock') : UsniAdaptor::t('products', 'Out Of Stock');
+            $availability = $product['stock_status'] == 1 ? UsniAdaptor::t('products', 'En Stock') : UsniAdaptor::t('products', 'Fuera de Stock');
         }
         return $availability;
     }
@@ -488,7 +488,7 @@ class ProductBehavior extends \yii\base\Behavior
             }
             return $content;
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**

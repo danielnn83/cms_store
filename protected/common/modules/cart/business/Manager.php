@@ -166,12 +166,12 @@ class Manager extends \common\business\Manager
                     $value = $inputOptions[$optionId];
                     if(empty($value))
                     {
-                        $errors[$optionId] = [$productOption['display_name'] . ' ' . UsniAdaptor::t('application', 'is required')]; 
+                        $errors[$optionId] = [$productOption['display_name'] . ' ' . UsniAdaptor::t('application', 'Es obligatorio')]; 
                     }
                 }
                 else
                 {
-                    $errors[$optionId] = [$productOption['display_name'] . ' ' . UsniAdaptor::t('application', 'is required')]; 
+                    $errors[$optionId] = [$productOption['display_name'] . ' ' . UsniAdaptor::t('application', 'Es obligatorio')]; 
                 }
             }
         }
@@ -278,11 +278,11 @@ class Manager extends \common\business\Manager
         $cartDTO->setProduct($product);
         if($postData['qty'] < 1 || !ctype_digit($postData['qty']))
         {
-            return Json::encode(['error' => UsniAdaptor::t('cart', 'Input quantity should be >= 1')]);
+            return Json::encode(['error' => UsniAdaptor::t('cart', 'La cantidad de entrada debe ser >= 1')]);
         }
         if($product['minimum_quantity'] > $postData['qty'])
         {
-            return Json::encode(['error' => UsniAdaptor::t('cart', 'Input quantity should be >= minimum quantity')]);
+            return Json::encode(['error' => UsniAdaptor::t('cart', 'La cantidad de entrada debe ser >= cantidad mínima')]);
         }
         else
         {

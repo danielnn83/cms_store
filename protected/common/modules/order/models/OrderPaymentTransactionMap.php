@@ -40,10 +40,10 @@ class OrderPaymentTransactionMap extends \usni\library\db\ActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                     'order_id'         => UsniAdaptor::t('order', 'Order'),
-                     'amount'           => UsniAdaptor::t('order', 'Amount'),
-                     'transaction_record_id'    => UsniAdaptor::t('order', 'Transaction Record'),
-                     'payment_method'   => UsniAdaptor::t('payment', 'Payment Method')
+                     'order_id'         => UsniAdaptor::t('order', 'Pedido'),
+                     'amount'           => UsniAdaptor::t('order', 'Cantidad'),
+                     'transaction_record_id'    => UsniAdaptor::t('order', 'Registro de la transacción'),
+                     'payment_method'   => UsniAdaptor::t('payment', 'Método de pago')
                   ];
         return $labels;
 	}
@@ -53,6 +53,6 @@ class OrderPaymentTransactionMap extends \usni\library\db\ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('order', 'Order Payment Transaction Map');
+        return UsniAdaptor::t('order', 'Mapa de transacción de pago de pedido');
     }
 }

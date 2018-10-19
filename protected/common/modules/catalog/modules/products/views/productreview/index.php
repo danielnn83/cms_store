@@ -17,7 +17,7 @@ use products\utils\ReviewUtil;
 /* @var $gridViewDTO \products\dto\ProductReviewGridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('products', 'Manage Reviews');
+$title          = UsniAdaptor::t('products', 'Administrar comentarios');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 $dropdownData   = $gridViewDTO->getProductDropDownData();
 
@@ -42,7 +42,7 @@ $widgetParams   = [
                             'name',
                             'review',
                             [
-                                    'label'     => UsniAdaptor::t('products', 'Product'),
+                                    'label'     => UsniAdaptor::t('products', 'Producto'),
                                     'attribute' => 'product_id',
                                     'value'     => 'product_name',
                                     'filter'    => $dropdownData

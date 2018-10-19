@@ -17,11 +17,11 @@ $customerGroupData      = $formDTO->getCustomerGroupsDropdownData();
 $zoneData               = $formDTO->getTaxZonesDropdownData();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('tax', 'Tax Rule');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('tax', 'Regla de impuestos');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('tax', 'Tax Rule');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('tax', 'Regla de impuestos');
 }
 $form = ActiveForm::begin([
         'id' => 'taxruleeditview',

@@ -21,10 +21,10 @@ class MarketingUtil
     public static function getToNewsletterDropdown()
     {
         return [
-                    SendMailForm::ALL_CUSTOMERS               => UsniAdaptor::t('customer', 'All Customers'),
-                    SendMailForm::CUSTOMER_GROUP              => UsniAdaptor::t('customer', 'Customer Group'),
-                    SendMailForm::CUSTOMERS                   => UsniAdaptor::t('customer', 'Customers'),
-                    SendMailForm::PRODUCTS                    => UsniAdaptor::t('products', 'Products Purchased'),
+                    SendMailForm::ALL_CUSTOMERS               => UsniAdaptor::t('customer', 'Todos los clientes'),
+                    SendMailForm::CUSTOMER_GROUP              => UsniAdaptor::t('customer', 'Grupo de clientes'),
+                    SendMailForm::CUSTOMERS                   => UsniAdaptor::t('customer', 'Clientes'),
+                    SendMailForm::PRODUCTS                    => UsniAdaptor::t('products', 'Productos comprados'),
                ];
     }
 }

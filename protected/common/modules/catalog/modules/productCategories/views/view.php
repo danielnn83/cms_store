@@ -13,11 +13,11 @@ use usni\library\utils\FileUploadUtil;
 /* @var $detailViewDTO \usni\library\dto\DetailViewDTO */
 /* @var $this \usni\library\web\AdminView */
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('productCategories', 'Product Category') . ' #' . $model['id'];
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('productCategories', 'Categoría del producto') . ' #' . $model['id'];
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('productCategories', 'Product Categories'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('productCategories', 'Categoría del producto'),
                                         'url' => ['/catalog/productCategories/default/index']
                                     ],
                                     [
@@ -51,7 +51,7 @@ $widgetParams   = [
                                                 'format'     => 'raw'
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('productCategories', 'Display in top menu'),
+                                                'label'     => UsniAdaptor::t('productCategories', 'Mostrar en el menú superior'),
                                                 'attribute'  =>  'displayintopmenu',
                                                 'value'      => ProductCategoryUtil::getDisplayInTopMenu($model['displayintopmenu'])
                                             ],
@@ -61,7 +61,7 @@ $widgetParams   = [
                                                 'attribute' => 'metakeywords',
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('application', 'Meta Description'),
+                                                'label'     => UsniAdaptor::t('application', 'Meta Descripción'),
                                                 'attribute' => 'metadescription',
                                             ],
                                             'code',

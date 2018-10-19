@@ -12,10 +12,10 @@ use usni\library\utils\Html;
 /* @var $this \usni\library\web\AdminView */
 /* @var $formDTO \products\dto\AssignOptionDTO */
 
-$this->title                = UsniAdaptor::t('products', 'Assign Product Options');
+$this->title                = UsniAdaptor::t('products', 'Asignar opciones a los productos');
 $this->params['breadcrumbs']= [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Products'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Productos'),
                                         'url'   => UsniAdaptor::createUrl('/catalog/products/default/index')
                                     ],
                                     [
@@ -23,7 +23,7 @@ $this->params['breadcrumbs']= [
                                         'url'   => UsniAdaptor::createUrl('/catalog/products/default/view', ['id' => $formDTO->product['id']])
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Assign Options')
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Asignar opciones')
                                     ]
                             ];
 $model      = $formDTO->model;

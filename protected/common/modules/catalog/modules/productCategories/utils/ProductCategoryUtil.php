@@ -40,10 +40,10 @@ class ProductCategoryUtil
     {
         return [
                     ''          => Html::getDefaultPrompt(),
-                    'nameasc'   => UsniAdaptor::t('products', 'Name(A-Z)'),
-                    'namedesc'  => UsniAdaptor::t('products', 'Name(Z-A)'),
-                    'priceasc'  => UsniAdaptor::t('products', 'Price(Low > High)'),
-                    'pricedesc' => UsniAdaptor::t('products', 'Price(High > Low)'),
+                    'nameasc'   => UsniAdaptor::t('products', 'Nombre(A-Z)'),
+                    'namedesc'  => UsniAdaptor::t('products', 'Nombre(Z-A)'),
+                    'priceasc'  => UsniAdaptor::t('products', 'Precio(Bajo > Alto)'),
+                    'pricedesc' => UsniAdaptor::t('products', 'Precio(Alto > Bajo)'),
                ];
     }
     
@@ -56,7 +56,7 @@ class ProductCategoryUtil
     {
         if($displayInTopMenu == true)
         {
-            return UsniAdaptor::t('application', 'Yes');
+            return UsniAdaptor::t('application', 'Si');
         }
         return UsniAdaptor::t('application', 'No');
     }

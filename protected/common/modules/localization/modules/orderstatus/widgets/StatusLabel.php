@@ -55,59 +55,59 @@ class StatusLabel extends \yii\bootstrap\Widget
     public function getLabelWidget($value, $id)
     {
         $labelWidget = null;
-        if ($value == UsniAdaptor::t('order', 'Completed'))
+        if ($value == UsniAdaptor::t('order', 'Completado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_SUCCESS, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Pending'))
+        elseif ($value == UsniAdaptor::t('order', 'Pendiente'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Cancelled'))
+        elseif ($value == UsniAdaptor::t('order', 'Cancelado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DANGER, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Cancelled Reversal'))
+        elseif ($value == UsniAdaptor::t('order', 'Inversión cancelada'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Chargeback'))
+        elseif ($value == UsniAdaptor::t('order', 'Contracargo'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Denied'))
+        elseif ($value == UsniAdaptor::t('order', 'Negado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Expired'))
+        elseif ($value == UsniAdaptor::t('order', 'Expirado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Failed'))
+        elseif ($value == UsniAdaptor::t('order', 'Ha fallado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Processed'))
+        elseif ($value == UsniAdaptor::t('order', 'Procesado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Processing'))
+        elseif ($value == UsniAdaptor::t('order', 'Procesando'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Refunded'))
+        elseif ($value == UsniAdaptor::t('order', 'Reintegrado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_INFO, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Reversed'))
+        elseif ($value == UsniAdaptor::t('order', 'Regresado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_WARNING, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Shipped'))
+        elseif ($value == UsniAdaptor::t('order', 'Enviado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DEFAULT, 'id' => $id]);
         }
-        elseif ($value == UsniAdaptor::t('order', 'Voided'))
+        elseif ($value == UsniAdaptor::t('order', 'Anulado'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_DANGER, 'id' => $id]);
         }

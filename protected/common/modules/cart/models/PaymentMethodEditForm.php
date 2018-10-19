@@ -43,7 +43,7 @@ class PaymentMethodEditForm extends Model
             [['payment_method', 'comments', 'agree'],  'safe'],
             [['agree'],         'required', 'isEmpty' => [$this, 'checkAgree'], 
                                             'requiredValue' => "1", 
-                                            'message' => UsniAdaptor::t('cart', 'Customer should agree to terms and conditions for the purchase')]
+                                            'message' => UsniAdaptor::t('cart', 'El cliente debe aceptar los términos y condiciones para la compra')]
         );
     }
 
@@ -52,7 +52,7 @@ class PaymentMethodEditForm extends Model
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('payment', 'Payment Method');
+        return UsniAdaptor::t('payment', 'Método de pago');
     }
 
     /**
@@ -61,9 +61,9 @@ class PaymentMethodEditForm extends Model
     public function attributeLabels()
     {
         return [
-                'payment_method'    => UsniAdaptor::t('cart', 'Payment Method'),
-                'comments'          => UsniAdaptor::t('application', 'Comments'),
-                'agree'             => UsniAdaptor::t('application', 'I agree to')
+                'payment_method'    => UsniAdaptor::t('cart', 'Método de pago'),
+                'comments'          => UsniAdaptor::t('application', 'Comentarios'),
+                'agree'             => UsniAdaptor::t('application', 'Estoy de acuerdo con')
                ];
     }
     
@@ -73,7 +73,7 @@ class PaymentMethodEditForm extends Model
     public function attributeHints()
     {
         return [
-            'comments'       => UsniAdaptor::t('paymenthint', 'Comments while making payment')
+            'comments'       => UsniAdaptor::t('paymenthint', 'Comentarios al hacer el pago')
         ];
     }
     

@@ -44,7 +44,7 @@ class ExtensionActionColumn extends ActionColumn
     {
         if($this->checkAccess($model, 'manage'))
         {
-            $label = UsniAdaptor::t('application', 'Settings');
+            $label = UsniAdaptor::t('application', 'Configuraciones');
             $icon  = FA::icon('cog'). "\n";
             $url   = $this->resolveSettingsUrl($model);
             return Html::a($icon, $url, [
@@ -68,13 +68,13 @@ class ExtensionActionColumn extends ActionColumn
         {
             if($model['status'] == Extension::STATUS_ACTIVE)
             {
-                $label = UsniAdaptor::t('users', 'Deactivate');
+                $label = UsniAdaptor::t('users', 'Desactivar');
                 $icon  = FA::icon('close');
                 $url   = $this->resolveChangeStatusUrl($model, Extension::STATUS_INACTIVE);
             }
             elseif($model['status'] == Extension::STATUS_INACTIVE)
             {
-                $label = UsniAdaptor::t('users', 'Activate');
+                $label = UsniAdaptor::t('users', 'Activar');
                 $icon  = FA::icon('check');
                 $url   = $this->resolveChangeStatusUrl($model, Extension::STATUS_ACTIVE);
             }

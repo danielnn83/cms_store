@@ -6,12 +6,13 @@ if(!empty($this->params['breadcrumbs']))
 {
 ?>
 <div class="container">
+    <br/><br/><br/><br/><br/>
     <?php
         echo Breadcrumbs::widget(
                                 [
                                     'links'                => $this->params['breadcrumbs'],
                                     'homeLink'             => [
-                                                                'label' => UsniAdaptor::t('application', 'Home'),
+                                                                'label' => UsniAdaptor::t('application', 'SOLÁ TEXTIL'),
                                                                 'url'   => Url::home()
                                                               ],
                                 ]

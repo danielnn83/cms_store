@@ -263,7 +263,7 @@ class Product extends TranslatableActiveRecord
                         return $('#product-type').val() === '2';
                      }", 
                     'when' => [$this, 'validateDownloads'], 
-                    'message' => UsniAdaptor::t('products', 'Downloads are required')],
+                    'message' => UsniAdaptor::t('products', 'Se requieren descargas')],
                 [['image', 'uploadInstance'], 'image', 'skipOnEmpty' => true, 'extensions' => 'jpg, png, gif, jpeg'],
                 ['name', 'unique', 'targetClass' => ProductTranslated::className(), 'targetAttribute' => ['name', 'language'], 'on' => 'create'],
                 ['alias', 'unique', 'targetClass' => ProductTranslated::className(), 'targetAttribute' => ['alias', 'language'], 'on' => 'create'],
@@ -355,7 +355,7 @@ class Product extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Product') : UsniAdaptor::t('products', 'Products');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Producto') : UsniAdaptor::t('products', 'Productos');
     }
 
     /**

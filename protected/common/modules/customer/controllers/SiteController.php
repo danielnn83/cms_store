@@ -106,15 +106,15 @@ class SiteController extends BaseController
         SiteManager::getInstance()->processForgotPassword($formDTO);
         if($formDTO->getActivationStatusIssue() == true)
         {
-            FlashUtil::setMessage('warning', UsniAdaptor::t('userflash', 'Your account is not in active status.'));
+            FlashUtil::setMessage('warning', UsniAdaptor::t('userflash', 'Su cuenta no está en estado activo.'));
         }
         elseif($formDTO->getNotRegisteredEmailId() == true)
         {
-            FlashUtil::setMessage('danger', UsniAdaptor::t('userflash', 'The given email is not registered with us. Please enter a valid email.'));
+            FlashUtil::setMessage('danger', UsniAdaptor::t('userflash', 'El correo electrónico dado no está registrado con nosotros. Por favor introduzca una dirección de correo electrónico válida.'));
         }
         elseif($formDTO->getIsTransactionSuccess() == true)
         {
-            FlashUtil::setMessage('success', UsniAdaptor::t('userflash', 'Your login credentials are sent on registered email address.'));
+            FlashUtil::setMessage('success', UsniAdaptor::t('userflash', 'Sus credenciales de inicio de sesión son enviadas a una dirección de correo electrónico registrada.'));
         }
         return $this->render('/front/forgotpassword', ['formDTO' => $formDTO]);
     }
@@ -135,7 +135,7 @@ class SiteController extends BaseController
             $manager->processEdit($formDTO);
             if($formDTO->getIsTransactionSuccess() == true)
             {
-                FlashUtil::setMessage('success', UsniAdaptor::t('userflash', 'You have successfully registered with the system. An activation email has been sent at your registered email address.'));
+                FlashUtil::setMessage('success', UsniAdaptor::t('userflash', 'Usted se ha registrado exitosamente a el sistema. Se ha enviado un correo electrónico de activación a su dirección de correo electrónico registrada.'));
                 return $this->redirect(UsniAdaptor::createUrl('customer/site/login'));
             }
             else
@@ -171,7 +171,7 @@ class SiteController extends BaseController
             $manager->processEdit($formDTO);
             if($formDTO->getIsTransactionSuccess())
             {
-                FlashUtil::setMessage('success', UsniAdaptor::t('applicationflash', 'Record has been updated successfully.'));
+                FlashUtil::setMessage('success', UsniAdaptor::t('applicationflash', 'El registro se ha actualizado con éxito.'));
             }
             return $this->render('/front/editprofile', ['formDTO' => $formDTO]);
         }
@@ -204,12 +204,12 @@ class SiteController extends BaseController
         UsniAdaptor::app()->getSession()->setFlash('warning', UserUtil::getPasswordInstructions());
         if($formDTO->getIsTransactionSuccess() === true)
         {
-            FlashUtil::setMessage('success', UsniAdaptor::t('userflash', 'Password has been changed successfully.'));
+            FlashUtil::setMessage('success', UsniAdaptor::t('userflash', 'La contraseña ha sido cambiada con éxito.'));
             return $this->refresh();
         }
         elseif($formDTO->getIsTransactionSuccess() === false)
         {
-            throw new ForbiddenHttpException(\Yii::t('yii','You are not authorized to perform this action.'));
+            throw new ForbiddenHttpException(\Yii::t('yii','No estás autorizado a realizar esta acción.'));
         }
         else
         {
@@ -230,11 +230,11 @@ class SiteController extends BaseController
             $result = SiteManager::getInstance()->processValidateEmailAddress($hash, $email);
             if($result == true)
             {
-                FlashUtil::setMessage('success', UsniAdaptor::t('users', 'Your email has been validated, Please login to continue.'));
+                FlashUtil::setMessage('success', UsniAdaptor::t('users', 'Su correo electrónico ha sido validado, por favor inicie sesión para continuar.'));
             }
             elseif($result == false)
             {
-                FlashUtil::setMessage('error', UsniAdaptor::t('users', 'Your email validation fails. Please contact system admin.'));
+                FlashUtil::setMessage('error', UsniAdaptor::t('users', 'Su validación de correo electrónico falla. Por favor contacte al administrador del sistema.'));
             }
             return $this->redirect(UsniAdaptor::createUrl('customer/site/login'));
         }
@@ -299,7 +299,7 @@ class SiteController extends BaseController
         SiteManager::getInstance()->processOrderView($detailViewDTO, UsniAdaptor::app()->storeManager->selectedStoreId);
         if($detailViewDTO->getEmptyOrder() == true)
         {
-            throw new InvalidParamException(UsniAdaptor::t('order', "Invalid order"));
+            throw new InvalidParamException(UsniAdaptor::t('order', "Pedido inválido"));
         }
         elseif($detailViewDTO->getIsValidOrder() == true)
         {
@@ -307,7 +307,7 @@ class SiteController extends BaseController
         }
         else
         {
-            throw new InvalidParamException(UsniAdaptor::t('order', "Invalid order"));
+            throw new InvalidParamException(UsniAdaptor::t('order', "Pedido inválido"));
         }
     }
     

@@ -14,11 +14,11 @@ $parentOptions  = $formDTO->getParentDropdownOptions();
 $memberOptions  = $formDTO->getGroupMemberOptions();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('customer', 'Customer Group');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('customer', 'Grupo de clientes');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('customer', 'Customer Group');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('customer', 'Grupo de clientes');
 }
 $form = ActiveForm::begin([
         'id' => 'customergroupeditview',

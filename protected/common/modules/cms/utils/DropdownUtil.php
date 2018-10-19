@@ -21,10 +21,10 @@ class DropdownUtil
     public static function getStatusSelectOptions()
     {
         return [
-                    Module::STATUS_PUBLISHED      => UsniAdaptor::t('cms', 'Published'),
-                    Module::STATUS_UNPUBLISHED    => UsniAdaptor::t('cms', 'Unpublished'),
-                    Module::STATUS_ARCHIVED       => UsniAdaptor::t('cms', 'Archived'),
-                    Module::STATUS_TRASHED        => UsniAdaptor::t('cms', 'Trashed'),
+                    Module::STATUS_PUBLISHED      => UsniAdaptor::t('cms', 'Publicado'),
+                    Module::STATUS_UNPUBLISHED    => UsniAdaptor::t('cms', 'No publicado'),
+                    Module::STATUS_ARCHIVED       => UsniAdaptor::t('cms', 'Archivado'),
+                    Module::STATUS_TRASHED        => UsniAdaptor::t('cms', 'Para la basura'),
                ];
     }
 }

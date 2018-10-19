@@ -12,12 +12,12 @@ use usni\library\widgets\BrowseDropdown;
 $model  = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('country', 'Countries'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('country', 'Paises'),
         'url' => ['/localization/country/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model->id
+        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model->id
     ]
 ];
 
@@ -26,5 +26,5 @@ $browseParams   = ['permission' => 'country.updateother',
                    'model'  => $model];
 echo BrowseDropdown::widget($browseParams);
 
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('country', 'Country');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('country', 'País');
 echo $this->render("/_form", ['formDTO' => $formDTO]);

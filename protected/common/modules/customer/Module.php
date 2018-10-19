@@ -63,9 +63,9 @@ class Module extends SecuredModule
     public function getPermissions()
     {
         $permissions = parent::getPermissions();
-        $permissions['Customer']['customer.change-password']    = UsniAdaptor::t('users', 'Change Password');
-        $permissions['Customer']['customer.change-status']      = UsniAdaptor::t('users', 'Change Status');
-        $permissions['Customer']['customer.change-passwordother'] = UsniAdaptor::t('users', 'Change Others Password');
+        $permissions['Customer']['customer.change-password']    = UsniAdaptor::t('users', 'Cambiar Password');
+        $permissions['Customer']['customer.change-status']      = UsniAdaptor::t('users', 'Cambiar Estatus');
+        $permissions['Customer']['customer.change-passwordother'] = UsniAdaptor::t('users', 'Cambiar otros Password');
         return $permissions;
     }
     

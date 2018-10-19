@@ -14,11 +14,11 @@ use products\widgets\FileDownload;
 $model = $formDTO->getModel();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Product Download');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Descargue de producto');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('products', 'Product Download');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('products', 'Descargue de producto');
 }
 $form = ActiveForm::begin([
         'id' => 'productdownloadeditview',

@@ -54,13 +54,13 @@ class ProductReviewActionColumn extends ActionColumn
         {
             if($model['status'] == ProductReview::STATUS_PENDING)
             {
-                $label  = UsniAdaptor::t('products', 'Approve');
+                $label  = UsniAdaptor::t('products', 'Aprobar');
                 $icon   = FA::icon('check');
                 return Html::a($icon, '#', ['class' => 'approve-review-link', 'title' => $label]);
             }
             else
             {
-                $label  = UsniAdaptor::t('products', 'Unapprove');
+                $label  = UsniAdaptor::t('products', 'No aprobar');
                 $icon   = FA::icon('remove');
                 return Html::a($icon, '#', ['class' => 'unapprove-review-link', 'title' => $label]);
             }
@@ -81,7 +81,7 @@ class ProductReviewActionColumn extends ActionColumn
         {
             if($model['status'] == ProductReview::STATUS_SPAM)
             {
-                $label   = UsniAdaptor::t('products', 'Not Spam');
+                $label   = UsniAdaptor::t('products', 'No Spam');
                 $icon    = FA::icon('comments-o');
                 return Html::a($icon, '#', ['class' => 'remove-spam-review-link', 'title' => $label]);
             }

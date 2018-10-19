@@ -18,11 +18,11 @@ if(!empty($errors))
 <table id="special-value-table" class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
-            <td class="text-left"><?php echo UsniAdaptor::t('customer', 'Customer Group');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Priority');?></td>
-            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Price');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Start Date');?></td>
-            <td class="text-left"><?php echo UsniAdaptor::t('products', 'End Date');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('customer', 'Grupo de clientes');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Prioridad');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Precio');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('products', 'Fecha de inicio');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Fecha de fin');?></td>
             <td class="text-right"></td>
         </tr>
     </thead>
@@ -38,20 +38,20 @@ if(!empty($errors))
                         <?= $form->field($special, "[$index]group_id")->dropDownList($formDTO->getGroups())->label(false);?>
                     </td>
                     <td class="text-right">
-                        <?= $form->field($special, "[$index]priority")->textInput(['placeholder' => UsniAdaptor::t('products', 'Priority')])->label(false);?>
+                        <?= $form->field($special, "[$index]priority")->textInput(['placeholder' => UsniAdaptor::t('products', 'Prioridad')])->label(false);?>
                     </td>
                     <td class="text-left">
-                        <?= $form->field($special, "[$index]price")->textInput(['placeholder' => UsniAdaptor::t('products', 'Price')])->label(false);?>
+                        <?= $form->field($special, "[$index]price")->textInput(['placeholder' => UsniAdaptor::t('products', 'Precio')])->label(false);?>
                     </td>
                     <td class="text-right">
-                        <?= $form->field($special, "[$index]start_datetime", ['inputOptions' => ['class' => 'form-control datefield']])->textInput(['placeholder' => UsniAdaptor::t('products', 'Start Datetime')])->label(false);?>
+                        <?= $form->field($special, "[$index]start_datetime", ['inputOptions' => ['class' => 'form-control datefield']])->textInput(['placeholder' => UsniAdaptor::t('products', 'Fecha de inicio')])->label(false);?>
                     </td>
                     <td class="text-left">
-                        <?= $form->field($special, "[$index]end_datetime", ['inputOptions' => ['class' => 'form-control datefield']])->textInput(['placeholder' => UsniAdaptor::t('products', 'End Datetime')])->label(false);?>
+                        <?= $form->field($special, "[$index]end_datetime", ['inputOptions' => ['class' => 'form-control datefield']])->textInput(['placeholder' => UsniAdaptor::t('products', 'Fecha de fin')])->label(false);?>
                     </td>
                     <td class="text-right">
                         <button type="button" id="remove-special-value-row" onclick="$(this).tooltip('destroy');
-                            $(this).closest('.special-value-row').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Remove');?>" id="remove">
+                            $(this).closest('.special-value-row').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Borrar');?>" id="remove">
                             <i class="fa fa-minus-circle"></i>
                         </button>
                     </td>
@@ -65,7 +65,7 @@ if(!empty($errors))
         <tr>
             <td colspan="5"></td>
             <td class="text-left">
-                <button type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="<?php echo UsniAdaptor::t('products', 'Add Discount');?>" id="add-special-value-row">
+                <button type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="<?php echo UsniAdaptor::t('products', 'Agregar descuento');?>" id="add-special-value-row">
                     <i class="fa fa-plus-circle"></i>
                 </button>
             </td>

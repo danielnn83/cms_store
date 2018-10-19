@@ -40,8 +40,8 @@ class Module extends \usni\library\components\SecuredModule
     public function getPermissions()
     {
         $permissions['MarketingModule'] = [
-                                                'access.marketing'  => UsniAdaptor::t('application', 'Access Tab'),
-                                                'marketing.mail'    => UsniAdaptor::t('marketing', 'Marketing Mails'),
+                                                'access.marketing'  => UsniAdaptor::t('application', 'Tab de Acceso'),
+                                                'marketing.mail'    => UsniAdaptor::t('marketing', 'Comercialización de correos'),
                                           ];
         return $permissions;
     }

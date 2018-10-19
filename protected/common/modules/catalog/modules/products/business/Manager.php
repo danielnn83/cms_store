@@ -55,7 +55,7 @@ class Manager extends \common\business\Manager
         $isValid  = $this->isValidProductId($model['id']);
         if($model->scenario === 'update' && $isValid == false)
         {
-            throw new InvalidParamException(UsniAdaptor::t('products', "Invalid product"));
+            throw new InvalidParamException(UsniAdaptor::t('products', "Producto invalido"));
         }
         parent::processEdit($formDTO);
         $taxClasses = ArrayUtil::map(ProductTaxClassDAO::getAll($this->language), 'id', 'name');
@@ -291,7 +291,7 @@ class Manager extends \common\business\Manager
                             'uploadInstanceAttribute' => 'uploadInstance',
                             'type'              => 'image',
                             'savedAttribute'    => 'savedImage',
-                            'fileMissingError'  => UsniAdaptor::t('application', 'Please upload image'),
+                            'fileMissingError'  => UsniAdaptor::t('application', 'Por favor carga la imagen'),
                             'required'          => true
                       ];
             $uploadInstanceManager = new UploadInstanceManager($config);
@@ -370,27 +370,27 @@ class Manager extends \common\business\Manager
             if(!is_numeric($productDiscount['price']))
             {
                 $isValid = false;
-                $model->addError('discounts', UsniAdaptor::t('products', 'Discounted price is invalid at row') . ' ' . ($index + 1));
+                $model->addError('discounts', UsniAdaptor::t('products', 'El precio con descuento no es válido en la fila') . ' ' . ($index + 1));
             }
             elseif ($productDiscount['price'] >= $model->price)
             {
                 $isValid = false;
-                $model->addError('discounts', UsniAdaptor::t('products', 'Discounted price should be less then base price at row') . ' ' . ($index + 1));
+                $model->addError('discounts', UsniAdaptor::t('products', 'El precio de descuento debe ser menor que el precio base en la fila') . ' ' . ($index + 1));
             }
             if(!ctype_digit($productDiscount['priority']))
             {
                 $isValid = false;
-                $model->addError('discounts', UsniAdaptor::t('products', 'Priority is invalid at row') . ' ' . ($index + 1));
+                $model->addError('discounts', UsniAdaptor::t('products', 'La prioridad no es válida en la fila') . ' ' . ($index + 1));
             }
             if(!ctype_digit($productDiscount['quantity']))
             {
                 $isValid = false;
-                $model->addError('discounts', UsniAdaptor::t('products', 'Quantity is invalid at row') . ' ' . ($index + 1));
+                $model->addError('discounts', UsniAdaptor::t('products', 'La cantidad no es válida en la fila') . ' ' . ($index + 1));
             }
             if (strtotime($productDiscount['start_datetime']) >= strtotime($productDiscount['end_datetime']))
             {
                 $isValid = false;
-                $model->addError('discounts', UsniAdaptor::t('products', 'Start date should be less then end date at row') . ' ' . ($index + 1));
+                $model->addError('discounts', UsniAdaptor::t('products', 'La fecha de inicio debe ser inferior a la fecha de finalización en la fila') . ' ' . ($index + 1));
             }
         }
         return $isValid;
@@ -410,22 +410,22 @@ class Manager extends \common\business\Manager
             if(!is_numeric($productSpecial['price']))
             {
                 $isValid = false;
-                $model->addError('specials', UsniAdaptor::t('products', 'Special price is invalid at row') . ' ' . ($index + 1));
+                $model->addError('specials', UsniAdaptor::t('products', 'El precio especial no es válido en la fila') . ' ' . ($index + 1));
             }
             elseif ($productSpecial['price'] >= $model->price)
             {
                 $isValid = false;
-                $model->addError('specials', UsniAdaptor::t('products', 'Special price should be less then base price at row') . ' ' . ($index + 1));
+                $model->addError('specials', UsniAdaptor::t('products', 'El precio especial debe ser menor que el precio base en la fila') . ' ' . ($index + 1));
             }
             if(!ctype_digit($productSpecial['priority']))
             {
                 $isValid = false;
-                $model->addError('specials', UsniAdaptor::t('products', 'Priority is invalid at row') . ' ' . ($index + 1));
+                $model->addError('specials', UsniAdaptor::t('products', 'La prioridad no es válida en la fila') . ' ' . ($index + 1));
             }
             if (strtotime($productSpecial['start_datetime']) >= strtotime($productSpecial['end_datetime']))
             {
                 $isValid = false;
-                $model->addError('specials', UsniAdaptor::t('products', 'Start date should be less then end date at row') . ' ' . ($index + 1));
+                $model->addError('specials', UsniAdaptor::t('products', 'La fecha de inicio debe ser inferior a la fecha de finalización en la fila') . ' ' . ($index + 1));
             }
         }
         return $isValid;
@@ -468,7 +468,7 @@ class Manager extends \common\business\Manager
                         {
                             foreach($error as $value)
                             {
-                                $model->addError('images', UsniAdaptor::t('products', 'At row') . ' ' . $index . ' ' . $value);
+                                $model->addError('images', UsniAdaptor::t('products', 'En la fila') . ' ' . $index . ' ' . $value);
                             }
                         }
                     }
@@ -578,7 +578,7 @@ class Manager extends \common\business\Manager
         {
             return $lengthClass['name'];
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**
@@ -593,7 +593,7 @@ class Manager extends \common\business\Manager
         {
             return $weightClass['name'];
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**
@@ -680,7 +680,7 @@ class Manager extends \common\business\Manager
         $isValid    = $this->isValidProductId($model['id']);
         if($isValid == false)
         {
-            throw new InvalidParamException(UsniAdaptor::t('products', "Invalid product"));
+            throw new InvalidParamException(UsniAdaptor::t('products', "Producto no válido"));
         }
         parent::processDetail($detailViewDTO);
     }

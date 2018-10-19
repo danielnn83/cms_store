@@ -47,8 +47,8 @@ class AdminSelectPaymentMethodForm extends \yii\base\Model
 	public function attributeLabels()
 	{
 		$labels = [
-                     'payment_type' => UsniAdaptor::t('order', 'Payment Type'),
-                     'orderId'      => UsniAdaptor::t('order', 'Order'),
+                     'payment_type' => UsniAdaptor::t('order', 'Tipo de pago'),
+                     'orderId'      => UsniAdaptor::t('order', 'Pedido'),
                   ];
         return $labels;
 	}
@@ -58,6 +58,6 @@ class AdminSelectPaymentMethodForm extends \yii\base\Model
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('payment', 'Select Payment Method');
+        return UsniAdaptor::t('payment', 'Seleccionar método de pago');
     }
 }

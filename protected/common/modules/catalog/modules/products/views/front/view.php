@@ -12,7 +12,7 @@ use products\widgets\PriceWidget;
 /* @var $this \products\web\ProductView */
 /* @var $productDTO \products\dto\ProductDTO*/
 
-$notSet     = UsniAdaptor::t('application', '(not set)');
+$notSet     = UsniAdaptor::t('application', '(no establecido/perteneciente)');
 $customer   = UsniAdaptor::app()->user->getIdentity();
 
 $this->params['breadcrumbs'] = ['label' => $this->product['name']];
@@ -29,7 +29,7 @@ $this->title                 = $this->product['name'];
                             {
                                 ?>
                                 <button type="button" data-toggle="tooltip" class="btn btn-success product-wishlist" title="" data-productid = "<?php echo $this->product['id']; ?>" data-original-title="Add to Wish List">
-                                    <?php echo UsniAdaptor::t('products', 'Add to Wishlist'); ?>
+                                    <?php echo UsniAdaptor::t('products', 'Agregar a la lista de deseos'); ?>
                                 </button>
                                 <?php
                             }
@@ -40,7 +40,7 @@ $this->title                 = $this->product['name'];
                             {
                                 ?>
                                 <button type="button" data-toggle="tooltip" class="btn btn-success add-product-compare" title="" data-productid = "<?php echo $this->product['id']; ?>" data-original-title="Compare this Product">
-                                    <?php echo UsniAdaptor::t('products', 'Add to Compare'); ?>
+                                    <?php echo UsniAdaptor::t('products', 'Agregar a comparar'); ?>
                                 </button>
                                 <?php
                             }
@@ -50,16 +50,16 @@ $this->title                 = $this->product['name'];
                         <?php
                         $items[] = [
                                         'options' => ['id' => 'tab-description'],
-                                        'label' => UsniAdaptor::t('application', 'Description'),
+                                        'label' => UsniAdaptor::t('application', 'Descripción'),
                                         'active' => 'true',
-                                        'content' => $this->product['description'] == null ? UsniAdaptor::t('application', '(not set)') : $this->product['description']
+                                        'content' => $this->product['description'] == null ? UsniAdaptor::t('application', '(no establecido/perteneciente)') : $this->product['description']
                                     ];
                         if (($this->product['allowReviews'] && UsniAdaptor::app()->user->isGuest === false)
                                 || ($this->product['allowReviews'] && $this->product['allowGuestReviews'] && UsniAdaptor::app()->user->isGuest === true))
                         {
                             $items[] = [
                                             'options' => ['id' => 'tab-review'],
-                                            'label' => UsniAdaptor::t('products', 'Reviews') . "(" . $this->product['reviewCnt'] . ")",
+                                            'label' => UsniAdaptor::t('products', 'Comentarios') . "(" . $this->product['reviewCnt'] . ")",
                                             'content' => $this->render('/front/_reviewview', ['reviewListDataProvider' => $productDTO->getReviewListDataProvider()])
                                         ];
                         }
@@ -67,7 +67,7 @@ $this->title                 = $this->product['name'];
                         {
                             $items[] = [
                                         'options' => ['id' => 'tab-specifications'],
-                                        'label' => UsniAdaptor::t('products', 'Specifications'),
+                                        'label' => UsniAdaptor::t('products', 'Especificaciones'),
                                         'content' => $this->render('/front/_attributes', ['data' => $productDTO->getGroupedAttributes()])
                                     ];
                         }
@@ -78,21 +78,21 @@ $this->title                 = $this->product['name'];
                         <h1><?php echo $this->product['name']; ?></h1>
                         <ul class="list-unstyled">
                             <li>
-                                <?php echo UsniAdaptor::t('products', 'Brand'); ?></span>:<?php echo str_repeat("&nbsp", 4) . $this->getManufacturerName(); ?>
+                                <?php echo UsniAdaptor::t('products', 'Marca'); ?></span>:<?php echo str_repeat("&nbsp", 4) . $this->getManufacturerName(); ?>
                             </li>
                             <li>
                                 <?php echo UsniAdaptor::t('products', 'SKU') ?>:</span><?php echo str_repeat("&nbsp", 4) ?>
                                     <?php echo $this->product['sku'] == null ? $notSet : $this->product['sku']; ?>
                             <li>
                             <li>
-                                <?php echo UsniAdaptor::t('products', 'Availability') ?></span>:<?php echo str_repeat("&nbsp", 4) ?>
+                                <?php echo UsniAdaptor::t('products', 'Disponibilidad') ?></span>:<?php echo str_repeat("&nbsp", 4) ?>
                                 <?php echo $this->product['availability']; ?>
                             </li>
                         </ul>
                         <ul class="list-unstyled">
                             <li>
                                 <?php
-                                echo UsniAdaptor::t('products', 'Price') . ': ' . PriceWidget::widget(['priceExcludingTax' => $this->product['priceExcludingTax'],
+                                echo UsniAdaptor::t('products', 'Precio') . ': ' . PriceWidget::widget(['priceExcludingTax' => $this->product['priceExcludingTax'],
                                                              'tax'  => $this->product['tax'],
                                                              'defaultPrice' => $this->product['price'],
                                                              'isDetail' => true]);
@@ -102,7 +102,7 @@ $this->title                 = $this->product['name'];
                                 <?php
                                 if (!empty($this->product['weight']))
                                 {
-                                    echo UsniAdaptor::t('products', 'Weight') . ': ' . $this->product['weight'];
+                                    echo UsniAdaptor::t('products', 'Peso') . ': ' . $this->product['weight'];
                                 }
                                 ?>
                             </li>
@@ -122,7 +122,7 @@ $this->title                 = $this->product['name'];
                                     <hr/>
                                 </li>
                                 <?php
-                                echo '<h3>' . UsniAdaptor::t('products', 'Discounted Price') . '</h3>';
+                                echo '<h3>' . UsniAdaptor::t('products', 'Precio descontado') . '</h3>';
                                 echo $this->getDiscountText();
                             }
                             ?>
@@ -135,20 +135,20 @@ $this->title                 = $this->product['name'];
                                 if ($valueContent != null)
                                 {
                                     ?>
-                                    <h3><?php echo UsniAdaptor::t('products', 'Available Options'); ?></h3>
+                                    <h3><?php echo UsniAdaptor::t('products', 'Opciones Disponibles'); ?></h3>
                                     <?php echo $valueContent; ?>
                                     <?php
                                 }
                                 ?>
                                 <div class="form-group">
-                                    <label class="control-label" for="input-quantity"><?php echo UsniAdaptor::t('products', 'Quantity'); ?></label>
+                                    <label class="control-label" for="input-quantity"><?php echo UsniAdaptor::t('products', 'Cantidad'); ?></label>
                                     <input type="hidden" name="product_id" value="<?php echo $this->product['id']; ?>" />
                                     <input type="hidden" name="minimum_quantity" value="<?php echo $this->product['minimum_quantity']; ?>" id="product_minimum_quantity"/>
                                     <input type="text" name="quantity" size="5" value="1" id="product_quantity"/>&nbsp;&nbsp;
                                     <button type="button" id="button-cart" class="btn btn-success add-cart-detail" data-productid = "<?php echo $this->product['id']; ?>">
-                                        <?php echo UsniAdaptor::t('cart', 'Add to Cart'); ?>
+                                        <?php echo UsniAdaptor::t('cart', 'Agregar al carrito'); ?>
                                     </button>
-                                    <div class="hidden" id="inputquantity-error"><?php echo UsniAdaptor::t('cart', 'Input quantity should be >= minimum quantity'); ?></div>
+                                    <div class="hidden" id="inputquantity-error"><?php echo UsniAdaptor::t('cart', 'La cantidad de entrada debe ser >= a la cantidad minima'); ?></div>
                                 </div>
                             </form>
                             <?php
@@ -156,7 +156,7 @@ $this->title                 = $this->product['name'];
                             {
                                 ?>
                                 <div class="alert alert-warning"><i class="fa fa-info-circle"></i>
-                                    <?php echo UsniAdaptor::t('products', "This product has a minimum quantity of ") . $this->product['minimum_quantity'] ?>
+                                    <?php echo UsniAdaptor::t('products', "Este producto tiene una cantidad mínima de ") . $this->product['minimum_quantity'] ?>
                                 </div>
                                 <?php
                             }
@@ -184,7 +184,7 @@ $this->title                 = $this->product['name'];
                             ?>
                             <div class="tags">
                                 <hr/>
-                                <?php echo UsniAdaptor::t('products', 'Tags') . ': ' . rtrim($tags, ","); ?>
+                                <?php echo UsniAdaptor::t('products', 'Etiquetas') . ': ' . rtrim($tags, ","); ?>
                             </div>
                             <?php
                         }
@@ -195,7 +195,7 @@ $this->title                 = $this->product['name'];
                 if ($this->product['relatedProductCount'] > 0)
                 {
                     ?>
-                    <h3><?php echo UsniAdaptor::t('products', 'Related Products'); ?></h3>
+                    <h3><?php echo UsniAdaptor::t('products', 'Productos relacionados'); ?></h3>
                     <div class="row">
                         <?php echo $this->render('/front/_relatedproductslist', ['products' => $productDTO->getRelatedProducts()]); ?>
                     </div>

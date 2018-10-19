@@ -10,14 +10,14 @@
 use usni\UsniAdaptor;
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('tax', 'Zones'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('tax', 'Zonas'),
         'url' => ['/localization/tax/zone/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Create')
+        'label' => UsniAdaptor::t('application', 'Agregar')
     ]
 ];
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('tax', 'Zone');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('tax', 'Zona');
 echo $this->render("/zone/_form", ['formDTO' => $formDTO]);
 

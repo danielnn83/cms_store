@@ -11,12 +11,12 @@ use usni\library\modules\auth\widgets\BrowseDropdown;
 $model  = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('customer', 'Customer Groups'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('customer', 'Grupos de clientes'),
         'url' => ['/customer/group/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model->id
+        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model->id
     ]
 ];
 
@@ -25,5 +25,5 @@ $browseParams   = ['permission' => 'group.updateother',
                    'model'  => $model];
 echo BrowseDropdown::widget($browseParams);
 
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('auth', 'Group');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('auth', 'Grupo');
 echo $this->render("/groups/_form", ['formDTO' => $formDTO]);

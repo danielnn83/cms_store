@@ -15,16 +15,16 @@ use usni\library\widgets\BrowseDropdown;
 $model = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Products'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Productos'),
                                         'url'   => ['/catalog/products/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model['id']
                                     ]
                                ];
 $browseParams   = ['permission' => 'product.updateother',
                    'data' => $formDTO->getBrowseModels(),
                    'model' => $model];
 echo BrowseDropdown::widget($browseParams);
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('products', 'Product');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('products', 'Producto');
 echo $this->render('/_tabform', ['formDTO' => $formDTO]);

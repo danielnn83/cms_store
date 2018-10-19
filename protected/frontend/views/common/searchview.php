@@ -12,7 +12,7 @@ $this->params['categoryList'] = $listViewDTO->getCategoryList();
 $this->params['model']  = $listViewDTO->getSearchModel();
 $this->leftnavView  = '//common/searchform';
 
-$title              = UsniAdaptor::t('application', 'Search Results');
+$title              = UsniAdaptor::t('application', 'Resultados de la búsqueda');
 $this->title        = $this->params['breadcrumbs'][] = $title;
 ?>
 <h2><?php echo $title?></h2>

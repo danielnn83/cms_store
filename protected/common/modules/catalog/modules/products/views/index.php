@@ -16,7 +16,7 @@ use products\grid\ProductActionColumn;
 /* @var $gridViewDTO \products\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('products', 'Manage Products');
+$title          = UsniAdaptor::t('products', 'Administrar productos');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -27,7 +27,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'productgridview',
     'pjaxId'        => 'productgridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('products', 'Product') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('products', 'Productos') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'productbulkeditview',
     'permissionPrefix'  => 'product',

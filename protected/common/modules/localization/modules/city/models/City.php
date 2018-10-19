@@ -46,8 +46,8 @@ class City extends TranslatableActiveRecord
 	{
 		$labels = [
                      'id'				=> UsniAdaptor::t('application', 'Id'),
-                     'name'				=> UsniAdaptor::t('application', 'Name'),
-                     'country_id'       => UsniAdaptor::t('country', 'Country'),
+                     'name'				=> UsniAdaptor::t('application', 'Nombre'),
+                     'country_id'       => UsniAdaptor::t('country', 'País'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -57,7 +57,7 @@ class City extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('city', 'City') : UsniAdaptor::t('city', 'Cities');
+        return ($n == 1) ? UsniAdaptor::t('city', 'Ciudad') : UsniAdaptor::t('city', 'Ciudades');
     }
 
     /**

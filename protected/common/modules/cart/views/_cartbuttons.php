@@ -2,10 +2,10 @@
 use usni\library\utils\Html;
 use usni\UsniAdaptor;
 
-$continueShoppingLabel      = UsniAdaptor::t('cart', 'Continue Shopping');
+$continueShoppingLabel      = UsniAdaptor::t('cart', 'Continuar comprando');
 $homeUrl                    = UsniAdaptor::app()->getHomeUrl();
 
-$checkoutLabel  = UsniAdaptor::t('cart', 'Checkout');
+$checkoutLabel  = UsniAdaptor::t('cart', 'Revisar');
 $checkoutLink   = Html::a($checkoutLabel, UsniAdaptor::createUrl('cart/checkout/index'), ['class' => 'btn btn-success']);
 if(!empty($products))
 {

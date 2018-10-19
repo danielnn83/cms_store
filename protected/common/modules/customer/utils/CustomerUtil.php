@@ -22,9 +22,9 @@ class CustomerUtil
     public static function getAddressTypeDropdown()
     {
         return [
-                    Address::TYPE_SHIPPING_ADDRESS  => UsniAdaptor::t('customer', 'Shipping Address'),
-                    Address::TYPE_BILLING_ADDRESS   => UsniAdaptor::t('customer', 'Billing Address'),
-                    Address::TYPE_DEFAULT           => UsniAdaptor::t('customer', 'Default Address')
+                    Address::TYPE_SHIPPING_ADDRESS  => UsniAdaptor::t('customer', 'Dirección de envio'),
+                    Address::TYPE_BILLING_ADDRESS   => UsniAdaptor::t('customer', 'Dirección de facturación'),
+                    Address::TYPE_DEFAULT           => UsniAdaptor::t('customer', 'Dirección de default')
                ];
     }
     
@@ -38,7 +38,7 @@ class CustomerUtil
     {
         if ($email == null)
         {
-            return $username . '@whatacart.com';
+            return $username . '@correo.com';
         }
         else
         {
@@ -54,13 +54,13 @@ class CustomerUtil
     public static function getFormattedCustomerActivityKey($key)
     {
         $formattedKeys = [
-                            'new_registration'      => UsniAdaptor::t('customer', 'registered for an account.'),
-                            'account_order_created' => UsniAdaptor::t('customer', 'created a new order.'),
-                            'login'                 => UsniAdaptor::t('customer', 'logged in.'),
-                            'edit_profile'          => UsniAdaptor::t('customer', 'updated their account details.'),
-                            'forgot_password'       => UsniAdaptor::t('customer', 'requested a new password.'),
-                            'change_password'       => UsniAdaptor::t('customer', 'updated their account password.'),
-                            'add_address'           => UsniAdaptor::t('customer', 'added a new address.')
+                            'new_registration'      => UsniAdaptor::t('customer', 'Registrado para una cuenta.'),
+                            'account_order_created' => UsniAdaptor::t('customer', 'Creó un nuevo pedido.'),
+                            'login'                 => UsniAdaptor::t('customer', 'Conectado.'),
+                            'edit_profile'          => UsniAdaptor::t('customer', 'actualizado los detalles de su cuenta.'),
+                            'forgot_password'       => UsniAdaptor::t('customer', 'solicitó una nueva contraseña    .'),
+                            'change_password'       => UsniAdaptor::t('customer', 'actualizado la contraseña de su cuenta.'),
+                            'add_address'           => UsniAdaptor::t('customer', 'agregó una nueva dirección.')
                          ];
         return ArrayUtil::getValue($formattedKeys, $key);
     }

@@ -71,7 +71,7 @@ class SiteController extends BaseController
         $isValid        = $siteManager->isValidProductId($id);
         if(!$isValid)
         {
-            throw new InvalidParamException(UsniAdaptor::t('products', "Invalid product"));
+            throw new InvalidParamException(UsniAdaptor::t('products', "Producto no válido"));
         }
         //Populate dtos
         $productDTO     = new ProductDTO();

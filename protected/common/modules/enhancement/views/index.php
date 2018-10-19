@@ -15,8 +15,8 @@ use usni\library\grid\ActionToolbar;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('enhancement', 'Enhancements');
-$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Manage') . ' ' . $title;
+$title          = UsniAdaptor::t('enhancement', 'Mejoras');
+$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Administrar') . ' ' . $title;
 
 $toolbarParams  = [
     'gridId' => 'enhancementgridview',
@@ -28,7 +28,7 @@ $widgetParams   = [
                         'id'            => 'enhancementgridview',
                         'dataProvider'  => $gridViewDTO->getDataProvider(),
                         'filterModel'   => $gridViewDTO->getSearchModel(),
-                        'caption'       => UsniAdaptor::t('payment', 'Manage Enhancements'),
+                        'caption'       => UsniAdaptor::t('payment', 'Administrar mejoras'),
                         'modelClass'    => Extension::className(),
                         'columns' => [
                             ['class' => CheckboxColumn::className()],

@@ -83,15 +83,15 @@ class Page extends TranslatableActiveRecord
     {
         $labels = [
                         'id'                    => UsniAdaptor::t('application', 'Id'),
-                        'name'                  => UsniAdaptor::t('application', 'Name'),
+                        'name'                  => UsniAdaptor::t('application', 'Nombre'),
                         'alias'                 => UsniAdaptor::t('application', 'Alias'),
-                        'summary'               => UsniAdaptor::t('cms', 'Summary'),
-                        'content'               => UsniAdaptor::t('cms', 'Content'),
+                        'summary'               => UsniAdaptor::t('cms', 'Resumen'),
+                        'content'               => UsniAdaptor::t('cms', 'Contenido'),
                         'menuitem'              => UsniAdaptor::t('cms', 'Menu Item'),
-                        'status'                => UsniAdaptor::t('application', 'Status'),
+                        'status'                => UsniAdaptor::t('application', 'Estatus'),
                         'metakeywords'          => UsniAdaptor::t('application', 'Meta Keywords'),
-                        'metadescription'       => UsniAdaptor::t('application', 'Meta Description'),
-                        'parent_id'             => UsniAdaptor::t('application', 'Parent')
+                        'metadescription'       => UsniAdaptor::t('application', 'Meta Descripción'),
+                        'parent_id'             => UsniAdaptor::t('application', 'Padre')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
     }
@@ -101,7 +101,7 @@ class Page extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('cms', 'Page') : UsniAdaptor::t('cms', 'Pages');
+        return ($n == 1) ? UsniAdaptor::t('cms', 'Página') : UsniAdaptor::t('cms', 'Páginas');
     }
 
     /**
@@ -111,15 +111,15 @@ class Page extends TranslatableActiveRecord
     public function attributeHints()
     {
         return array(
-            'alias'   => UsniAdaptor::t('applicationhint', 'Spaces not allowed. Allowed characters [a-zA-Z0-9_-]'),
-            'name'    => UsniAdaptor::t('applicationhint', 'Minimum 3 characters'),
-            'summary'    => UsniAdaptor::t('cmshint', 'Summary for the page'),
-            'content'    => UsniAdaptor::t('cmshint', 'Content for the page'),
-            'menuitem'   => UsniAdaptor::t('cmshint', 'Menu text for the page'),
-            'metakeywords'   => UsniAdaptor::t('cmshint', 'Meta keywords for the page'),
-            'metadescription'   => UsniAdaptor::t('cmshint', 'Meta description for the page'),
-            'parent_id'   => UsniAdaptor::t('cmshint', 'Parent for the page'),
-            'status'   => UsniAdaptor::t('cmshint', 'Status for the page')
+            'alias'   => UsniAdaptor::t('applicationhint', 'Espacios no permitidos. Caracteres permitidos [a-zA-Z0-9_-]'),
+            'name'    => UsniAdaptor::t('applicationhint', 'Minimo 3 caracteres'),
+            'summary'    => UsniAdaptor::t('cmshint', 'Resumen para la página'),
+            'content'    => UsniAdaptor::t('cmshint', 'Contenido para la página'),
+            'menuitem'   => UsniAdaptor::t('cmshint', 'Texto del menú para la página'),
+            'metakeywords'   => UsniAdaptor::t('cmshint', 'Meta keywords para la página'),
+            'metadescription'   => UsniAdaptor::t('cmshint', 'Meta descripción para la página'),
+            'parent_id'   => UsniAdaptor::t('cmshint', 'Pagina padre para la página'),
+            'status'   => UsniAdaptor::t('cmshint', 'Estatus para la página')
         );
     }
 

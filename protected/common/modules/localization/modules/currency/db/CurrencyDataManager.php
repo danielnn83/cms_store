@@ -31,7 +31,7 @@ class CurrencyDataManager extends DataManager
     {
         return [
                     [
-                        'name'           => UsniAdaptor::t('currency', 'US Dollars'),
+                        'name'           => UsniAdaptor::t('currency', 'US Dolares'),
                         'code'           => 'USD', 
                         'symbol_left'    => '$',
                         'symbol_right'   => '',
@@ -40,7 +40,7 @@ class CurrencyDataManager extends DataManager
                         'status'         => StatusUtil::STATUS_ACTIVE
                     ],
                     [
-                        'name'           => UsniAdaptor::t('currency', 'Pound Sterling'),
+                        'name'           => UsniAdaptor::t('currency', 'Libras esterlinas'),
                         'code'           => 'GBP', 
                         'symbol_left'    => '£',
                         'symbol_right'   => '',

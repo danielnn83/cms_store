@@ -10,11 +10,11 @@ use usni\library\bootstrap\FormButtons;
 $model = $formDTO->getModel();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('city', 'City');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('city', 'Ciudad');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('city', 'City');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('city', 'Ciudad');
 }
 $form = ActiveForm::begin([
         'id' => 'cityeditview',

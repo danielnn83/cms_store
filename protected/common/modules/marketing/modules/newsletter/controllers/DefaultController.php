@@ -104,7 +104,7 @@ class DefaultController extends \usni\library\web\Controller
         if(isset($_GET['selectedIds']))
         {
             Manager::getInstance()->processSend($_GET['selectedIds']);
-            FlashUtil::setMessage('success', UsniAdaptor::t('newsletterflash', 'Newsletter has been sent successfully.'));
+            FlashUtil::setMessage('success', UsniAdaptor::t('newsletterflash', 'El boletín ha sido enviado con éxito.'));
             return $this->redirect(UsniAdaptor::createUrl('/marketing/newsletter/default/index'));
         }
     }

@@ -10,11 +10,11 @@ use frontend\widgets\FormButtons;
 /* @var $this \frontend\web\View */
 /* @var $formDTO \customer\dto\FormDTO */
 
-$label      = UsniAdaptor::t('users', 'Change Password');
+$label      = UsniAdaptor::t('users', 'Cambiar Password');
 $model      = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
                                     [
-                                        'label' => UsniAdaptor::t('customer', 'My Account'),
+                                        'label' => UsniAdaptor::t('customer', 'Mi cuenta'),
                                         'url'   => ['/customer/site/my-account']
                                     ],
                                     [

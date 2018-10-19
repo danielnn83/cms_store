@@ -12,7 +12,7 @@ use usni\library\grid\StatusDataColumn;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('products', 'Latest Products');
+$title          = UsniAdaptor::t('products', 'Ultimos productos');
 
 $widgetParams   = [
                         'id'            => 'latestproductsgridview',
@@ -25,12 +25,12 @@ $widgetParams   = [
                                                </div>",
                         'columns'       => [
                                                 [
-                                                    'attribute' => 'name',
+                                                    'attribute' => 'Nombre',
                                                     'class'     => ProductNameDataColumn::className()
                                                 ],
                                                 'model',
                                                 [
-                                                    'attribute' => 'status',
+                                                    'attribute' => 'Estatus',
                                                     'class' => StatusDataColumn::className()
                                                 ],
                                         ],

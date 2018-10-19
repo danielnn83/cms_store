@@ -52,9 +52,9 @@ class WeightClass extends TranslatableActiveRecord
 	{
 		$labels = [
                         'id'    => UsniAdaptor::t('application', 'Id'),
-                        'value'	=> UsniAdaptor::t('application', 'Value'),
-                        'name'	=> UsniAdaptor::t('application', 'Name'),
-                        'unit'	=> UsniAdaptor::t('localization', 'Unit'),
+                        'value'	=> UsniAdaptor::t('application', 'Valor'),
+                        'name'	=> UsniAdaptor::t('application', 'Nombre'),
+                        'unit'	=> UsniAdaptor::t('localization', 'Unidad'),
                     ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -64,7 +64,7 @@ class WeightClass extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('weightclass', 'Weight Class') : UsniAdaptor::t('weightclass', 'Weight Classes');
+        return ($n == 1) ? UsniAdaptor::t('weightclass', 'Clase de peso') : UsniAdaptor::t('weightclass', 'Clases de peso');
     }
     
     /**

@@ -13,7 +13,7 @@ use newsletter\models\Newsletter;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('products', 'Manage Newsletters');
+$title          = UsniAdaptor::t('products', 'Administrar boletines');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -46,7 +46,7 @@ $widgetParams   = [
                 ];
 echo ActionToolbar::widget($toolbarParams);
 echo GridView::widget($widgetParams);
-$error  = UsniAdaptor::t('application', 'Please select at least one record.');
+$error  = UsniAdaptor::t('application', 'Seleccione al menos un registro.');
 $url    =  UsniAdaptor::createUrl('/marketing/newsletter/default/send');
 $this->registerJs("$('.send-newsletter-btn').on('click', function(e){
                             var idList = $('#newslettergridview').yiiGridView('getSelectedRows');

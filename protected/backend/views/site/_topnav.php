@@ -37,7 +37,7 @@ $languageSelection = UsniAdaptor::app()->languageManager->selectedLanguage;
                     ?>
                     <li>
                         <?php
-                            $label = FA::icon('trash') . "\n" . UsniAdaptor::t('application', 'Clear Cache');
+                            $label = FA::icon('trash') . "\n" . UsniAdaptor::t('application', 'Limpiar Cache');
                             echo Html::a($label, Url::current(['clearCache' => 'true']));
                         ?>
                     </li>

@@ -14,7 +14,7 @@ use products\utils\DownloadUtil;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('products', 'Manage Product Downloads');
+$title          = UsniAdaptor::t('products', 'Administrar descargas de productos');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

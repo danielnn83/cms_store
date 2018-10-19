@@ -16,7 +16,7 @@ use productCategories\grid\ProductCategoryNameDataColumn;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('productCategories', 'Manage Product Categories');
+$title          = UsniAdaptor::t('productCategories', 'Administrar categorías de los productos');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -27,7 +27,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'productcategorygridview',
     'pjaxId'        => 'productcategorygridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('productCategories', 'Product Category') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('productCategories', 'Categoría del producto') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'productcategorybulkeditview',
     'permissionPrefix'  => 'productcategory',

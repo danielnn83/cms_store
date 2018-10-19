@@ -102,7 +102,7 @@ class Manager extends \usni\library\business\Manager
         $str    = null;
         $states = StateDAO::getStateByCountry($countryId, $this->language);
         $dropdownData = ArrayUtil::map($states, 'id', 'name');
-        return ArrayUtil::merge([-1 => UsniAdaptor::t('localization', 'All States')], $dropdownData);
+        return ArrayUtil::merge([-1 => UsniAdaptor::t('localization', 'Todos los estados')], $dropdownData);
     }
     
     /**
@@ -112,7 +112,7 @@ class Manager extends \usni\library\business\Manager
     public static function getStateAndAllStatesDropdownData()
     {
         $data       = ArrayUtil::map(StateTranslated::find()->asArray()->indexBy('name')->all(), 'owner_id', 'name');
-        $data[-1]    = UsniAdaptor::t('localization', 'All States');
+        $data[-1]    = UsniAdaptor::t('localization', 'Todos los estados');
         return $data;
     }
 }

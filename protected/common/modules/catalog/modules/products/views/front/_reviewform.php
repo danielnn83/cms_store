@@ -28,14 +28,14 @@ if($userModel != null)
 ?>
 <div id="reviewformcontainer">
     <div class="alert alert-success alert-review">
-        <?php echo UsniAdaptor::t('productflash', 'Thank you for your review. It has been submitted to the admin for approval.');?>
+        <?php echo UsniAdaptor::t('productflash', 'Gracias por tu comentario. Se ha enviado al administrador para su aprobación.');?>
     </div>
     <?php $form = ActiveForm::begin(['id' => 'review-form', 
                                      'layout' => 'horizontal',
                                      'decoratorView' => false,
                                      'view' => $this]); ?>
     <legend id="review-title">
-        <?php echo UsniAdaptor::t('products', 'Write Review');?>
+        <?php echo UsniAdaptor::t('products', 'Escribir un comentario');?>
     </legend>
     <?php
     if($isHidden)
@@ -55,7 +55,7 @@ if($userModel != null)
     <?= Html::activeHiddenInput($model, 'product_id');?>
     <?= Html::activeHiddenInput($model, 'status');?>
     <?= FormButtons::widget(['layout' => "<div class='form-actions text-right'>{submit}\n{cancel}</div>",
-                                'submitButtonLabel' => UsniAdaptor::t('application', 'Submit'),
+                                'submitButtonLabel' => UsniAdaptor::t('application', 'Enviar'),
                                 'showCancelButton' => false])?>
     <?php ActiveForm::end(); ?>
 </div>

@@ -33,12 +33,12 @@ class ProductAttributeDataManager extends DataManager
                                                                           [':name' => 'Memory', ':ln' => static::getDefaultLanguage()])->one();
         return [
                     [
-                        'name'              => UsniAdaptor::t('products', 'Clockspeed'),
+                        'name'              => UsniAdaptor::t('products', 'Velocidad de reloj'),
                         'attribute_group'   => $attributeGroup->owner_id,
                         'sort_order'        => 1, 
                     ],
                     [
-                        'name'              => UsniAdaptor::t('products', 'Fan Speed'),
+                        'name'              => UsniAdaptor::t('products', 'Velocidad del ventilador'),
                         'attribute_group'   => $attributeGroup->owner_id,
                         'sort_order'        => 1, 
                     ],

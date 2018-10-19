@@ -15,7 +15,7 @@ use usni\library\grid\ActionColumn;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('manufacturer', 'Manage Manufacturers');
+$title          = UsniAdaptor::t('manufacturer', 'Administrar fabricantes');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -26,7 +26,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'manufacturergridview',
     'pjaxId'        => 'manufacturergridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('manufacturer', 'Manufacturer') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('manufacturer', 'Fabricante') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'manufacturerbulkeditview',
     'permissionPrefix'  => 'manufacturer'

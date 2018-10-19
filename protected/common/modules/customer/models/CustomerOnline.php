@@ -19,7 +19,7 @@ class CustomerOnline extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('customer', 'Customer Online');
+        return UsniAdaptor::t('customer', 'Cliente en línea');
     }
 
     /**

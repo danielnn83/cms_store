@@ -65,9 +65,9 @@ class ProductImage extends TranslatableActiveRecord
     {
         $labels = [
                     'id'            => UsniAdaptor::t('application','Id'),
-                    'product_id'    => UsniAdaptor::t('products', 'Product'),
-                    'image'         => UsniAdaptor::t('application', 'Image'),
-                    'caption'       => UsniAdaptor::t('products', 'Caption')
+                    'product_id'    => UsniAdaptor::t('products', 'Producto'),
+                    'image'         => UsniAdaptor::t('application', 'Imagen'),
+                    'caption'       => UsniAdaptor::t('products', 'Subtitulo')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
     }
@@ -77,7 +77,7 @@ class ProductImage extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('application', 'Image') : UsniAdaptor::t('application', 'Images');
+        return ($n == 1) ? UsniAdaptor::t('application', 'Imagen') : UsniAdaptor::t('application', 'Imagenes');
     }
     
     /**

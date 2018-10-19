@@ -40,13 +40,13 @@ class OrderPaymentDetails extends \usni\library\db\TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                     'order_id'         => UsniAdaptor::t('order', 'Order'),
-                     'payment_method'   => UsniAdaptor::t('payment', 'Payment Method'),
-                     'total_including_tax'  => UsniAdaptor::t('order', 'Total Including Tax'),
-                     'tax'              => UsniAdaptor::t('tax', 'Tax'),
-                     'payment_type'     => UsniAdaptor::t('payment', 'Payment Type'),
-                     'comments'         => UsniAdaptor::t('order', 'Comments'),
-                     'shipping_fee'     => UsniAdaptor::t('shipping', 'Shipping Fee'),
+                     'order_id'         => UsniAdaptor::t('order', 'Pedido'),
+                     'payment_method'   => UsniAdaptor::t('payment', 'Método de pago'),
+                     'total_including_tax'  => UsniAdaptor::t('order', 'Total incluyendo impuestos'),
+                     'tax'              => UsniAdaptor::t('tax', 'Impuestos'),
+                     'payment_type'     => UsniAdaptor::t('payment', 'Tipo de pago'),
+                     'comments'         => UsniAdaptor::t('order', 'Comentarios'),
+                     'shipping_fee'     => UsniAdaptor::t('shipping', 'Gastos de envío'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -56,7 +56,7 @@ class OrderPaymentDetails extends \usni\library\db\TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('order', 'Order Payment') : UsniAdaptor::t('order', 'Order Payments');
+        return ($n == 1) ? UsniAdaptor::t('order', 'Pago de pedido') : UsniAdaptor::t('order', 'Pagos de pedidos');
     }
     
     /**

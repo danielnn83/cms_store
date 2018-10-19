@@ -60,9 +60,9 @@ class Manufacturer extends ActiveRecord
 	{
 		$labels = [
                      'id'       => UsniAdaptor::t('application', 'Id'),
-                     'name'		=> UsniAdaptor::t('application', 'Name'),
-                     'image'    => UsniAdaptor::t('application', 'Image'),
-                     'status'   => UsniAdaptor::t('application', 'Status'),
+                     'name'		=> UsniAdaptor::t('application', 'Nombre'),
+                     'image'    => UsniAdaptor::t('application', 'Imagen'),
+                     'status'   => UsniAdaptor::t('application', 'Estado'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -72,7 +72,7 @@ class Manufacturer extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('manufacturer', 'Manufacturer') : UsniAdaptor::t('manufacturer', 'Manufacturers');
+        return ($n == 1) ? UsniAdaptor::t('manufacturer', 'Fabricante') : UsniAdaptor::t('manufacturer', 'Fabricantes');
     }
     
     /**

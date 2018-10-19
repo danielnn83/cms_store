@@ -24,11 +24,11 @@ class ReviewUtil
     public static function renderStatus($data)
     {
         $value = self::getLabel($data);
-        if($value == UsniAdaptor::t('application', 'Pending'))
+        if($value == UsniAdaptor::t('application', 'Pendiente'))
         {
             return Label::widget(['content' => $value, 'modifier' => Html::COLOR_WARNING]);
         }
-        elseif ($value == UsniAdaptor::t('products', 'Approve'))
+        elseif ($value == UsniAdaptor::t('products', 'Aprovado'))
         {
             return Label::widget(['content' => $value, 'modifier' => Html::COLOR_SUCCESS]);
         }
@@ -36,7 +36,7 @@ class ReviewUtil
         {
             return Label::widget(['content' => $value, 'modifier' => Html::COLOR_DANGER]);
         }
-        elseif ($value == UsniAdaptor::t('application', 'Delete'))
+        elseif ($value == UsniAdaptor::t('application', 'Borrado'))
         {
             return Label::widget(['content' => $value, 'modifier' => Html::COLOR_DANGER]);
         }
@@ -51,11 +51,11 @@ class ReviewUtil
     {
         if ($data['status'] == ProductReview::STATUS_PENDING)
         {
-            return UsniAdaptor::t('application', 'Pending');
+            return UsniAdaptor::t('application', 'Pendiente');
         }
         else if ($data['status'] == ProductReview::STATUS_APPROVED)
         {
-            return UsniAdaptor::t('products', 'Approve');
+            return UsniAdaptor::t('products', 'Aprovado');
         }
         else if ($data['status'] == ProductReview::STATUS_SPAM)
         {
@@ -63,7 +63,7 @@ class ReviewUtil
         }
         else if ($data['status'] == ProductReview::STATUS_DELETED)
         {
-            return UsniAdaptor::t('application', 'Delete');
+            return UsniAdaptor::t('application', 'Borrado');
         }
     }
     
@@ -74,9 +74,9 @@ class ReviewUtil
     public static function getStatusDropdown()
     {
         return [
-                    ProductReview::STATUS_APPROVED    => UsniAdaptor::t('products', 'Approve'),
-                    ProductReview::STATUS_PENDING     => UsniAdaptor::t('application', 'Pending'),
-                    ProductReview::STATUS_DELETED     => UsniAdaptor::t('application', 'Delete'),
+                    ProductReview::STATUS_APPROVED    => UsniAdaptor::t('products', 'Aprovado'),
+                    ProductReview::STATUS_PENDING     => UsniAdaptor::t('application', 'Pendiente'),
+                    ProductReview::STATUS_DELETED     => UsniAdaptor::t('application', 'Borrado'),
                ];
     }
 }

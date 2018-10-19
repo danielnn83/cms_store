@@ -70,7 +70,7 @@ class InvoiceManager extends \common\business\Manager
         }
         else
         {
-            throw new InvalidParamException(UsniAdaptor::t('stores', 'Invalid Order'));
+            throw new InvalidParamException(UsniAdaptor::t('stores', 'Orden inválida'));
         }
     }
     

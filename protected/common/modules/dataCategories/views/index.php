@@ -15,7 +15,7 @@ use common\modules\dataCategories\models\DataCategory;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('dataCategories', 'Manage Data Categories');
+$title          = UsniAdaptor::t('dataCategories', 'Administrar Categoría de datos');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -24,7 +24,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'datacategorygridview',
     'pjaxId'        => 'datacategorygridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('dataCategories', 'Data Category') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('dataCategories', 'Categoría de datos') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'permissionPrefix'  => 'datacategory'
 ];

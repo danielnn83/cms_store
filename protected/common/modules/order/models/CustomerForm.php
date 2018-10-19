@@ -39,9 +39,9 @@ class CustomerForm extends Model
     public function attributeLabels()
     {
         return [
-            'customerId'    => UsniAdaptor::t('customer', 'Customer'),
-            'storeId'       => UsniAdaptor::t('stores', 'Store'),
-            'currencyCode'  => UsniAdaptor::t('currency', 'Currency')
+            'customerId'    => UsniAdaptor::t('customer', 'Cliente'),
+            'storeId'       => UsniAdaptor::t('stores', 'Tienda'),
+            'currencyCode'  => UsniAdaptor::t('currency', 'Moneda')
         ];
     }
     

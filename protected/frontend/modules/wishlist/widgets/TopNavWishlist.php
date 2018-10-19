@@ -21,7 +21,7 @@ class TopNavWishlist extends \yii\bootstrap\Widget
     {
         $wishlist   = ApplicationUtil::getWishList();
         $count      = $wishlist->getCount();
-        $label      = UsniAdaptor::t('wishlist', 'Wish List');
+        $label      = UsniAdaptor::t('wishlist', 'Lista de deseos');
         if($count > 0)
         {
             return $label . ' (' . $count . ')';

@@ -17,7 +17,7 @@ $dataCategoriesItems  = require_once UsniAdaptor::app()->getModule('dataCategori
 $localItems  = require_once UsniAdaptor::app()->getModule('localization')->basePath . '/config/menu.php';
 $sidebarItems       = ArrayUtil::merge($authItems, $notificationItems, $serviceItems, $userItems, $dataCategoriesItems, $localItems);
 return [    
-            'label'       => MenuUtil::getSidebarMenuIcon('cog') . MenuUtil::wrapLabel(UsniAdaptor::t('application', 'System')),
+            'label'       => MenuUtil::getSidebarMenuIcon('cog') . MenuUtil::wrapLabel(UsniAdaptor::t('application', 'Sistema')),
             'url'         => '#',
             'itemOptions' => ['class' => 'navblock-header'],
             'items'       => $sidebarItems

@@ -53,7 +53,7 @@ trait DownloadTrait
         {
             if($count >= $download['allowed_downloads'])
             {
-                return UsniAdaptor::t('productflash', 'You have downloaded maximum number of times allowed for {name}.', ['name' => $download['name']]);
+                return UsniAdaptor::t('productflash', 'Ha descargado el número máximo de veces permitido para {name}.', ['name' => $download['name']]);
             }
         }
         //If number of days after which it could be downloaded crossed
@@ -67,7 +67,7 @@ trait DownloadTrait
             $days    = floor($currentDateTime - $createdDateTime)/(60 * 60 * 24);
             if($days > $download['number_of_days'])
             {
-                return UsniAdaptor::t('productflash', 'The number of days allowed to download are expired for {name}. Please contact system admin.', ['name' => $download['name']]);
+                return UsniAdaptor::t('productflash', 'La cantidad de días permitidos para la descarga ha expirado {name}. Por favor contacte al administrador del sistema.', ['name' => $download['name']]);
             }
         }
         return true;

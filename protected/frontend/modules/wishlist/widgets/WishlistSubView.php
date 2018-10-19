@@ -86,7 +86,7 @@ class WishlistSubView extends \yii\bootstrap\Widget
         else
         {
             $this->isEmpty = true;
-            $content = Html::tag('p', UsniAdaptor::t('wishlist', 'Your wish list is empty!'));
+            $content = Html::tag('p', UsniAdaptor::t('wishlist', 'Tu lista de deseos esta vacia!'));
         }
         return $content;
     }

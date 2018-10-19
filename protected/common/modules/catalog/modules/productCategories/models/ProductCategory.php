@@ -90,17 +90,17 @@ class ProductCategory extends TranslatableActiveRecord
     public function attributeLabels()
     {
         $labels = [
-                    'parent_id'         => UsniAdaptor::t('application', 'Parent'),
-                    'name'              => UsniAdaptor::t('application', 'Name'),
-                    'description'       => UsniAdaptor::t('application', 'Description'),
-                    'status'            => UsniAdaptor::t('application', 'Status'),
+                    'parent_id'         => UsniAdaptor::t('application', 'Padre'),
+                    'name'              => UsniAdaptor::t('application', 'Nombre'),
+                    'description'       => UsniAdaptor::t('application', 'Descripción'),
+                    'status'            => UsniAdaptor::t('application', 'Estatus'),
                     'alias'             => UsniAdaptor::t('application', 'Alias'),
-                    'image'             => UsniAdaptor::t('application', 'Image'),
+                    'image'             => UsniAdaptor::t('application', 'Imagen'),
                     'metakeywords'      => UsniAdaptor::t('application', 'Meta Keywords'),
-                    'metadescription'   => UsniAdaptor::t('application', 'Meta Description'),
-                    'displayintopmenu'  => UsniAdaptor::t('productCategories', 'Display in top menu'),
+                    'metadescription'   => UsniAdaptor::t('application', 'Meta Descripción'),
+                    'displayintopmenu'  => UsniAdaptor::t('productCategories', 'Mostrar en el menú superior'),
                     'data_category_id'  => DataCategory::getLabel(1),
-                    'code'              => UsniAdaptor::t('application', 'Code'),
+                    'code'              => UsniAdaptor::t('application', 'Código'),
                 ];
         return parent::getTranslatedAttributeLabels($labels);
     }
@@ -110,7 +110,7 @@ class ProductCategory extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('productCategories', 'Product Category') : UsniAdaptor::t('productCategories', 'Product Categories');
+        return ($n == 1) ? UsniAdaptor::t('productCategories', 'Categoría del producto') : UsniAdaptor::t('productCategories', 'Categoría del producto');
     }
 
     /**
@@ -136,7 +136,7 @@ class ProductCategory extends TranslatableActiveRecord
         $isAllowedToDelete = $this->checkIfAllowedToDelete();
         if($isAllowedToDelete == false)
         {
-            throw new Exception('products are associated to category.');
+            throw new Exception('Hay productos asociados a la categoría.');
         }
         if(parent::beforeDelete())
         {

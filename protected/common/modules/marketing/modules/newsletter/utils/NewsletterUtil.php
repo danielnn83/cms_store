@@ -21,8 +21,8 @@ class NewsletterUtil
     public static function getToNewsletterDropdown()
     {
         return [
-                    Newsletter::ALL_SUBSCRIBERS  => UsniAdaptor::t('newsletter', 'All Subscribers'),
-                    Newsletter::ALL_CUSTOMERS    => UsniAdaptor::t('newsletter', 'All Customers')
+                    Newsletter::ALL_SUBSCRIBERS  => UsniAdaptor::t('newsletter', 'Todos los suscriptores'),
+                    Newsletter::ALL_CUSTOMERS    => UsniAdaptor::t('newsletter', 'Todos los clientes')
                ];
     }
 }

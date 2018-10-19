@@ -18,11 +18,11 @@ $parentOptions  = $formDTO->getParentDropdownOptions();
 $cancelUrl      = UsniAdaptor::createUrl('cms/page/index');
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('cms', 'Page');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('cms', 'Página');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('cms', 'Page');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('cms', 'Página');
 }
 $form = ActiveForm::begin([
         'id' => 'pageeditview',

@@ -24,7 +24,7 @@ $widgetParams   = [
                                                 'value'     => $model['manufacturerName']
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('products', 'Downloads'),
+                                                'label'     => UsniAdaptor::t('products', 'Descargas'),
                                                 'format'    => 'raw',
                                                 'value'     => $model['downloads']
                                             ],

@@ -28,7 +28,7 @@ class Manager extends \usni\library\business\Manager
                             'uploadInstanceAttribute' => 'uploadInstance',
                             'type'              => 'image',
                             'savedAttribute'    => 'savedImage',
-                            'fileMissingError'  => UsniAdaptor::t('application', 'Please upload image'),
+                            'fileMissingError'  => UsniAdaptor::t('application', 'Por favor, carga imagen'),
                       ];
             $uploadInstanceManager = new UploadInstanceManager($config);
             $result = $uploadInstanceManager->processUploadInstance();

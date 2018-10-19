@@ -13,12 +13,12 @@ use common\modules\dataCategories\models\DataCategory;
 $model  = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('dataCategories', 'Data Categories'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('dataCategories', 'Categoría de datos'),
         'url' => ['/dataCategories/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model->id
+        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model->id
     ]
 ];
 
@@ -26,5 +26,5 @@ $browseParams   = ['permission' => 'datacategory.updateother',
                    'data'   => $formDTO->getBrowseModels(),
                    'model'  => $model];
 echo BrowseDropdown::widget($browseParams);
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('dataCategories', 'Data Category');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('dataCategories', 'Categoría de datos');
 echo $this->render("/_form", ['model' => $model]);

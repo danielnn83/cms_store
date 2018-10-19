@@ -8,11 +8,11 @@ use usni\library\utils\ArrayUtil;
 
 if($formDTO->getScenario() == 'registration')
 {
-    $caption = UsniAdaptor::t('customer', 'Register Account');
+    $caption = UsniAdaptor::t('customer', 'Registrar cuenta');
 }
 else
 {
-    $caption = UsniAdaptor::t('customer', 'Edit Profile');
+    $caption = UsniAdaptor::t('customer', 'Editar perfil');
 }
 $errors = ArrayUtil::merge($formDTO->getModel()->errors, $formDTO->getPerson()->errors, $formDTO->getAddress()->errors);
 echo TabbedActiveFormAlert::widget(['model' => $formDTO->getModel(), 'errors' => $errors]);
@@ -33,16 +33,16 @@ $form = TabbedActiveForm::begin([
             $deleteUrl = UsniAdaptor::createUrl('customer/site/delete-image');
             $items[] = [
                 'options' => ['id' => 'tabperson'],
-                'label' => UsniAdaptor::t('users', 'Person'),
+                'label' => UsniAdaptor::t('users', 'Persona'),
                 'content' => $this->render('@usni/library/modules/users/views/_personedit.php', ['form' => $form, 'formDTO' => $formDTO, 
                                                                                                  'showDeleteLink' => false, 'deleteUrl' => $deleteUrl])
             ];
             $items[] = [
                 'options' => ['id' => 'tabaddress'],
-                'label' => UsniAdaptor::t('users', 'Address'),
+                'label' => UsniAdaptor::t('users', 'Dirección'),
                 'content' => $this->render('@usni/library/modules/users/views/_addressedit', ['formDTO' => $formDTO, 'form' => $form])
             ];
             echo Tabs::widget(['items' => $items]);
     ?>
-<?= FormButtons::widget(['submitButtonLabel' => UsniAdaptor::t('application', 'Continue'), 'showCancelButton' => false]);?>
+<?= FormButtons::widget(['submitButtonLabel' => UsniAdaptor::t('application', 'Continuar'), 'showCancelButton' => false]);?>
 <?php TabbedActiveForm::end();

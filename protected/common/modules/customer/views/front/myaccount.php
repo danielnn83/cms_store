@@ -6,7 +6,7 @@
 use usni\UsniAdaptor;
 use yii\helpers\Html;
 
-$title              = UsniAdaptor::t('customer', 'My Account');
+$title              = UsniAdaptor::t('customer', 'Mi cuenta');
 $this->title        = $title;
 $this->leftnavView  = '/front/_sidebar'; 
 $this->params['breadcrumbs'] = [    
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'] = [
                     echo Html::label(UsniAdaptor::t('users', 'Name'), null, ['class' => 'control-label col-sm-3']); 
                 ?>
                 <div class="col-sm-9">
-                    <p><?php echo $fullName == null ? UsniAdaptor::t('application', '(not set)') : $fullName ;?></p>
+                    <p><?php echo $fullName == null ? UsniAdaptor::t('application', '(no establecido/perteneciente)') : $fullName ;?></p>
                 </div>
             </div>
             <div class="row">
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'] = [
             </div>
             
             <div class="row">
-                <?php echo Html::label(UsniAdaptor::t('users', 'Address'), null, ['class' => 'control-label col-sm-3']); ?>
+                <?php echo Html::label(UsniAdaptor::t('users', 'Dirección'), null, ['class' => 'control-label col-sm-3']); ?>
                 <div class="col-sm-9">
                     <p><?php echo $model->address->getConcatenatedDisplayedAddress(); ?></p>
                 </div>

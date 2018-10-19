@@ -42,19 +42,19 @@ class OrderDataManager extends DataManager
                     [
                             'type'      => 'email',
                             'notifykey' => Order::NOTIFY_ORDERCOMPLETION,
-                            'subject'   => UsniAdaptor::t('order', 'Order Completion'),
+                            'subject'   => UsniAdaptor::t('order', 'Finalización del pedido'),
                             'content'   => file_get_contents($basePath . '/email/_orderCompletion.php')
                     ],
                     [
                             'type'      => 'email',
                             'notifykey' => Order::NOTIFY_ORDERRECEIVED,
-                            'subject'   => UsniAdaptor::t('order', 'Received Order'),
+                            'subject'   => UsniAdaptor::t('order', 'Pedido recibido'),
                             'content'   => file_get_contents($basePath . '/email/_orderReceive.php')
                     ],
                     [
                             'type'      => 'email',
                             'notifykey' => Order::NOTIFY_ORDERUPDATE,
-                            'subject'   => UsniAdaptor::t('order', 'Update Order') . ' | {{ordernumber}}',
+                            'subject'   => UsniAdaptor::t('order', 'Actualizar pedido') . ' | {{ordernumber}}',
                             'content'   => file_get_contents($basePath . '/email/_orderUpdate.php')
                     ]
                 ];

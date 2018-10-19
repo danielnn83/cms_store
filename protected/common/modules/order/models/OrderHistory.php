@@ -42,10 +42,10 @@ class OrderHistory extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                     'order_id'         => UsniAdaptor::t('order', 'Order'),
-                     'status'           => UsniAdaptor::t('orderstatus', 'Order Status'),
-                     'notify_customer'  => UsniAdaptor::t('customer', 'Notify Customer'),
-                     'comment'          => UsniAdaptor::t('application', 'Comment'),
+                     'order_id'         => UsniAdaptor::t('order', 'Pedido'),
+                     'status'           => UsniAdaptor::t('orderstatus', 'Estatus de pedido'),
+                     'notify_customer'  => UsniAdaptor::t('customer', 'Notificar al cliente'),
+                     'comment'          => UsniAdaptor::t('application', 'Comentario'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -56,7 +56,7 @@ class OrderHistory extends TranslatableActiveRecord
     public function attributeHints()
     {
         return [
-                    'notify_customer'   => UsniAdaptor::t('orderhint', 'Customer would be notified if status is completed.'),
+                    'notify_customer'   => UsniAdaptor::t('orderhint', 'El cliente sería notificado si el estado se completa.'),
                ];
     }
     
@@ -65,7 +65,7 @@ class OrderHistory extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('order', 'Order History');
+        return UsniAdaptor::t('order', 'Historial de pedidos');
     }
     
     /**

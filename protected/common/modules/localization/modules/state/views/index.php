@@ -16,7 +16,7 @@ use usni\library\utils\StatusUtil;
 /* @var $gridViewDTO \common\modules\localization\modules\state\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title                  = UsniAdaptor::t('state', 'Manage States');
+$title                  = UsniAdaptor::t('state', 'Administrar estados');
 $this->title            = $this->params['breadcrumbs'][] = $title;
 $countryDropdownData    = $gridViewDTO->getCountryDropdownData();
 
@@ -28,7 +28,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'stategridview',
     'pjaxId'        => 'stategridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('state', 'State') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('state', 'Estado') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => '/localization/state/default/bulk-edit',
     'bulkEditFormId'    => 'statebulkeditview',
     'permissionPrefix'  => 'state'

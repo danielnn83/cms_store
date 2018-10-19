@@ -42,13 +42,13 @@ class ProductOptionMappingDetails extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'mapping_id'        => UsniAdaptor::t('products', 'Mapping Id'),
-            'quantity'          => UsniAdaptor::t('products', 'Quantity'),
-            'subtract_stock'    => UsniAdaptor::t('products', 'Subtract stock'),
-            'price'             => UsniAdaptor::t('products', 'Price'),
-            'weight'            => UsniAdaptor::t('products', 'Weight'),
-            'price_prefix'      => UsniAdaptor::t('products', 'Price Prefix'),
-            'weight_prefix'     => UsniAdaptor::t('products', 'Weight Prefix')
+                'mapping_id'        => UsniAdaptor::t('products', 'Mapeado Id'),
+            'quantity'          => UsniAdaptor::t('products', 'Cantidad'),
+            'subtract_stock'    => UsniAdaptor::t('products', 'Restar stock'),
+            'price'             => UsniAdaptor::t('products', 'Precio'),
+            'weight'            => UsniAdaptor::t('products', 'Peso'),
+            'price_prefix'      => UsniAdaptor::t('products', 'Prefijo de precio'),
+            'weight_prefix'     => UsniAdaptor::t('products', 'Prefijo de peso')
         ];
     }
 

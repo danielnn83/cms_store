@@ -43,7 +43,7 @@ class ProductAttributeGroup extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Attribute Group') : UsniAdaptor::t('products', 'Attribute Groups');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Grupos de atributos') : UsniAdaptor::t('products', 'Grupos de atributos');
     }
     
     /**
@@ -52,8 +52,8 @@ class ProductAttributeGroup extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                    'name'          => UsniAdaptor::t('products', 'Attribute Group Name'),
-                    'sort_order'    => UsniAdaptor::t('application', 'Sort Order')
+                    'name'          => UsniAdaptor::t('products', 'Nombre del grupo de atributos'),
+                    'sort_order'    => UsniAdaptor::t('application', 'Orden')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}

@@ -74,7 +74,7 @@ class ForgotPasswordForm extends \yii\base\Model
     {
         $this->emailNotification            = new ForgotPasswordEmailNotification(['user' => $this->user]);
         $this->to                           = $this->user['email'];
-        $this->emailNotification->subject   = UsniAdaptor::t('customer', 'Forgot Password Request');
+        $this->emailNotification->subject   = UsniAdaptor::t('customer', 'Olvidé mi contraseña');
         $this->processSend();
     }
 }

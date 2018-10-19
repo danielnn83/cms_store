@@ -22,7 +22,7 @@ $addressModel   = new Address(['scenario' => 'bulkedit']);
 $form = BulkEditActiveForm::begin([
             'id' => 'customerbulkeditview',
             'layout' => 'horizontal',
-            'caption' => UsniAdaptor::t('customer', 'Customer') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+            'caption' => UsniAdaptor::t('customer', 'Cliente') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
         ]);
 ?>
 <?= $form->field($customerModel, 'status')->select2Input(UserUtil::getStatusDropdown(), false);?>

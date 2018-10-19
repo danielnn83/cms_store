@@ -3,7 +3,7 @@ use usni\UsniAdaptor;
 
 /* @var $this \usni\library\web\AdminView */
 /* @var $dashboardDTO \backend\dto\DashboardDTO */
-$this->title = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Dashboard');
+$this->title = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Tablero');
 ?>
 <div class="row">
     <div class="col-sm-6 col-xs-12">

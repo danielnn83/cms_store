@@ -11,11 +11,11 @@ use usni\library\widgets\DetailBrowseDropdown;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('city', 'City') . ' #' . $model['id'];
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('city', 'Ciudad') . ' #' . $model['id'];
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('city', 'Cities'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('city', 'Ciudades'),
                                         'url' => ['/localization/city/default/index']
                                     ],
                                     [

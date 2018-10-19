@@ -16,7 +16,7 @@ $model  = new Currency(['scenario' => 'bulkedit']);
 $form = BulkEditActiveForm::begin([
             'id'        => 'currencybulkeditview',
             'layout'    => 'horizontal',
-            'caption' => UsniAdaptor::t('currency', 'Currency') . ' ' . UsniAdaptor::t('application', 'Bulk Edit')
+            'caption' => UsniAdaptor::t('currency', 'Moneda') . ' ' . UsniAdaptor::t('application', 'Edición masiva')
         ]);
 ?>
 <?= $form->field($model, 'status')->select2Input(StatusUtil::getDropdown(), false);?>

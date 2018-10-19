@@ -19,7 +19,7 @@ class CustomerActivity extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('customer', 'Customer Activity');
+        return UsniAdaptor::t('customer', 'Actividad del cliente');
     }
 
     /**

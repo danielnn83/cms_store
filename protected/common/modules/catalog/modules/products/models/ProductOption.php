@@ -45,7 +45,7 @@ class ProductOption extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Option') : UsniAdaptor::t('products', 'Options');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Opción') : UsniAdaptor::t('products', 'Opciones');
     }
     
     /**
@@ -54,9 +54,9 @@ class ProductOption extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                    'name'              => UsniAdaptor::t('products', 'Option Name'),
-                    'display_name'      => UsniAdaptor::t('products', 'Display Name'),
-                    'type'              => UsniAdaptor::t('application', 'Type'),
+                    'name'              => UsniAdaptor::t('products', 'Nombre de opción'),
+                    'display_name'      => UsniAdaptor::t('products', 'Nombre a desplegar'),
+                    'type'              => UsniAdaptor::t('application', 'Tipo'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}

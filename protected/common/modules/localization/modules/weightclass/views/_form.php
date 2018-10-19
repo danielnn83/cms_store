@@ -13,11 +13,11 @@ use usni\library\bootstrap\FormButtons;
 $model  = $formDTO->getModel();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('weightclass', 'Weight Class');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('weightclass', 'Clase de peso');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('weightclass', 'Weight Class');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('weightclass', 'Clase de peso');
 }
 $form = ActiveForm::begin([
         'id' => 'weightclasseditview',

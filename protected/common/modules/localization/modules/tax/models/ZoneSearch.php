@@ -83,11 +83,11 @@ class ZoneSearch extends Zone
         {
             if($model['country_id'] ==  -1)
             {
-                $model['country'] = UsniAdaptor::t('localization', 'All Countries');
+                $model['country'] = UsniAdaptor::t('localization', 'Todos los países');
             }
             if($model['state_id'] ==  -1)
             {
-                $model['state'] = UsniAdaptor::t('localization', 'All States');
+                $model['state'] = UsniAdaptor::t('localization', 'Todos los estados');
             }
             $models[$index] = $model;
         }

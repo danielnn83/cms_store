@@ -44,12 +44,12 @@ class ProductDiscount extends ActiveRecord
     public function attributeLabels()
     {
         return [
-                    'group_id'      => UsniAdaptor::t('customer', 'Customer Group'),
-                    'quantity'      => UsniAdaptor::t('products', 'Quantity'), 
-                    'price'         => UsniAdaptor::t('products', 'Price'),
-                    'priority'      => UsniAdaptor::t('products', 'Priority'),
-                    'start_datetime'=> UsniAdaptor::t('products', 'Start Date'),
-                    'end_datetime'  => UsniAdaptor::t('products', 'End Date'),
+                    'group_id'      => UsniAdaptor::t('customer', 'Grupo de clientes'),
+                    'quantity'      => UsniAdaptor::t('products', 'Cantidad'), 
+                    'price'         => UsniAdaptor::t('products', 'Precio'),
+                    'priority'      => UsniAdaptor::t('products', 'Prioridad'),
+                    'start_datetime'=> UsniAdaptor::t('products', 'Fecha de inicio'),
+                    'end_datetime'  => UsniAdaptor::t('products', 'Fecha de fin'),
                     'product_id'    => Product::getLabel(1),
                ];
     }
@@ -59,7 +59,7 @@ class ProductDiscount extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Discount') : UsniAdaptor::t('products', 'Discounts');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Descuento') : UsniAdaptor::t('products', 'Descuentos');
     }
     
     /**

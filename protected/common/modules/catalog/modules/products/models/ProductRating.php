@@ -44,7 +44,7 @@ class ProductRating extends \usni\library\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-                    'rating'           => UsniAdaptor::t('products', 'Rating'),
+                    'rating'           => UsniAdaptor::t('products', 'Clasificación'),
                ];
     }
 
@@ -53,7 +53,7 @@ class ProductRating extends \usni\library\db\ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Rating') : UsniAdaptor::t('products', 'Ratings');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Clasificación') : UsniAdaptor::t('products', 'Clasificaciones');
     }
     
     /**

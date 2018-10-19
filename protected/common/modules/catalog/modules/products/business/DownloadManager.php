@@ -51,7 +51,7 @@ class DownloadManager extends \usni\library\business\Manager
                                 'uploadInstanceAttribute' => 'uploadInstance',
                                 'type'              => $fileType,
                                 'savedAttribute'    => 'savedFile',
-                                'fileMissingError'  => UsniAdaptor::t('application', 'Please upload file'),
+                                'fileMissingError'  => UsniAdaptor::t('application', 'Por favor cargue el archivo'),
                             ];
             $uploadInstanceManager = new UploadInstanceManager($config);
             $result = $uploadInstanceManager->processUploadInstance();

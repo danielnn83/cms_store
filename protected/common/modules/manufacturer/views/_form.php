@@ -14,11 +14,11 @@ use usni\library\widgets\Thumbnail;
 $cancelUrl = UsniAdaptor::createUrl('manufacturer/default/index');
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('manufacturer', 'Manufacturer');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('manufacturer', 'Fabricante');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('manufacturer', 'Manufacturer');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('manufacturer', 'Fabricante');
 }
 $form = ActiveForm::begin([
         'id' => 'manufacturereditview',

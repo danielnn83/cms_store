@@ -10,15 +10,15 @@ use usni\library\widgets\DetailView;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('newsletter', 'Newsletter');
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('newsletter', 'Boletín');
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('newsletter', 'Newsletters'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('newsletter', 'Boletines'),
                                         'url' => ['/marketing/newsletter/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'View') . ' ' . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Ver') . ' ' . ' #' . $model['id']
                                     ]
                                 ];
 $deleteUrl      = UsniAdaptor::createUrl('marketing/newsletter/default/delete', ['id' => $model['id']]);
@@ -29,11 +29,11 @@ $widgetParams   = [
                     'caption'       => null,
                     'attributes'    => [
                                             [
-                                                'label'     => UsniAdaptor::t('application', 'From'),
+                                                'label'     => UsniAdaptor::t('application', 'De'),
                                                 'attribute' => 'storeName',
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('application', 'To'),
+                                                'label'     => UsniAdaptor::t('application', 'Para'),
                                                 'attribute' => 'to'
                                             ],
                                             'subject',

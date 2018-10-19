@@ -13,10 +13,10 @@ use usni\library\grid\ActionToolbar;
 
 /* @var $gridViewDTO \products\dto\ProductReviewGridViewDTO */
 /* @var $this \usni\library\web\AdminView */
-$title  = UsniAdaptor::t('products', 'Manage Trash Reviews');
+$title  = UsniAdaptor::t('products', 'Administrar comentarios basura');
 $this->params['breadcrumbs'] = [
                                     [
-                                        'label' => UsniAdaptor::t('products', 'Manage Reviews'),
+                                        'label' => UsniAdaptor::t('products', 'Administrar comentarios'),
                                         'url'   => ['/catalog/products/review/index']
                                     ],
                                     [
@@ -46,7 +46,7 @@ $widgetParams   = [
                             'name',
                             'review',
                             [
-                                    'label'     => UsniAdaptor::t('products', 'Product'),
+                                    'label'     => UsniAdaptor::t('products', 'Producto'),
                                     'attribute' => 'product_id',
                                     'value'     => 'product_name',
                             ],

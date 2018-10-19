@@ -27,7 +27,7 @@ class SiteController extends BaseController
         $isValid  = SiteManager::getInstance()->isValidCategory($id);
         if($isValid == false)
         {
-            throw new InvalidParamException(UsniAdaptor::t('productCategories', "Invalid product category"));
+            throw new InvalidParamException(UsniAdaptor::t('productCategories', "Categoría de producto no válida"));
         }
         $listViewDTO    = new ProductCategoryListViewDTO();
         $listViewDTO->setId($id);

@@ -51,7 +51,7 @@ class Module extends SecuredModule
     public function getPermissions()
     {
         $permissions['EnhancementModule'] = [
-                                                'access.enhancement'  => UsniAdaptor::t('application', 'Access Tab'),
+                                                'access.enhancement'  => UsniAdaptor::t('application', 'Ficha de acceso'),
                                           ];
         return $permissions;
     }

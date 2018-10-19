@@ -11,10 +11,10 @@ use usni\library\utils\Html;
 /* @var $this \usni\library\web\AdminView */
 /* @var $formDTO \products\dto\AssignAttributeDTO */
 
-$this->title                = UsniAdaptor::t('products', 'Assign Attributes');
+$this->title                = UsniAdaptor::t('products', 'Asignar atributos');
 $this->params['breadcrumbs']= [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Products'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Productos'),
                                         'url'   => UsniAdaptor::createUrl('/catalog/products/default/index')
                                     ],
                                     [
@@ -22,7 +22,7 @@ $this->params['breadcrumbs']= [
                                         'url'   => UsniAdaptor::createUrl('/catalog/products/default/view', ['id' => $formDTO->product['id']])
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('products', 'Assign Attributes')
+                                        'label' => UsniAdaptor::t('products', 'Asignar atributos')
                                     ]
                             ];
 $model      = $formDTO->model;
@@ -41,7 +41,7 @@ $form       = ActiveForm::begin([
 <?php ActiveForm::end();?>
 
 <?php echo $this->render('/_assignedAttributesGridView', ['dataProvider' => $formDTO->getAttributesDataProvider(),
-                                                 'caption' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('application', 'Attributes'),
+                                                 'caption' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('application', 'Atributos'),
                                                  'showActionColumn' => true]);?>
 <?php
 $formId             = 'assignproductattributeeditview';

@@ -71,7 +71,7 @@ class OrderActionColumn extends \usni\library\grid\ActionColumn
     {
         if($this->checkAccess($model, 'view'))
         {
-            $label = UsniAdaptor::t('order', 'Invoice');
+            $label = UsniAdaptor::t('order', 'Factura');
             $icon  = FA::icon('bitcoin'). "\n";
             $url   = UsniAdaptor::createUrl("order/invoice/view", ['id' => $model['invoice_id']]);
             return Html::a($icon, $url, [
@@ -96,7 +96,7 @@ class OrderActionColumn extends \usni\library\grid\ActionColumn
         {
             if($model['payment_activity_url'] != null)
             {
-                $label = UsniAdaptor::t('order', 'Add Payment');
+                $label = UsniAdaptor::t('order', 'Agregar pago');
                 $icon  = FA::icon('plus-circle'). "\n";
                 $url   = UsniAdaptor::createUrl($model['payment_activity_url'], ['orderId' => $model['id']]);
                 return Html::a($icon, $url, [
@@ -118,7 +118,7 @@ class OrderActionColumn extends \usni\library\grid\ActionColumn
     {
         if($this->checkAccess($model, 'view'))
         {
-            $label = UsniAdaptor::t('payment', 'View Payments');
+            $label = UsniAdaptor::t('payment', 'Ver pagos');
             $icon  = FA::icon('money'). "\n";
             $url   = UsniAdaptor::createUrl("order/payment/index", ['orderId' => $model['id']]);
             return Html::a($icon, $url, [

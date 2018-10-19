@@ -37,21 +37,21 @@ class ZoneDataManager extends DataManager
         $assam      = State::find()->where('code = :code', [':code' => 'MN'])->asArray()->one();
          return [
                     [
-                        'name'          => UsniAdaptor::t('zone', 'North Zone'),
+                        'name'          => UsniAdaptor::t('zone', 'Zona Norte'),
                         'country_id'    => $country['id'],
                         'state_id'      => $delhi['id'],
                         'zip'           => self::PIN_CODE_DELHI,
                         'is_zip_range'  => 0,
-                        'description'   => UsniAdaptor::t('zone', 'North Zone for India'),
+                        'description'   => UsniAdaptor::t('zone', 'Zona norte para país'),
                     ],
                     [
-                        'name'          => UsniAdaptor::t('zone', 'East Zone'),
+                        'name'          => UsniAdaptor::t('zone', 'Zona Este'),
                         'country_id'    => $country['id'],
                         'state_id'      => $assam['id'],
                         'from_zip'      => '781000',
                         'to_zip'        => '781010',
                         'is_zip_range'  => 1,
-                        'description'   => UsniAdaptor::t('zone', 'East Zone for India'),
+                        'description'   => UsniAdaptor::t('zone', 'Zona este para país'),
                     ]
                 ];
     }

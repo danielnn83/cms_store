@@ -48,7 +48,7 @@ class StockStatus extends TranslatableActiveRecord
 	{
 		$labels = [
                         'id'    => UsniAdaptor::t('application', 'id'),
-                        'name'	=> UsniAdaptor::t('application', 'Name'),
+                        'name'	=> UsniAdaptor::t('application', 'Nombre'),
                     ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -58,7 +58,7 @@ class StockStatus extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('stockstatus', 'Stock Status');
+        return UsniAdaptor::t('stockstatus', 'Estado de Stock');
     }
     
      /**

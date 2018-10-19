@@ -37,7 +37,7 @@ class CustomerDataManager extends DataManager
                     [
                         'type'      => 'email',
                         'notifykey' => Customer::NOTIFY_CREATECUSTOMER,
-                        'subject'   => UsniAdaptor::t('customer', 'New Customer Registration'),
+                        'subject'   => UsniAdaptor::t('customer', 'Nuevo registro de cliente'),
                         'content'   => file_get_contents($filePath)
                     ]
                 ];

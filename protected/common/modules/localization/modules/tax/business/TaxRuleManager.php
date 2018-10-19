@@ -71,7 +71,7 @@ class TaxRuleManager extends Manager
             }
             return implode(', ', $zoneNames);
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**

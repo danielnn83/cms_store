@@ -51,12 +51,12 @@ class Country extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                        'name'                  => UsniAdaptor::t('application', 'Name'),
+                        'name'                  => UsniAdaptor::t('application', 'Nombre'),
                         'iso_code_2'            => UsniAdaptor::t('localization','Iso Code(2)'),
                         'iso_code_3'            => UsniAdaptor::t('localization','Iso Code(3)'),
-                        'address_format'        => UsniAdaptor::t('localization','Address Format'),
-                        'postcode_required' 	=> UsniAdaptor::t('localization','Postcode Required'),
-                        'status'                => UsniAdaptor::t('application','Status'),
+                        'address_format'        => UsniAdaptor::t('localization','Formato de la dirección'),
+                        'postcode_required' 	=> UsniAdaptor::t('localization','Código postal requerido'),
+                        'status'                => UsniAdaptor::t('application','Estatus'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -66,7 +66,7 @@ class Country extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('country', 'Country') : UsniAdaptor::t('country', 'Countries');
+        return ($n == 1) ? UsniAdaptor::t('country', 'País') : UsniAdaptor::t('country', 'Paises');
     }
     
     /**

@@ -97,13 +97,13 @@ class DefaultController extends BaseController
         $manager->processContactUs($formDTO);
         if($formDTO->getIsTransactionSuccess() === true)
         {
-            $message = UsniAdaptor::t('applicationflash', 'Thank you for contacting us. We would revert back to you within 24 hours.');
+            $message = UsniAdaptor::t('applicationflash', 'Gracias por contactarnos. Nosotros nos pondremos en contacto contigo.');
             FlashUtil::setMessage('success', $message);
             $this->refresh();
         }
         elseif($formDTO->getIsTransactionSuccess() === false)
         {
-            FlashUtil::setMessage('error', UsniAdaptor::t('applicationflash', 'There is an error sending email'));
+            FlashUtil::setMessage('error', UsniAdaptor::t('applicationflash', 'Hubo un error al enviar el correo, contacta al administrador'));
             return $this->refresh();
         }
         else

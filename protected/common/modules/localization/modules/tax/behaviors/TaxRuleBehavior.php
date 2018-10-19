@@ -28,7 +28,7 @@ class TaxRuleBehavior extends \yii\base\Behavior
         {
             return $value;
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**
@@ -48,7 +48,7 @@ class TaxRuleBehavior extends \yii\base\Behavior
             }
             return implode(', ', $customerGroupNames);
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**
@@ -68,6 +68,6 @@ class TaxRuleBehavior extends \yii\base\Behavior
             }
             return implode(', ', $productTaxClassNames);
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
 }

@@ -16,7 +16,7 @@ $model  = new Manufacturer(['scenario' => 'bulkedit']);
 $form = BulkEditActiveForm::begin([
             'id'        => 'manufacturerbulkeditview',
             'layout'    => 'horizontal',
-            'caption' => UsniAdaptor::t('manufacturer', 'Manufacturer') . ' ' . UsniAdaptor::t('application', 'Bulk Edit')
+            'caption' => UsniAdaptor::t('manufacturer', 'Fabricante') . ' ' . UsniAdaptor::t('application', 'Edición masiva')
         ]);
 ?>
 <?= $form->field($model, 'status')->select2Input(StatusUtil::getDropdown(), false);?>

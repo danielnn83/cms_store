@@ -7,13 +7,13 @@ use usni\UsniAdaptor;
 
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('customer', 'Customers'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('customer', 'Clientes'),
                                         'url'   => ['/customer/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Create')
+                                        'label' => UsniAdaptor::t('application', 'Agregar')
                                     ]
                                ];
 
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('customer', 'Customer');
+$this->title = UsniAdaptor::t('application', 'agregar') . ' ' . UsniAdaptor::t('customer', 'Clientes');
 echo $this->render('/_tabform', ['formDTO' => $formDTO]);

@@ -13,15 +13,15 @@ use usni\library\modules\users\widgets\DetailBrowseDropdown;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('customer', 'Customer');
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('customer', 'Cliente');
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('customer', 'Customers'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('customer', 'Clientes'),
                                         'url' => ['/customer/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'View') . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Ver') . ' #' . $model['id']
                                     ]
                                 ];
 
@@ -52,12 +52,12 @@ $toolbarParams  = ['editUrl'            => UsniAdaptor::createUrl('customer/defa
             ];
             $items[] = [
                 'options' => ['id' => 'tabprofileInfo'],
-                'label' => UsniAdaptor::t('users', 'Profile'),
+                'label' => UsniAdaptor::t('users', 'Perfil'),
                 'content' => $this->render('@usni/library/modules/users/views/_personview', ['detailViewDTO' => $detailViewDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'tabaddressInfo'],
-                'label' => UsniAdaptor::t('users', 'Address'),
+                'label' => UsniAdaptor::t('users', 'Dirección'),
                 'content' => $this->render('@usni/library/modules/users/views/_addressview', ['detailViewDTO' => $detailViewDTO])
             ];
             echo Tabs::widget(['items' => $items]);

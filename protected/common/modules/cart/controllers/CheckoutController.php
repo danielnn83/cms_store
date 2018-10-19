@@ -56,7 +56,7 @@ class CheckoutController extends BaseController
             $cart = ApplicationUtil::getCart();
             if($cart->shouldProceedForCheckout() === false)
             {
-                FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "Either products in the cart are not in stock or out of stock checkout is not allowed. Please contact system admin."));
+                FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "Los productos en el carrito no están en stock o no están disponibles en stock. Comuníquese con el administrador del sistema."));
                 return $this->redirect(UsniAdaptor::createUrl('cart/default/view'));
             }
             $checkoutDTO    = new CheckoutDTO();
@@ -95,7 +95,7 @@ class CheckoutController extends BaseController
         }
         if($cart->shouldProceedForCheckout() === false)
         {
-            FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "Either products in the cart are not in stock or out of stock checkout is not allowed. Please contact system admin."));
+            FlashUtil::setMessage('warning', UsniAdaptor::t('cartflash', "Los productos en el carrito no están en stock o no están disponibles en stock. Comuníquese con el administrador del sistema."));
             return $this->redirect(UsniAdaptor::createUrl('cart/default/view'));
         }
         $reviewDTO      = new ReviewDTO();

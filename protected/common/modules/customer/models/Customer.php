@@ -57,7 +57,7 @@ class Customer extends ActiveRecord implements IAuthIdentity
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('customer', 'Customer') : UsniAdaptor::t('customer', 'Customers');
+        return ($n == 1) ? UsniAdaptor::t('customer', 'Cliente') : UsniAdaptor::t('customer', 'Clientes');
     }
 
     /**

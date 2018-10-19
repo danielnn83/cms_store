@@ -16,7 +16,7 @@ echo $form->field($model, 'payment_method')->radioList($paymentMethods)->label(f
 if($formDTO->getInterface() == 'front')
 {
     echo $form->field($model, 'agree', ['horizontalCssClasses' => ['wrapper'   => 'col-sm-12'], 
-                                      'checkboxTemplate' => "{beginWrapper}\n<div class=\"checkbox\">\n{beginLabel}\n{input}\n{labelTitle}\n" . ' <a href="#termsModal" data-toggle="modal">' .  UsniAdaptor::t('application', 'Terms and Conditions') . '</a>' . "{endLabel}\n</div>\n{error}\n{endWrapper}"])->checkbox();
+                                      'checkboxTemplate' => "{beginWrapper}\n<div class=\"checkbox\">\n{beginLabel}\n{input}\n{labelTitle}\n" . ' <a href="#termsModal" data-toggle="modal">' .  UsniAdaptor::t('application', 'Terminos y condiciones') . '</a>' . "{endLabel}\n</div>\n{error}\n{endWrapper}"])->checkbox();
     echo $this->render('/_termsmodal', ['formDTO' => $formDTO]);
 }
 else

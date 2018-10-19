@@ -45,11 +45,11 @@ class ProductSpecial extends ActiveRecord
     public function attributeLabels()
     {
         return [
-                    'group_id'      => UsniAdaptor::t('customer', 'Customer Group'),
-                    'price'         => UsniAdaptor::t('products', 'Price'),
-                    'priority'      => UsniAdaptor::t('products', 'Priority'),
-                    'start_datetime'=> UsniAdaptor::t('products', 'Start Date'),
-                    'end_datetime'  => UsniAdaptor::t('products', 'End Date'),
+                    'group_id'      => UsniAdaptor::t('customer', 'Grupo de clientes'),
+                    'price'         => UsniAdaptor::t('products', 'Precio'),
+                    'priority'      => UsniAdaptor::t('products', 'Prioridad'),
+                    'start_datetime'=> UsniAdaptor::t('products', 'Fecha de inicio'),
+                    'end_datetime'  => UsniAdaptor::t('products', 'Fecha de fin'),
                     'product_id'    => Product::getLabel(1),
                ];
     }
@@ -59,7 +59,7 @@ class ProductSpecial extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Special') : UsniAdaptor::t('products', 'Specials');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Especial') : UsniAdaptor::t('products', 'Especiales');
     }
     
     /**

@@ -6,12 +6,12 @@ if(UsniAdaptor::app()->user->can('access.cms'))
 {
     return [    
                 'label'       => MenuUtil::getSidebarMenuIcon('pencil') .
-                                     MenuUtil::wrapLabel(UsniAdaptor::t('cms', 'Content')),
+                                     MenuUtil::wrapLabel(UsniAdaptor::t('cms', 'CMS')),
                 'url'         => '#',
                 'itemOptions' => ['class' => 'navblock-header'],
                 'items'       => [
                                     [
-                                        'label' => UsniAdaptor::t('cms', 'Pages'),
+                                        'label' => UsniAdaptor::t('cms', 'Páginas'),
                                         'url'   => ["/cms/page/index"],
                                         'visible'=> UsniAdaptor::app()->user->can('page.manage'),
                                     ]

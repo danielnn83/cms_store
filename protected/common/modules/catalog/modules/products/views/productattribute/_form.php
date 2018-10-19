@@ -15,11 +15,11 @@ $attributeGroups    = $formDTO->getAttributeGroupData();
 
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Attribute');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Atributo');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('products', 'Attribute');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('products', 'Atributo');
 }
 $form = ActiveForm::begin([
         'id' => 'productattributeeditview',

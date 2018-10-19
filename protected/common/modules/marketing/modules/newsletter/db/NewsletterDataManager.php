@@ -34,7 +34,7 @@ class NewsletterDataManager extends DataManager
                     [
                         'type'      => 'email',
                         'notifykey' => 'sendNewsletter',
-                        'subject'   => UsniAdaptor::t('marketing', 'Newsletter'),
+                        'subject'   => UsniAdaptor::t('marketing', 'Boletin'),
                         'content'   => file_get_contents($filePath)
                     ]
                 ];

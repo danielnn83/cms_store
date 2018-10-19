@@ -13,7 +13,7 @@ use common\modules\localization\modules\lengthclass\models\LengthClass;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('lengthclass', 'Manage Length Classes');
+$title          = UsniAdaptor::t('lengthclass', 'Administrar clase de longitudes');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

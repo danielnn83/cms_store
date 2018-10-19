@@ -43,9 +43,9 @@ class ProductOptionMapping extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'option_id'         => UsniAdaptor::t('products', 'Option'),
+            'option_id'         => UsniAdaptor::t('products', 'Opción'),
             'product_id'        => Product::getLabel(1),
-            'required'          => UsniAdaptor::t('application', 'Required')
+            'required'          => UsniAdaptor::t('application', 'Requerido')
         ];
     }
 
@@ -54,7 +54,7 @@ class ProductOptionMapping extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('application', 'Manage') . ' ' . ProductOption::getLabel(2);
+        return UsniAdaptor::t('application', 'Administrar') . ' ' . ProductOption::getLabel(2);
     }
 
     /**

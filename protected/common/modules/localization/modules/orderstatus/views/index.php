@@ -14,7 +14,7 @@ use common\modules\localization\modules\orderstatus\grid\OrderStatusNameDataColu
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('orderstatus', 'Manage Order Status');
+$title          = UsniAdaptor::t('orderstatus', 'Administrar estado del pedido');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

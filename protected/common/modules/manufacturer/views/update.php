@@ -11,12 +11,12 @@ use usni\library\widgets\BrowseDropdown;
 $model  = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('manufacturer', 'Manufacturers'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('manufacturer', 'Fabricantes'),
         'url' => ['/manufacturer/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model->id
+        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model->id
     ]
 ];
 
@@ -25,5 +25,5 @@ $browseParams   = ['permission' => 'manufacturer.updateother',
                    'model'  => $model];
 echo BrowseDropdown::widget($browseParams);
 
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('manufacturer', 'Manufacturer');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('manufacturer', 'Fabricante');
 echo $this->render("/_form", ['model' => $model]);

@@ -8,7 +8,7 @@ use frontend\widgets\FormButtons;
 
 $isShippingRequired = $formDTO->getCart()->isShippingRequired();
 
-$this->title = $this->params['breadcrumbs'][] = UsniAdaptor::t('cart', 'Checkout');
+$this->title = $this->params['breadcrumbs'][] = UsniAdaptor::t('cart', 'Revisar');
 
 $shippingMethods = $formDTO->getShippingMethods();
 $paymentMethods  = $formDTO->getPaymentMethods();
@@ -16,7 +16,7 @@ if($isShippingRequired && empty($shippingMethods))
 {
 ?>
     <div class="well">
-        <p><?php echo UsniAdaptor::t('cart', "Shipping methods are not enabled. Please contact admin to enable shipping methods.");?></p>
+        <p><?php echo UsniAdaptor::t('cart', "Métodos de envio no estan habilitados. Por favor, contacta al Administrador para habilitar los métodos de envio.");?></p>
     </div>
 <?php
 }
@@ -24,7 +24,7 @@ elseif(empty($paymentMethods))
 {
   ?>
     <div class="well">
-        <p><?php echo UsniAdaptor::t('cart', "Payment methods are not enabled. Please contact admin to enable payment methods.");?></p>
+        <p><?php echo UsniAdaptor::t('cart', "Los métodos de pago no estan habilitados. Por favor, contacta al Administrador para habilitar los métodos de pago.");?></p>
     </div>
   <?php
 }
@@ -47,7 +47,7 @@ else
                                ]); ?>
 <div class="row">
     <div class="col-sm-6">
-        <legend><span class="badge">1</span> <?php echo UsniAdaptor::t('customer', 'Billing Address');?></legend>
+        <legend><span class="badge">1</span> <?php echo UsniAdaptor::t('customer', 'Dirección de facturación');?></legend>
         <?php echo $this->render('/_billingedit', ['form' => $form, 'model' => $formDTO->getCheckout()->billingInfoEditForm]);?>
     </div>
     <?php
@@ -55,15 +55,15 @@ else
     {
     ?>
         <div class="col-sm-6">
-            <legend><span class="badge">2</span> <?php echo UsniAdaptor::t('customer', 'Shipping Address');?></legend>
+            <legend><span class="badge">2</span> <?php echo UsniAdaptor::t('customer', 'Dirección de envío');?></legend>
             <?php echo $this->render('/_shippingedit', ['form' => $form, 'model' => $formDTO->getCheckout()->deliveryInfoEditForm]);?>
         </div>
         <div class="col-sm-6">
-            <legend><span class="badge">3</span> <?php echo UsniAdaptor::t('shipping', 'Shipping Method');?></legend>
+            <legend><span class="badge">3</span> <?php echo UsniAdaptor::t('shipping', 'Método de envío');?></legend>
             <?php echo $this->render('/_deliveryoptions', ['form' => $form, 'formDTO' => $formDTO]);?>
         </div>
         <div class="col-sm-6">
-            <legend><span class="badge">4</span> <?php echo UsniAdaptor::t('payment', 'Payment Method');?></legend>
+            <legend><span class="badge">4</span> <?php echo UsniAdaptor::t('payment', 'Método de pago');?></legend>
             <?php echo $this->render('/_paymentoptions', ['form' => $form, 'formDTO' => $formDTO]);?>
         </div>
     <?php
@@ -72,14 +72,14 @@ else
     {
     ?>
         <div class="col-sm-6">
-            <legend><span class="badge">2</span> <?php echo UsniAdaptor::t('payment', 'Payment Method');?></legend>
+            <legend><span class="badge">2</span> <?php echo UsniAdaptor::t('payment', 'Método de pago');?></legend>
             <?php echo $this->render('/_paymentoptions', ['form' => $form, 'formDTO' => $formDTO]);?>
         </div>
     <?php
     }
     ?>
 </div>
-<?= FormButtons::widget(['submitButtonLabel' => UsniAdaptor::t('application', 'Continue'),
+<?= FormButtons::widget(['submitButtonLabel' => UsniAdaptor::t('application', 'Continuar'),
                          'submitButtonOptions' => ['class' => 'btn btn-success', 'id' => 'save'],
                          'showCancelButton' => false
                          ]);?>

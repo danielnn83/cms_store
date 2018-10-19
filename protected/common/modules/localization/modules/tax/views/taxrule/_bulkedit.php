@@ -17,7 +17,7 @@ $model  = new TaxRule(['scenario' => 'bulkedit']);
 $form = BulkEditActiveForm::begin([
             'id'        => 'taxrulebulkeditview',
             'layout'    => 'horizontal',
-            'caption' => UsniAdaptor::t('tax', 'Tax Rule') . ' ' . UsniAdaptor::t('application', 'Bulk Edit')
+            'caption' => UsniAdaptor::t('tax', 'Regla de impuestos') . ' ' . UsniAdaptor::t('application', 'Edición masiva')
         ]);
 ?>
 <?= $form->field($model, 'based_on')->dropDownList(TaxUtil::getBasedOnDropdown());?>

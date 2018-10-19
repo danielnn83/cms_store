@@ -12,11 +12,11 @@ use usni\library\widgets\DetailBrowseDropdown;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('customer', 'Customer Group') . ' #' . $model['id'];
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('customer', 'Grupo de cliente') . ' #' . $model['id'];
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('customer', 'Customer Group'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('customer', 'Grupo de cliente'),
                                         'url' => ['/customer/group/index']
                                     ],
                                     [

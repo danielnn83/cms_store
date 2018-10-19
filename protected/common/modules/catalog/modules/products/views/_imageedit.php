@@ -20,8 +20,8 @@ if(!empty($errors))
 <table id="productimage-value-table" class="table table-striped table-bordered table-hover">
     <thead>
         <tr>
-            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Caption');?></td>
-            <td class="text-right"><?php echo UsniAdaptor::t('application', 'Image');?></td>
+            <td class="text-left"><?php echo UsniAdaptor::t('products', 'Subtítulo');?></td>
+            <td class="text-right"><?php echo UsniAdaptor::t('application', 'Imagen');?></td>
             <td></td>
         </tr>
     </thead>
@@ -35,7 +35,7 @@ if(!empty($errors))
                 <tr class="productimage-value-row" id="productimage-value-row-<?php echo $index;?>">
                     <?php echo Html::activeHiddenInput($productImage, "[$index]id");?>
                     <td class="text-left">
-                        <?= $form->field($productImage, "[$index]caption")->textInput(['placeholder' => UsniAdaptor::t('products', 'Caption')])->label(false);?>
+                        <?= $form->field($productImage, "[$index]caption")->textInput(['placeholder' => UsniAdaptor::t('products', 'Subtítulo')])->label(false);?>
                     </td>
                     <td class="text-right">
                         <?php
@@ -53,7 +53,7 @@ if(!empty($errors))
                     <?php $deleteUrl = UsniAdaptor::createUrl('catalog/products/product-image/delete');?>
                     <td class="text-right">
                         <button type="button" onclick="$(this).tooltip('destroy');
-                                    $(this).closest('.productimage-value-row').remove();$(this).removeProductImage('<?php echo $deleteUrl;?>', '<?php echo $productImage->id;?>');" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Remove');?>">
+                                    $(this).closest('.productimage-value-row').remove();$(this).removeProductImage('<?php echo $deleteUrl;?>', '<?php echo $productImage->id;?>');" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Borrar');?>">
                             <i class="fa fa-minus-circle"></i>
                         </button>
                     </td>
@@ -66,7 +66,7 @@ if(!empty($errors))
     <tfoot>
         <tr>
             <td class="text-right" colspan="3">
-                <button type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="<?php echo UsniAdaptor::t('products', 'Add Image');?>" id="add-productimage-value-row">
+                <button type="button" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="<?php echo UsniAdaptor::t('products', 'Agregar imagen');?>" id="add-productimage-value-row">
                     <i class="fa fa-plus-circle"></i>
                 </button>
             </td>

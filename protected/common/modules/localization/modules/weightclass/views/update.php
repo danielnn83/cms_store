@@ -12,12 +12,12 @@ use usni\library\widgets\BrowseDropdown;
 $model  = $formDTO->getModel();
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('weightclass', 'Weight Classes'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('weightclass', 'Clases de pesos'),
         'url' => ['/localization/weightclass/default/index']
     ],
         [
-        'label' => UsniAdaptor::t('application', 'Update') . ' #' . $model->id
+        'label' => UsniAdaptor::t('application', 'Actualizar') . ' #' . $model->id
     ]
 ];
 
@@ -26,5 +26,5 @@ $browseParams   = ['permission' => 'weightclass.updateother',
                    'model'  => $model];
 echo BrowseDropdown::widget($browseParams);
 
-$this->title = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('weightclass', 'Weight Class');
+$this->title = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('weightclass', 'Clases de pesos');
 echo $this->render("/_form", ['formDTO' => $formDTO]);

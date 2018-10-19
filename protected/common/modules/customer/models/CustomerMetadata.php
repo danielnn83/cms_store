@@ -18,6 +18,6 @@ class CustomerMetadata extends \usni\library\db\ActiveRecord
      */
     public static function getLabel($n = 2)
     {
-        return UsniAdaptor::t('customer', 'Customer Metadata');
+        return UsniAdaptor::t('customer', 'Metadatos del cliente');
     }
 }

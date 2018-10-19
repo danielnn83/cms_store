@@ -15,9 +15,9 @@ if(UsniAdaptor::app()->isInstalled())
     //Cms
     $items[]    = require_once UsniAdaptor::app()->getModule('cms')->basePath . '/config/menu.php';
     //Extensions
-    $items[]    = require_once UsniAdaptor::app()->getModule('extension')->basePath . '/config/menu.php';
+    //$items[]    = require_once UsniAdaptor::app()->getModule('extension')->basePath . '/config/menu.php';
     //Marketing
-    $items[]    = require_once UsniAdaptor::app()->getModule('marketing')->basePath . '/config/menu.php';
+    //$items[]    = require_once UsniAdaptor::app()->getModule('marketing')->basePath . '/config/menu.php';
     //Stores
     $items[]    = require_once UsniAdaptor::app()->getModule('stores')->basePath . '/config/menu.php';
     //System

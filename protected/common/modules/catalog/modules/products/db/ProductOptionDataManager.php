@@ -39,15 +39,15 @@ class ProductOptionDataManager extends DataManager
                         'url'           => 'http://xyz.com'
                     ],
                     [
-                        'name'          => UsniAdaptor::t('products', 'Size'),
-                        'display_name'  => UsniAdaptor::t('products', 'size'),
+                        'name'          => UsniAdaptor::t('products', 'Tamaño'),
+                        'display_name'  => UsniAdaptor::t('products', 'tamaño'),
                         'sort_order'    => 2,
                         'type'          => 'radio',
                         'url'           => 'http://xyz.com'
                     ],
                     [
-                        'name'          => UsniAdaptor::t('products', 'Resolution'),
-                        'display_name'  => UsniAdaptor::t('products', 'resolution'),
+                        'name'          => UsniAdaptor::t('products', 'Resolución'),
+                        'display_name'  => UsniAdaptor::t('products', 'resolución'),
                         'sort_order'    => 3,
                         'type'          => 'select',
                         'url'           => 'http://xyz.com'

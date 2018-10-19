@@ -13,7 +13,7 @@ use products\models\ProductAttribute;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('products', 'Manage Attributes');
+$title          = UsniAdaptor::t('products', 'Administrar Atributos');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

@@ -43,7 +43,7 @@ class ProductActionColumn extends \usni\library\grid\ActionColumn
     {
         if($this->checkAccess($model, 'update'))
         {
-            $label = UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Attributes');
+            $label = UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Atributos');
             $icon  = FA::icon('list');
             $url   = UsniAdaptor::createUrl("catalog/products/attribute/assign", ["productId" => $model['id']]);
             return Html::a($icon, $url, [
@@ -65,7 +65,7 @@ class ProductActionColumn extends \usni\library\grid\ActionColumn
     {
         if($this->checkAccess($model, 'update'))
         {
-            $label = UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Options');
+            $label = UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Opciones');
             $icon  = FA::icon('list-ul');
             $url   = UsniAdaptor::createUrl("catalog/products/option/assign", ["productId" => $model['id']]);
             return Html::a($icon, $url, [

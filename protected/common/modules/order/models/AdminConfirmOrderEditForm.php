@@ -53,8 +53,8 @@ class AdminConfirmOrderEditForm extends \cart\models\ConfirmOrderForm
     public function attributeLabels()
     {
         return array_merge(parent::attributeLabels(), [
-                    'status'        => UsniAdaptor::t('application', 'Status'),
-                    'comments'      => UsniAdaptor::t('application', 'Comments')
+                    'status'        => UsniAdaptor::t('application', 'Estatus'),
+                    'comments'      => UsniAdaptor::t('application', 'Comentarios')
                ]);
     }
     
@@ -64,8 +64,8 @@ class AdminConfirmOrderEditForm extends \cart\models\ConfirmOrderForm
     public function attributeHints()
     {
         return array_merge(parent::attributeHints(), [
-                    'status'        => UsniAdaptor::t('orderhint', 'Status for the order'),
-                    'comments'      => UsniAdaptor::t('orderhint', 'Comments for the order')
+                    'status'        => UsniAdaptor::t('orderhint', 'Estatus para el pedido'),
+                    'comments'      => UsniAdaptor::t('orderhint', 'Comentarios para el pedido')
                 ]);
     }
 }

@@ -13,7 +13,7 @@ use common\modules\localization\modules\weightclass\models\WeightClass;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('weightclass', 'Manage Weight Classes');
+$title          = UsniAdaptor::t('weightclass', 'Administrar clases de pesos');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

@@ -59,10 +59,10 @@ class Newsletter extends TranslatableActiveRecord
     public function attributeLabels()
     {
         $labels =   [
-                        'subject'       => UsniAdaptor::t('application', 'Subject'),
-                        'content'       => UsniAdaptor::t('cms', 'Content'),
-                        'store_id'      => UsniAdaptor::t('application', 'From'),
-                        'to'            => UsniAdaptor::t('application', 'To'),
+                        'subject'       => UsniAdaptor::t('application', 'Tema'),
+                        'content'       => UsniAdaptor::t('cms', 'Contenido'),
+                        'store_id'      => UsniAdaptor::t('application', 'De'),
+                        'to'            => UsniAdaptor::t('application', 'Para'),
                     ];
         return parent::getTranslatedAttributeLabels($labels);
     }
@@ -73,8 +73,8 @@ class Newsletter extends TranslatableActiveRecord
 	public function attributeHints()
 	{
 		$hints = [
-                     'subject'  => UsniAdaptor::t('newsletterhint', 'Set subject for the newsletter.'),
-                     'store_id' => UsniAdaptor::t('newsletterhint', 'Select store to send newsletter.'),
+                     'subject'  => UsniAdaptor::t('newsletterhint', 'Establecer tema para el boletín.'),
+                     'store_id' => UsniAdaptor::t('newsletterhint', 'Seleccione la tienda para enviar el boletín.'),
                  ];
         return $hints;
 	}
@@ -84,7 +84,7 @@ class Newsletter extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('newsletter', 'Newsletter') : UsniAdaptor::t('newsletter', 'Newsletters');
+        return ($n == 1) ? UsniAdaptor::t('newsletter', 'Boletín') : UsniAdaptor::t('newsletter', 'Boletines');
     }
     
     /**

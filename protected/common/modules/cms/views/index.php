@@ -16,7 +16,7 @@ use common\modules\cms\utils\DropdownUtil;
 /* @var $gridViewDTO \common\modules\cms\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('cms', 'Manage Pages');
+$title          = UsniAdaptor::t('cms', 'Administrar páginas');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -27,7 +27,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'pagegridview',
     'pjaxId'        => 'pagegridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('cms', 'Page') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('cms', 'Página') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'pagebulkeditview',
     'permissionPrefix'  => 'page',

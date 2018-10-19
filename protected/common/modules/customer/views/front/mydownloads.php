@@ -12,12 +12,12 @@ use products\grid\MyDownloadsActionColumn;
 
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 
-$title              = UsniAdaptor::t('customer', 'My Downloads');
+$title              = UsniAdaptor::t('customer', 'Mis descargas');
 $this->title        = $title;
 $this->leftnavView  = '/front/_sidebar';
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('customer', 'My Account'),
+                                        'label' => UsniAdaptor::t('customer', 'Mi cuenta'),
                                         'url'   => ['/customer/site/my-account']
                                     ],
                                     [
@@ -39,11 +39,11 @@ $widgetParams   = [
                                 'filter'        => DownloadUtil::getDownloadTypes()
                             ],
                             [
-                                'label'     => UsniAdaptor::t('products', 'Size(in bytes)'),
+                                'label'     => UsniAdaptor::t('products', 'Tamaño(en bytes)'),
                                 'attribute' => 'size',
                             ],
                             [
-                                'label'     => UsniAdaptor::t('products', 'Date Added'),
+                                'label'     => UsniAdaptor::t('products', 'Fecha de registro'),
                                 'attribute' => 'created_datetime',
                                 'class'     => FormattedDateTimeColumn::className(),
                                 'filter'    => false

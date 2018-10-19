@@ -13,15 +13,15 @@ if(UsniAdaptor::app()->installed === true && YII_ENV != 'test')
 }
 else
 {
-    $storeName  = UsniAdaptor::t('stores', 'Default Store');
+    $storeName  = UsniAdaptor::t('stores', 'Nombre de la tienda');
 }
 ?>
 <div class="footer clearfix">
     <div class="pull-left">
-        Copyright &copy; <?php echo date('Y'); ?> <?php echo $storeName . ' ' . UsniAdaptor::t('application', 'All Rights Reserved.');?>
+        Copyright &copy; <?php echo date('Y'); ?> <?php echo $storeName . ' ' . UsniAdaptor::t('application', 'Todos los derechos reservados.');?>
         
     </div>
     <div class="pull-right">
-        <?php echo UsniAdaptor::app()->powered() . " " . UsniAdaptor::t('application', 'Release') . ' ' . UsniAdaptor::app()->version; ?>
+        <?php echo UsniAdaptor::app()->powered() . " " . UsniAdaptor::t('application', 'Versión') . ' ' . UsniAdaptor::app()->version; ?>
     </div>
 </div><!-- footer -->

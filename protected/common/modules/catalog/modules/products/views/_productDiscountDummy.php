@@ -8,13 +8,13 @@ use usni\library\utils\Html;
             <?php echo Html::dropDownList('ProductDiscount[##rowCount##][group_id_dummy]', null, $groups, ['class' => 'form-control dummy-discount']); ?>
         </td>
         <td class="text-right">
-            <input type="text" name="ProductDiscount[##rowCount##][quantity]" value="" placeholder="<?php echo UsniAdaptor::t('products', 'Quantity');?>" class="form-control">
+            <input type="text" name="ProductDiscount[##rowCount##][quantity]" value="" placeholder="<?php echo UsniAdaptor::t('products', 'Cantidad');?>" class="form-control">
         </td>
         <td class="text-left">
-            <input type="text" name="ProductDiscount[##rowCount##][priority]" value="" placeholder="<?php echo UsniAdaptor::t('products', 'Priority');?>" class="form-control">
+            <input type="text" name="ProductDiscount[##rowCount##][priority]" value="" placeholder="<?php echo UsniAdaptor::t('products', 'Prioridad');?>" class="form-control">
         </td>
         <td class="text-right">
-            <input type="text" name="ProductDiscount[##rowCount##][price]" value="" placeholder="<?php echo UsniAdaptor::t('products', 'Price');?>" class="form-control">
+            <input type="text" name="ProductDiscount[##rowCount##][price]" value="" placeholder="<?php echo UsniAdaptor::t('products', 'Precio');?>" class="form-control">
         </td>
         <td class="text-left">
             <input type="text" name="ProductDiscount[##rowCount##][start_datetime]" value="" placeholder="YYYY-mm-dd H:i:s" class="form-control datefield">
@@ -24,7 +24,7 @@ use usni\library\utils\Html;
         </td>
         <td class="text-left">
             <button type="button" onclick="$(this).tooltip('destroy');
-                        $(this).closest('.discount-value-row').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Remove');?>">
+                        $(this).closest('.discount-value-row').remove();" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="<?php echo UsniAdaptor::t('products', 'Borrar');?>">
                 <i class="fa fa-minus-circle"></i>
             </button>
         </td>

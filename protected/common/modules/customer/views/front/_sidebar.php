@@ -11,12 +11,12 @@ use usni\UsniAdaptor
 <div class="col-sm-3 hidden-xs" id="column-left">
 <nav>
   <ul id="accountsidebarlist">
-      <li><?php echo Html::a(UsniAdaptor::t('users', 'My Account'), UsniAdaptor::createUrl('/customer/site/my-account')); ?></li>
-      <li><?php echo Html::a(UsniAdaptor::t('users', 'Edit Profile'), UsniAdaptor::createUrl('/customer/site/edit-profile')); ?></li>
-      <li><?php echo Html::a(UsniAdaptor::t('users', 'Change Password'), UsniAdaptor::createUrl('/customer/site/change-password')) ?></li>    
-      <li><?php echo Html::a(UsniAdaptor::t('order', 'My Orders'), UsniAdaptor::createUrl('/customer/site/order-history')) ?></li>
-      <li><?php echo Html::a(UsniAdaptor::t('wishlist', 'Wishlist'), UsniAdaptor::createUrl('wishlist/default/view')) ?></li>
-      <li><?php echo Html::a(UsniAdaptor::t('customer', 'My Downloads'), UsniAdaptor::createUrl('customer/site/downloads')) ?></li>
+      <li><?php echo Html::a(UsniAdaptor::t('users', 'Mi cuenta'), UsniAdaptor::createUrl('/customer/site/my-account')); ?></li>
+      <li><?php echo Html::a(UsniAdaptor::t('users', 'Editar perfil'), UsniAdaptor::createUrl('/customer/site/edit-profile')); ?></li>
+      <li><?php echo Html::a(UsniAdaptor::t('users', 'Cambiar Password'), UsniAdaptor::createUrl('/customer/site/change-password')) ?></li>    
+      <li><?php //echo Html::a(UsniAdaptor::t('order', 'Mis Pedidos'), UsniAdaptor::createUrl('/customer/site/order-history')) ?></li>
+      <li><?php //echo Html::a(UsniAdaptor::t('wishlist', 'Deseados'), UsniAdaptor::createUrl('wishlist/default/view')) ?></li>
+      <!--li><?php //echo Html::a(UsniAdaptor::t('customer', 'Mis descargas'), UsniAdaptor::createUrl('customer/site/downloads')) ?></li-->
   </ul>
 </nav>
 </div>

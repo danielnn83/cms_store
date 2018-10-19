@@ -11,11 +11,11 @@ use usni\library\bootstrap\FormButtons;
 
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Attribute Group');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Atributos de grupo');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('products', 'Attribute Group');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('products', 'Atributos de grupo');
 }
 $form = ActiveForm::begin([
         'id' => 'productattributegroupeditview',

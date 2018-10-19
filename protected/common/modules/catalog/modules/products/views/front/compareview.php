@@ -11,12 +11,12 @@ use products\grid\front\RatingDataColumn;
 
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \frontend\web\View */
-$this->title = UsniAdaptor::t('products', 'Compare Products');
+$this->title = UsniAdaptor::t('products', 'Comparar productos');
 ?>
 <h2><?php echo $this->title;?></h2>
 <?php
 $this->params['breadcrumbs'] = [
-                                    ['label' => UsniAdaptor::t('customer', 'My Account'), 'url' => UsniAdaptor::createUrl('customer/site/my-account')],
+                                    ['label' => UsniAdaptor::t('customer', 'Mi cuenta'), 'url' => UsniAdaptor::createUrl('customer/site/my-account')],
                                     ['label' => $this->title]
                                 ];
 
@@ -46,11 +46,11 @@ $widgetParams   = [
                                 'value'     => 'convertedWeight',
                             ],
                             [
-                                'label'     => UsniAdaptor::t('products', 'Availability'),
+                                'label'     => UsniAdaptor::t('products', 'Disponibilidad'),
                                 'value'     => 'availability',
                             ],
                             [
-                                'label'     => UsniAdaptor::t('products', 'Dimensions(L*W*H)'),
+                                'label'     => UsniAdaptor::t('products', 'Dimensiones(L*W*H)'),
                                 'value'     => 'dimensions',
                             ],
                             [
@@ -58,12 +58,12 @@ $widgetParams   = [
                                 'value'     => 'formattedPrice'
                             ],
                             [
-                                'label'     => UsniAdaptor::t('products', 'Attributes'),
+                                'label'     => UsniAdaptor::t('products', 'Atributos'),
                                 'value'     => 'attributes',
                                 'format'    => 'html'
                             ],
                             [
-                                'label'     => UsniAdaptor::t('products', 'Rating'),
+                                'label'     => UsniAdaptor::t('products', 'Clasificación'),
                                 'class'     => RatingDataColumn::className()
                             ],
                             [

@@ -3,7 +3,7 @@ use usni\UsniAdaptor;
 use cart\widgets\SiteCartSubView;
 use yii\bootstrap\Alert;
 
-$this->title = $this->params['breadcrumbs'][] = UsniAdaptor::t('cart', 'Shopping Cart');
+$this->title = $this->params['breadcrumbs'][] = UsniAdaptor::t('cart', 'Carrito de compras');
 if(UsniAdaptor::app()->session->hasFlash('outOfStockCheckoutNowAllowed'))
 {
     echo Alert::widget(['options' => ['class' => 'alert-danger'], 

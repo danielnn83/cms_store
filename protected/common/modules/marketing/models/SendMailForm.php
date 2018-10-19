@@ -102,13 +102,13 @@ class SendMailForm extends Model
     public function attributeLabels()
     {
         $labels =   [
-                        'subject'       => UsniAdaptor::t('application', 'Subject'),
-                        'content'       => UsniAdaptor::t('cms', 'Content'),
-                        'store_id'      => UsniAdaptor::t('application', 'From'),
-                        'to'            => UsniAdaptor::t('application', 'To'),
-                        'customer_id'   => UsniAdaptor::t('customer', 'Customer'),
-                        'group_id'      => UsniAdaptor::t('customer', 'Customer Group'),
-                        'product_id'    => UsniAdaptor::t('products', 'Products'),
+                        'subject'       => UsniAdaptor::t('application', 'Tema'),
+                        'content'       => UsniAdaptor::t('cms', 'Contenido'),
+                        'store_id'      => UsniAdaptor::t('application', 'De'),
+                        'to'            => UsniAdaptor::t('application', 'Para'),
+                        'customer_id'   => UsniAdaptor::t('customer', 'Cliente'),
+                        'group_id'      => UsniAdaptor::t('customer', 'Grupo de cliente'),
+                        'product_id'    => UsniAdaptor::t('products', 'Productos'),
                     ];
         return $labels;
     }
@@ -119,8 +119,8 @@ class SendMailForm extends Model
 	public function attributeHints()
 	{
 		$hints = [
-                     'subject'  => UsniAdaptor::t('marketinghint', 'Set subject for the mail.'),
-                     'store_id' => UsniAdaptor::t('marketinghint', 'Select store to send mail.'),
+                     'subject'  => UsniAdaptor::t('marketinghint', 'Establecer asunto para el correo.'),
+                     'store_id' => UsniAdaptor::t('marketinghint', 'Seleccionar tienda para enviar correo.'),
                  ];
         return $hints;
 	}
@@ -130,6 +130,6 @@ class SendMailForm extends Model
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('marketing', 'Send Mail') : UsniAdaptor::t('marketing', 'Send Mails');
+        return ($n == 1) ? UsniAdaptor::t('marketing', 'Enviar Email') : UsniAdaptor::t('marketing', 'Enviar Emails');
     }
 }

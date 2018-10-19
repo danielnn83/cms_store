@@ -33,7 +33,7 @@ class MarketingDataManager extends DataManager
                     [
                         'type'      => 'email',
                         'notifykey' => 'sendMail',
-                        'subject'   => UsniAdaptor::t('marketing', 'Send Mail'),
+                        'subject'   => UsniAdaptor::t('marketing', 'Enviar Email'),
                         'content'   => file_get_contents($filePath)
                     ]
                 ];

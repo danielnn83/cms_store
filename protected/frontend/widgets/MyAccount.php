@@ -17,16 +17,6 @@ use yii\bootstrap\Dropdown;
  */
 class MyAccount extends \yii\bootstrap\Widget
 {
-    /**
-     * Layout for the store selector
-     * @var string 
-     */
-    public $layout = '<li class="dropdown">{headerLink}{listItems}</li>';
-    
-    /**
-     * @var array Html options for header link 
-     */
-    public $headerLinkOptions = ['data-toggle' => 'dropdown', 'class' => 'dropdown-toggle'];
     
     /**
      * @var string My account url 
@@ -56,79 +46,48 @@ class MyAccount extends \yii\bootstrap\Widget
         }
         if($this->accountLabel == null)
         {
-            $this->accountLabel = UsniAdaptor::t('users', 'My Account');
+            $this->accountLabel = UsniAdaptor::t('users', 'Mi cuenta');
         }
-        $content = preg_replace_callback("/{\\w+}/", function ($matches) {
-                $content = $this->renderSection($matches[0]);
-
-                return $content === false ? $matches[0] : $content;
-            }, $this->layout);
-        return $content;
+        
+        return $this->renderTotal();
     }
     
-    /**
-     * Renders a section of the specified name.
-     * If the named section is not supported, false will be returned.
-     * @param string $name the section name, e.g., `{summary}`, `{items}`.
-     * @return string|boolean the rendering result of the section, or false if the named section is not supported.
-     */
-    public function renderSection($name)
-    {
-        switch ($name) {
-            case '{headerLink}':
-                return $this->renderHeaderLink();
-            case '{listItems}':
-                return $this->renderListItems();
-            default:
-                return false;
-        }
-    }
+   
     
-    /**
-     * Render header link
-     * @return string
-     */
-    public function renderHeaderLink()
+    
+    public function renderTotal()
     {
         $username       = null;
         if (!UsniAdaptor::app()->user->isGuest)
         {
             $username   = UsniAdaptor::app()->user->getIdentity()->username;
+            $this->accountLabel = $username;
         }
-        if($username == null)
-        {
-            $linkText = Html::tag('span', $this->accountLabel, ['class' => "hidden-xs hidden-sm hidden-md"]);
-        }
-        else
-        {
-            $linkText = Html::tag('span', $username, ['class' => "hidden-xs hidden-sm hidden-md"]);
-        }
-        $headerLink     = $linkText . "\n" .
-                          FA::icon('caret-down');
-        $linkOptions    = ArrayUtil::merge($this->headerLinkOptions, ['title' => strip_tags($this->accountLabel)]);
-        return Html::a($headerLink, $this->accountUrl, $linkOptions);
-    }
-    
-    /**
-     * Render list items
-     * @return string
-     */
-    public function renderListItems()
-    {
-        $items          = [];
+        $lista = "";
         if(!UsniAdaptor::app()->user->isGuest)
         {
-            $items[] = ['label' => $this->accountLabel, 'url' => $this->accountUrl];
-            $items[] = ['label' => UsniAdaptor::t('users', 'Logout'), 'url' => UsniAdaptor::createUrl('customer/site/logout')];
+            
+            $lista =//'<li><a href="'.UsniAdaptor::createUrl('wishlist/default/view').'">'.UsniAdaptor::t('users', "Lista de deseos").'</a></li>
+                    //<li><a href="'.UsniAdaptor::createUrl('cart/checkout/index').'">'. UsniAdaptor::t('users', "Pagar").'</a></li>
+                    '<li><a href="'.UsniAdaptor::createUrl('customer/site/logout').'">'.UsniAdaptor::t('users', "Salir").'</a></li>';
         }
         else
         {
-            $items[] = ['label' => UsniAdaptor::t('users', 'Register'), 'url' => UsniAdaptor::createUrl('customer/site/register')];
-            $items[] = ['label' => UsniAdaptor::t('users', 'Login'), 'url' => UsniAdaptor::createUrl('customer/site/login')];
+            
+            $lista = ' <li><a href="'.UsniAdaptor::createUrl('customer/site/login').'">'.UsniAdaptor::t('users', "Ingresar").'</a></li>
+                    <li><a href="'.UsniAdaptor::createUrl('customer/site/register').'">'.UsniAdaptor::t('users', "Registrar").'</a></li>';
         }
-        return Dropdown::widget(['items'         => $items,
-                                'options'       => ['class' => 'dropdown-menu dropdown-menu-right'],
-                                'encodeLabels'  => false
-                                ]);
-    }
+        return '<div class="header-account header-account-2 f-left">
+                <ul class="user-meta">
+                    <li><a href="#"><i class="zmdi zmdi-view-headline"></i></a>
+                        <ul>
+                            <li><a href="'.$this->accountUrl.'">'.$this->accountLabel.'</a></li>
+                            '.$lista.'
+                        </ul>
+                    </li>
+                </ul>
+            </div>';
+    } 
+    
+    
 }

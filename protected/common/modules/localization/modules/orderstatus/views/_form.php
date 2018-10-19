@@ -13,11 +13,11 @@ $model = $formDTO->getModel();
 
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('orderstatus', 'Order Status');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('orderstatus', 'Estado del pedido');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('orderstatus', 'Order Status');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('orderstatus', 'Estado del pedido');
 }
 
 $form = ActiveForm::begin([

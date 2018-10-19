@@ -27,7 +27,7 @@ class BillingAddress extends Address
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('customer', 'Billing Address');
+        return UsniAdaptor::t('customer', 'Dirección de facturación');
     }
     
     /**

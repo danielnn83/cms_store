@@ -16,7 +16,7 @@ $newsletterCustomerCount = UsniAdaptor::app()->session->get('newsletterCustomerC
 $form = ActiveForm::begin([
         'id' => 'sendnewsletterview',
         'layout' => 'horizontal',
-        'caption' => UsniAdaptor::t('newsletter', 'Subscribe Newsletter'),
+        'caption' => UsniAdaptor::t('newsletter', 'Suscribirse al boletín informativo'),
         'decoratorView' => '//common/newsletteredit.php'
     ]);
 ?>
@@ -25,7 +25,7 @@ if(!isset($newsletterCustomerCount))
 {
 ?>
 <?= $form->field($model, 'email')->textInput(); ?>
-<?= FormButtons::widget(['showCancelButton' => false, 'submitButtonLabel' => UsniAdaptor::t('application', 'Submit'), 
+<?= FormButtons::widget(['showCancelButton' => false, 'submitButtonLabel' => UsniAdaptor::t('application', 'Enviar'), 
                          'submitButtonOptions' => ['class' => 'btn btn-success'],
                          'layout' => "<div class='text-right'>{submit}\n{cancel}</div>"]);?>
 <?php
@@ -34,19 +34,19 @@ else
 {
     if($newsletterCustomerCount == 0)
     {   
-      $subscribeMessage  = UsniAdaptor::t('newsletter', 'If you want to subscribe click on submit.');
+      $subscribeMessage  = UsniAdaptor::t('newsletter', 'Si desea suscribirse, haga clic en enviar.');
       
 ?>
 <?= $subscribeMessage; ?>
 <?= Html::activeHiddenInput($model, "is_subscribe", ['value' => true]); ?>
-<?= FormButtons::widget(['showCancelButton' => false, 'submitButtonLabel' => UsniAdaptor::t('application', 'Submit'), 
+<?= FormButtons::widget(['showCancelButton' => false, 'submitButtonLabel' => UsniAdaptor::t('application', 'Enviar'), 
                          'submitButtonOptions' => ['class' => 'btn btn-success'],
                          'layout' => "<div class='text-right'>{submit}\n{cancel}</div>"]);?>
 <?php
 }
 else
 {
-  $subscribeMessage = UsniAdaptor::t('newsletter', 'You have already subscribed for the newsletter');  
+  $subscribeMessage = UsniAdaptor::t('newsletter', 'Ya te has suscrito al boletín');  
 ?>
 <?= $subscribeMessage; ?>
 <?php

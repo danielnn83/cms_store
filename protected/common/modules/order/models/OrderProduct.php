@@ -48,15 +48,15 @@ class OrderProduct extends ActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                     'order_id'     => UsniAdaptor::t('order', 'Order'),
+                     'order_id'     => UsniAdaptor::t('order', 'Pedido'),
                      'product_id'	=> Product::getLabel(1),
-                     'quantity'     => UsniAdaptor::t('products', 'Quantity'),
-                     'name'         => UsniAdaptor::t('application', 'Name'),
-                     'model'        => UsniAdaptor::t('products', 'Model'),
-                     'price'        => UsniAdaptor::t('products', 'Price'),
+                     'quantity'     => UsniAdaptor::t('products', 'Cantidad'),
+                     'name'         => UsniAdaptor::t('application', 'Nombre'),
+                     'model'        => UsniAdaptor::t('products', 'Modelo'),
+                     'price'        => UsniAdaptor::t('products', 'Precio'),
                      'total'        => UsniAdaptor::t('application', 'Total'),
-                     'tax'          => UsniAdaptor::t('tax', 'Tax'),
-                     'options_price'=> UsniAdaptor::t('products', 'Options Price')
+                     'tax'          => UsniAdaptor::t('tax', 'Impuesto'),
+                     'options_price'=> UsniAdaptor::t('products', 'Opciones de precio')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -66,6 +66,6 @@ class OrderProduct extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('order', 'Order Product') : UsniAdaptor::t('order', 'Order Products');
+        return ($n == 1) ? UsniAdaptor::t('order', 'Solicitar producto') : UsniAdaptor::t('order', 'Solicitar productos');
     }
 }

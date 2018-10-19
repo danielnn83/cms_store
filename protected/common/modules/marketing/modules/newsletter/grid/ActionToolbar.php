@@ -73,7 +73,7 @@ class ActionToolbar extends \usni\library\grid\ActionToolbar
     {
         if($this->showSend && UsniAdaptor::app()->user->can($this->sendPermission))
         {   
-            $button = Html::button(FA::icon('send') . "\n" . UsniAdaptor::t('application', 'Send'), 
+            $button = Html::button(FA::icon('send') . "\n" . UsniAdaptor::t('application', 'Enviar'), 
                                                                                           ["id" => "action-toolbar-bulkedit",
                                                                                           "class" => "btn btn-default send-newsletter-btn"]);
             return Html::tag('div', $button, ['class' => "btn-group"]);

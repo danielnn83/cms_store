@@ -12,7 +12,7 @@ use common\modules\order\grid\OrderStatusDataColumn;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('order', 'Latest Orders');
+$title          = UsniAdaptor::t('order', 'Ultimos pedidos');
 
 $widgetParams   = [
                         'id'            => 'latestordersgridview',
@@ -25,14 +25,18 @@ $widgetParams   = [
                                                </div>",
                         'columns'       => [
                                                 'unique_id',
-                                                'name',
+                                                
                                                 [
-                                                    'label'     => UsniAdaptor::t('products', 'Amount'),
+                                                    'label'     => UsniAdaptor::t('products', 'Nombre'),
+                                                    'attribute' => 'name'
+                                                ],
+                                                [
+                                                    'label'     => UsniAdaptor::t('products', 'Cantidad'),
                                                     'attribute' => 'amount',
                                                     'class'     => FormattedPriceColumn::className()
                                                 ],
                                                 [
-                                                    'attribute' => 'status',
+                                                    'attribute' => 'Estatus',
                                                     'class' => OrderStatusDataColumn::className()
                                                 ],
                                         ],

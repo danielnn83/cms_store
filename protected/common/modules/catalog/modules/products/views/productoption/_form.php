@@ -17,11 +17,11 @@ $model  = $formDTO->getModel();
 
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Option');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Opciones');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('products', 'Option');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('products', 'Opciones');
 }
 $form = ActiveForm::begin([
         'id' => 'productoptioneditview',
@@ -33,7 +33,7 @@ $form = ActiveForm::begin([
 <?= $form->field($model, 'display_name')->textInput(); ?>
 <?= $form->field($model, 'type')->select2input(ProductUtil::getProductOptionType());?>
 <?php
-$titleRow   = Html::tag('div', Html::tag('h4', UsniAdaptor::t('products', 'Option Values')), ['class' => 'col-xs-10']);
+$titleRow   = Html::tag('div', Html::tag('h4', UsniAdaptor::t('products', 'Valores de la opción')), ['class' => 'col-xs-10']);
 $titleRow  .= Html::tag('div', Html::tag('span', 
                                             Html::a(FA::icon('plus'), '#',
                                                        [

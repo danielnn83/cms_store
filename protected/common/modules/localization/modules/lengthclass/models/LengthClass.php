@@ -51,9 +51,9 @@ class LengthClass extends TranslatableActiveRecord
 	{
 		$labels = [
                         'id'    => UsniAdaptor::t('application', 'Id'),
-                        'value'	=> UsniAdaptor::t('application', 'Value'),
-                        'name'	=> UsniAdaptor::t('application', 'Name'),
-                        'unit'	=> UsniAdaptor::t('localization', 'Unit'),
+                        'value'	=> UsniAdaptor::t('application', 'Valor'),
+                        'name'	=> UsniAdaptor::t('application', 'Nombre'),
+                        'unit'	=> UsniAdaptor::t('localization', 'Unidad'),
                     ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -63,7 +63,7 @@ class LengthClass extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('lengthclass', 'Length Class') : UsniAdaptor::t('lengthclass', 'Length Classes');
+        return ($n == 1) ? UsniAdaptor::t('lengthclass', 'Clase de longitud') : UsniAdaptor::t('lengthclass', 'Clases de longitud');
     }
     
     /**

@@ -64,7 +64,7 @@ class BeforeActionBehavior extends Behavior
         if(empty(UsniAdaptor::app()->storeManager->stores))
         {
             UsniAdaptor::app()->storeManager->stores    = StoreBusinessManager::getInstance(['language' => 'en-US'])->getAll();   
-            FlashUtil::setMessage('warning', UsniAdaptor::t('application', 'Selected store is currently in default language and is missing for the selected language. Please enter the data in the selected language.'));
+            FlashUtil::setMessage('warning', UsniAdaptor::t('application', 'La tienda se encuentra actualmente en otro idioma que no es el predeterminado. Por favor ingrese los datos en el idioma seleccionado.'));
         }
         foreach(UsniAdaptor::app()->storeManager->stores as $record)
         {

@@ -354,6 +354,6 @@ class Manager extends \common\business\Manager
             $customer = CustomerDAO::getById($customerId);
             return $customer['username'];
         }
-        return UsniAdaptor::t('customer', 'guest');
+        return UsniAdaptor::t('customer', 'Invitado');
     }
 }

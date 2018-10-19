@@ -45,9 +45,9 @@ class TaxRuleDetails extends ActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                        'product_tax_class_id' => UsniAdaptor::t('tax', 'Product Tax Classes'),
-                        'customer_group_id'    => UsniAdaptor::t('customer', 'Customer Groups'),
-                        'type'                 => UsniAdaptor::t('application', 'Type'),
+                        'product_tax_class_id' => UsniAdaptor::t('tax', 'Clases de impuestos sobre productos'),
+                        'customer_group_id'    => UsniAdaptor::t('customer', 'Grupos de clientes'),
+                        'type'                 => UsniAdaptor::t('application', 'Tipo'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -57,7 +57,7 @@ class TaxRuleDetails extends ActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('tax', 'Tax Rule Detail') : UsniAdaptor::t('tax', 'Tax Rule Details');
+        return ($n == 1) ? UsniAdaptor::t('tax', 'Detalle de la regla de impuestos') : UsniAdaptor::t('tax', 'Detalles de la regla de impuestos');
     }
     
     /**

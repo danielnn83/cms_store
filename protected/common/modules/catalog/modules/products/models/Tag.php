@@ -32,8 +32,8 @@ class Tag extends TranslatableActiveRecord
     {
         $labels = [
                     'id'        => UsniAdaptor::t('application', 'Id'),
-                    'name'      => UsniAdaptor::t('application', 'Name'),
-                    'frequency' => UsniAdaptor::t('products', 'Frequency'),
+                    'name'      => UsniAdaptor::t('application', 'Nombre'),
+                    'frequency' => UsniAdaptor::t('products', 'Frecuencia'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
     }

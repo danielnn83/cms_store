@@ -37,7 +37,7 @@ class MyDownloadsActionColumn extends ActionColumn
             $url        = UsniAdaptor::createUrl('customer/site/download', ['id' => $model['id'], 'orderId' => $model['order_id']]);
             $icon       = FA::icon('cloud-download');
             $options    = [
-                            'title' => UsniAdaptor::t('products', 'Download'),
+                            'title' => UsniAdaptor::t('products', 'Descargas'),
                             'data-pjax' => '0',
                             'id'        => 'download-' . $model['id'],
                             'class'     => 'download-product'

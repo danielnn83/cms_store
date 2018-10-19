@@ -13,7 +13,7 @@ use usni\library\grid\ActionColumn;
 /* @var $gridViewDTO \common\modules\localization\modules\city\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('city', 'Manage Cities');
+$title          = UsniAdaptor::t('city', 'Administrar ciudades');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 $dropdownData   = $gridViewDTO->getCountryDropdownData();
 $toolbarParams  = [
@@ -24,7 +24,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'citygridview',
     'pjaxId'        => 'citygridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('city', 'City') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('city', 'Ciudad') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'citybulkeditview',
     'permissionPrefix'  => 'city'

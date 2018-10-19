@@ -15,7 +15,7 @@ use common\modules\extension\grid\ModificationActionColumn;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Manage Modifications');
+$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Administrar modificaciones');
 
 $toolbarParams  = [
     'gridId' => 'modificationgridview',
@@ -27,7 +27,7 @@ $widgetParams   = [
                         'id'            => 'modificationgridview',
                         'dataProvider'  => $gridViewDTO->getDataProvider(),
                         'filterModel'   => $gridViewDTO->getSearchModel(),
-                        'caption'       => UsniAdaptor::t('payment', 'Manage Modifications'),
+                        'caption'       => UsniAdaptor::t('payment', 'Administrar modificaciones'),
                         'modelClass'    => Extension::className(),
                         'columns' => [
                             ['class' => CheckboxColumn::className()],

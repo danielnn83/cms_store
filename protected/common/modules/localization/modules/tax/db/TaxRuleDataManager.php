@@ -39,7 +39,7 @@ class TaxRuleDataManager extends DataManager
         $zone               = ZoneTranslated::find()->where('name = :name AND language = :ln', [':name' => 'North Zone', ':ln' => 'en-US'])->asArray()->one();
         return [
                     [
-                        'name'                      => UsniAdaptor::t('tax', 'Sales Tax'),
+                        'name'                      => UsniAdaptor::t('tax', 'Impuesto de venta'),
                         'productTaxClass'           => [$productTaxClass['owner_id']],
                         'based_on'                  => TaxRule::TAX_BASED_ON_SHIPPING,
                         'customerGroups'            => [$groupDefault['id'], $groupRetailer['id'], $groupWholesaler['id']],
@@ -48,7 +48,7 @@ class TaxRuleDataManager extends DataManager
                         'taxZones'                  => [$zone['owner_id']]
                     ],
                     [
-                        'name'                      => UsniAdaptor::t('tax', 'Service Tax'),
+                        'name'                      => UsniAdaptor::t('tax', 'Impuesto de servicio'),
                         'productTaxClass'           => [$productTaxClass['owner_id']],
                         'based_on'                  => TaxRule::TAX_BASED_ON_BILLING,
                         'customerGroups'            => [$groupDefault['id'], $groupRetailer['id'],$groupWholesaler['id']],

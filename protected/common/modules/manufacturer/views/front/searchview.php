@@ -12,7 +12,7 @@ $this->params['manList'] = $listViewDTO->getManList();
 $this->leftnavView  = '/front/_sidebar';
 
 $manufacturer       = $listViewDTO->getManufacturer();
-$title              = UsniAdaptor::t('application', 'Search Results');
+$title              = UsniAdaptor::t('application', 'Buscar resultados');
 $this->title        = $this->params['breadcrumbs'][] = $title;
 ?>
 <h2><?php echo $title . '-' . $manufacturer['name']?></h2>

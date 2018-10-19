@@ -3,30 +3,31 @@
         <?php echo $this->render('/_contactus', ['formDTO' => $formDTO]); ?>
     </div>
     <div class="col-md-4">
-        <h3>Contact Details</h3>
+        <h3>Detalle de contacto</h3>
         <table class="table table-striped table-bordered">
             <tbody>
                 <tr>
-                    <td>Developed By</td>
-                    <td> <a href="http://ushainformatique.com">Usha Informatique</a></td>
+                    <td>Empresa - Tienda</td>
+                    <td> <a href="http://www.solatextil.mx">Sola textil</a></td>
                 </tr>
                 <tr>
-                    <td>Contact Person</td> 
-                    <td>Mayank Singhai</td>
+                    <td>Persona de contact</td> 
+                    <td>Nombre de la persona</td>
                 </tr>
                 <tr>
-                    <td>Email</td> 
-                    <td>support@whatacart.com</td>
+                    <td>Correo</td> 
+                    <td>correo@solatextil.mx</td>
                 </tr>
                 <tr>
-                    <td>Phone</td> 
-                    <td>+91-9818826390</td>
+                    <td>Teléfono</td> 
+                    <td>555555555555</td>
                 </tr>
             </tbody>
         </table>
-        <h3>Address</h3>
+        <h3>Dirección</h3>
         <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7017.88191962675!2d77.09889459999998!3d28.42103829999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d220169f5e215%3A0x995dcf81cbb6d65e!2sSector+56%2C+Gurgaon%2C+Haryana!5e0!3m2!1sen!2sin!4v1466172824709" width="350" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.532228763554!2d-99.13539358561789!3d19.432606845717135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fecd4864aaff%3A0x4cff0c5cb291360c!2zWsOzY2Fsbw!5e0!3m2!1ses!2smx!4v1538896824728" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
         </p>
     </div>
 </div>

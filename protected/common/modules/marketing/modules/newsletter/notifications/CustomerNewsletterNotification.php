@@ -89,7 +89,7 @@ class CustomerNewsletterNotification extends EmailNotification
         $baseUrl            = NotificationUtil::getApplicationBaseUrl();
         $unsubscribeUrl     = $baseUrl . $url . '?email=' . $email;
         $unsubscribeUrl     = str_replace('backend/', '', $unsubscribeUrl);
-        $unsubscribeUrl     = "<a href='$unsubscribeUrl'>" . UsniAdaptor::t('newsletter', 'Unsubscribe') . "</a>";
+        $unsubscribeUrl     = "<a href='$unsubscribeUrl'>" . UsniAdaptor::t('newsletter', 'Darse de baja') . "</a>";
         return $unsubscribeUrl;
     }
 }

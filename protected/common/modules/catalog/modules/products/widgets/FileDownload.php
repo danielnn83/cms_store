@@ -55,7 +55,7 @@ class FileDownload extends \yii\bootstrap\Widget
             if($this->showDeleteLink)
             {
                 $icon       = FA::icon('trash');
-                $title      = UsniAdaptor::t('application', 'Delete');
+                $title      = UsniAdaptor::t('application', 'Borrar');
                 $deleteLink = Html::a($icon, '#', ['class' => 'delete-file', 'title' => $title]);
                 $this->registerDeleteFileScript();
             }

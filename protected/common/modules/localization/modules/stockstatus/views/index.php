@@ -13,7 +13,7 @@ use common\modules\localization\modules\stockstatus\models\StockStatus;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('stockstatus', 'Manage Stock Status');
+$title          = UsniAdaptor::t('stockstatus', 'Administrar Estados de Stock');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

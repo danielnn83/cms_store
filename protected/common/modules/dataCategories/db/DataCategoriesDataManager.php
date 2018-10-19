@@ -24,8 +24,8 @@ class DataCategoriesDataManager extends DataManager
         return [
                  [
                     'id'           => DataCategory::ROOT_CATEGORY_ID, 
-                    'name'         => UsniAdaptor::t('dataCategories', 'Root Category'), 
-                    'description'  => UsniAdaptor::t('dataCategories', 'This is root data category for the application under which all the data would reside'),
+                    'name'         => UsniAdaptor::t('dataCategories', 'Categoría raiz'), 
+                    'description'  => UsniAdaptor::t('dataCategories', 'Esta es la categoría de datos raíz para la aplicación en la que residirían todos los datos'),
                     'status'       => ActiveRecord::STATUS_ACTIVE
                 ]
                ];

@@ -11,15 +11,15 @@ use usni\library\widgets\DetailBrowseDropdown;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('weightclass', 'Weight Class');
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('weightclass', 'Clase de peso');
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('weightclass', 'Weight Classes'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('weightclass', 'Clases de pesos'),
                                         'url' => ['/localization/weightclass/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'View') . ' ' . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Ver') . ' ' . ' #' . $model['id']
                                     ]
                                 ];
 $editUrl        = UsniAdaptor::createUrl('localization/weightclass/default/update', ['id' => $model['id']]);

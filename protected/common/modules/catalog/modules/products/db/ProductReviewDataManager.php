@@ -34,28 +34,28 @@ class ProductReviewDataManager extends DataManager
         return [
                     [
                         'name'          => 'Wholesalecustomer wholesalecustomerlast',
-                        'review'        => UsniAdaptor::t('products', 'This is my first review'),
+                        'review'        => UsniAdaptor::t('products', 'Esta es mi primera revisión'),
                         'status'        => ProductReview::STATUS_APPROVED,
                         'product_id'    => $product['owner_id'],
                         'email'         => 'wholesalecustomer@whatacart.com'
                     ],
                     [
                         'name'          => 'Wholesalecustomer wholesalecustomerlast',
-                        'review'        => UsniAdaptor::t('products', 'This is my second review'),
+                        'review'        => UsniAdaptor::t('products', 'Esta es mi segunda revisión'),
                         'status'        => ProductReview::STATUS_APPROVED,
                         'product_id'    => $product['owner_id'],
                         'email'         => 'wholesalecustomer@whatacart.com'
                     ],
                     [
                         'name'          => 'Wholesalecustomer wholesalecustomerlast',
-                        'review'        => UsniAdaptor::t('products', 'This is my third review'),
+                        'review'        => UsniAdaptor::t('products', 'Esta es mi tercera revisión'),
                         'status'        => ProductReview::STATUS_APPROVED,
                         'product_id'    => $product['owner_id'],
                         'email'         => 'wholesalecustomer@whatacart.com'
                     ],
                     [
                         'name'          => 'Wholesalecustomer wholesalecustomerlast',
-                        'review'        => UsniAdaptor::t('products', 'This is my fourth review'),
+                        'review'        => UsniAdaptor::t('products', 'Esta es mi cuarta revisión'),
                         'status'        => ProductReview::STATUS_APPROVED,
                         'product_id'    => $product['owner_id'],
                         'email'         => 'wholesalecustomer@whatacart.com'

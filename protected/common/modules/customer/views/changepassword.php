@@ -10,13 +10,13 @@ use usni\library\bootstrap\FormButtons;
 /* @var $this \usni\library\web\AdminView */
 /* @var $formDTO \customer\dto\FormDTO */
 
-$label      = UsniAdaptor::t('users', 'Change Password');
+$label      = UsniAdaptor::t('users', 'Cambiar Password');
 $model      = $formDTO->getModel();
 $customer   = $model->user;
 $this->params['breadcrumbs'] = [
         [
-        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-        UsniAdaptor::t('customer', 'Customers'),
+        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+        UsniAdaptor::t('customer', 'Clientes'),
         'url' => ['/customer/default/index']
     ],
         [

@@ -43,7 +43,7 @@ class CompareActionColumn extends \usni\library\grid\ActionColumn
         $icon   = FA::icon('shopping-cart');
         $url    = '#';
         return Html::a($icon, $url, [
-                    'title' => UsniAdaptor::t('cart', 'Add To Cart'),
+                    'title' => UsniAdaptor::t('cart', 'Agregar al carrito'),
                     'data-productid' => $model['id'],
                     'class'     => "btn btn-success btn-sm add-cart"
                 ]);
@@ -61,7 +61,7 @@ class CompareActionColumn extends \usni\library\grid\ActionColumn
         $icon   = FA::icon('times');
         $url    = '#';
         return Html::a($icon, $url, [
-                    'title' => UsniAdaptor::t('products', 'Remove'),
+                    'title' => UsniAdaptor::t('products', 'Eliminar'),
                     'data-pjax' => '0',
                     'data-productid' => $model['id'],
                     'class'     => "btn btn-danger btn-sm productcompare-remove"

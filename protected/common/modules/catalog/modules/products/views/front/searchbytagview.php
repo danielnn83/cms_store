@@ -11,7 +11,7 @@ use usni\UsniAdaptor;
 $this->params['tagList'] = $listViewDTO->getTagList();
 $this->leftnavView  = '/front/_sidebartagsearch';
 
-$title              = UsniAdaptor::t('application', 'Search Results');
+$title              = UsniAdaptor::t('application', 'Buscar resultados');
 $this->title        = $this->params['breadcrumbs'][] = $title;
 ?>
 <h2><?php echo $title . ' - ' . $listViewDTO->getSearchModel()->tag?></h2>

@@ -53,9 +53,9 @@ class DataCategory extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                        'name'            => UsniAdaptor::t('application', 'Name'),
-                        'description'     => UsniAdaptor::t('application', 'Description'),
-                        'status'          => UsniAdaptor::t('application', 'Status'),
+                        'name'            => UsniAdaptor::t('application', 'Nombre'),
+                        'description'     => UsniAdaptor::t('application', 'Descripción'),
+                        'status'          => UsniAdaptor::t('application', 'Estatus'),
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -65,7 +65,7 @@ class DataCategory extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('dataCategories', 'Data Category') : UsniAdaptor::t('dataCategories', 'Data Categories');
+        return ($n == 1) ? UsniAdaptor::t('dataCategories', 'Categoría de datos') : UsniAdaptor::t('dataCategories', 'Categoría de datos');
     }
     
     /**
@@ -82,9 +82,9 @@ class DataCategory extends TranslatableActiveRecord
     public function attributeHints()
     {
         return array(
-            'name'          => UsniAdaptor::t('applicationhint', 'Minimum 3 characters'),
-            'description'   => UsniAdaptor::t('applicationhint', 'Description for the site'),
-            'status'        => UsniAdaptor::t('datacategoryhint', 'Status for datacategory')
+            'name'          => UsniAdaptor::t('applicationhint', 'Mínimo 3 carácteres'),
+            'description'   => UsniAdaptor::t('applicationhint', 'Descripción para el sitio'),
+            'status'        => UsniAdaptor::t('datacategoryhint', 'Estatus para categoria de datos')
         );
     }
     

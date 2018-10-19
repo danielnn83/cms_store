@@ -58,7 +58,7 @@ class BillingInfoEditForm extends Model
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('cart', 'Billing Details');
+        return UsniAdaptor::t('cart', 'Detalles de facturación');
     }
 
     /**

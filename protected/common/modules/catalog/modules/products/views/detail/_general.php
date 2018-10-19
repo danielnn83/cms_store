@@ -17,14 +17,14 @@ $widgetParams   = [
                                                 'format'      => 'raw'
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('products', 'Tax Class'),
+                                                'label'     => UsniAdaptor::t('products', 'Clase de impuestos'),
                                                 'attribute' => 'tax_class_id',
                                                 'value'     => $model['taxClassName']
                                             ],
                                             'metakeywords',
                                             'metadescription',
                                             [
-                                                'label' => UsniAdaptor::t('products', 'Product Tags'),
+                                                'label' => UsniAdaptor::t('products', 'Etiquetas de productos'),
                                                 'value' => $model['tagNames']
                                             ]
                                         ]

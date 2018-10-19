@@ -16,7 +16,7 @@ use usni\library\utils\StatusUtil;
 /* @var $gridViewDTO \usni\library\modules\auth\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('customer', 'Manage Customer Groups');
+$title          = UsniAdaptor::t('customer', 'Administrar grupos de clientes');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -27,7 +27,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'customergroupgridview',
     'pjaxId'        => 'customergroupgridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('customer', 'Customer Group') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('customer', 'Grupos de clientes') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => 'bulk-edit',
     'bulkEditFormId'    => 'customergroupbulkeditview',
     'permissionPrefix'  => 'group'

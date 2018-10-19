@@ -16,7 +16,7 @@ use usni\library\utils\StatusUtil;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('country', 'Manage Countries');
+$title          = UsniAdaptor::t('country', 'Administrar paises');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [

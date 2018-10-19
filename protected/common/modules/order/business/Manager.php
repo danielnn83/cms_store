@@ -59,7 +59,7 @@ class Manager extends \common\business\Manager
         $order = $checkoutDTO->getCheckout()->order;
         if($order->scenario == 'update' && !($this->isValidOrderId($order->id)))
         {
-            throw new InvalidParamException(UsniAdaptor::t('stores', 'Invalid Order'));
+            throw new InvalidParamException(UsniAdaptor::t('stores', 'Orden inválida'));
         }
         $model  = $checkoutDTO->getCheckout()->customerForm;
         if($model->scenario == 'update')
@@ -69,7 +69,7 @@ class Manager extends \common\business\Manager
                                                                            ->asArray()->one();
             if($order->status == $completedOrderStatus['owner_id'])
             {
-                throw new Exception(UsniAdaptor::t('order', 'Order could not be updated.'));
+                throw new Exception(UsniAdaptor::t('order', 'La orden no se pudo actualizar.'));
             }
 
         }
@@ -172,7 +172,7 @@ class Manager extends \common\business\Manager
         }
         else
         {
-            throw new InvalidParamException(UsniAdaptor::t('stores', 'Invalid Order'));
+            throw new InvalidParamException(UsniAdaptor::t('stores', 'Orden inválida'));
         }
     }
     

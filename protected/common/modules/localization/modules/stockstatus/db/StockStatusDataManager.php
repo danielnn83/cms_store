@@ -30,10 +30,10 @@ class StockStatusDataManager extends DataManager
     {
          return [
                     [
-                        'name'      => UsniAdaptor::t('stockstatus', 'In Stock'),
+                        'name'      => UsniAdaptor::t('stockstatus', 'En Stock'),
                     ],
                     [
-                        'name'      => UsniAdaptor::t('stockstatus', 'Out Of Stock'),
+                        'name'      => UsniAdaptor::t('stockstatus', 'Agostado'),
                     ]
                 ];
     }

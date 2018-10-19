@@ -17,7 +17,7 @@ $model  = new Group(['scenario' => 'bulkedit']);
 $form = BulkEditActiveForm::begin([
             'id'        => 'customergroupbulkeditview',
             'layout'    => 'horizontal',
-            'caption' => UsniAdaptor::t('customer', 'Customer Group') . ' ' . UsniAdaptor::t('application', 'Bulk Edit')
+            'caption' => UsniAdaptor::t('customer', 'Grupo de clientes') . ' ' . UsniAdaptor::t('application', 'Edición masiva')
         ]);
 ?>
 <?= $form->field($model, 'status')->dropDownList(StatusUtil::getDropdown());?>

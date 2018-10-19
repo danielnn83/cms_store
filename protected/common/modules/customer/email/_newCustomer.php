@@ -1,12 +1,12 @@
-<p>Welcome {{fullName}}. Your account has been created successfully at {{appname}}</p>
+<p>Bienvenido {{fullName}}. Su cuenta ha sido creada con éxito en {{appname}}</p>
 
-<p>Your login details are as below<br /><br/>
+<p>La información de inicio de sesión es la siguiente:<br /><br/>
     <strong>Username:</strong> {{username}}<br />
     <strong>Password</strong>: {{password}}</p>
 
 {{confirmemailLabel}}
 {{confirmemail}}
 
-Thanks,<br />
+Gracias,<br />
 System Admin
 

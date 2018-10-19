@@ -48,7 +48,7 @@ class DeliveryOptionsEditForm extends Model
      */
     public static function getLabel($n = 1)
     {
-        return UsniAdaptor::t('cart', 'Delivery Options');
+        return UsniAdaptor::t('cart', 'Opciones de entrega');
     }
 
     /**
@@ -57,9 +57,9 @@ class DeliveryOptionsEditForm extends Model
     public function attributeLabels()
     {
         return [
-                'shipping'    => UsniAdaptor::t('shipping', 'Shipping'),
-                'comments'    => UsniAdaptor::t('application', 'Comments'),
-                'shipping_fee'    => UsniAdaptor::t('shipping', 'Shipping Fee'),
+                'shipping'    => UsniAdaptor::t('shipping', 'Envío'),
+                'comments'    => UsniAdaptor::t('application', 'Comentarios'),
+                'shipping_fee'    => UsniAdaptor::t('shipping', 'Gastos de envío'),
                ];
     }
     
@@ -69,9 +69,9 @@ class DeliveryOptionsEditForm extends Model
     public function attributeHints()
     {
         return [
-                'shipping'    => UsniAdaptor::t('shippinghint', 'Shipping Method'),
-                'comments'    => UsniAdaptor::t('shippinghint', 'Comments associated with the shipping'),
-                'shipping_fee'    => UsniAdaptor::t('shippinghint', 'Shipping fee'),
+                'shipping'    => UsniAdaptor::t('shippinghint', 'Método de envío'),
+                'comments'    => UsniAdaptor::t('shippinghint', 'Comentarios asociados con el envío'),
+                'shipping_fee'    => UsniAdaptor::t('shippinghint', 'Gastos de envío'),
                ];
     }
 }

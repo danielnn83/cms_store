@@ -50,8 +50,8 @@ class ProductTaxClass extends TranslatableActiveRecord
 	{
 		$labels = [
                     'id'					 => UsniAdaptor::t('application', 'Id'),
-                    'name'					 => UsniAdaptor::t('application', 'Name'),
-                    'description'            => UsniAdaptor::t('application', 'Description')
+                    'name'					 => UsniAdaptor::t('application', 'Nombre'),
+                    'description'            => UsniAdaptor::t('application', 'Descripción')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -61,7 +61,7 @@ class ProductTaxClass extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('tax', 'Product Tax Class') : UsniAdaptor::t('tax', 'Product Tax Classes');
+        return ($n == 1) ? UsniAdaptor::t('tax', 'Clase de impuesto al producto') : UsniAdaptor::t('tax', 'Clases de impuestos al producto');
     }
     
     /**

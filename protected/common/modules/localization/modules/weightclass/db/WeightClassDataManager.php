@@ -30,22 +30,22 @@ class WeightClassDataManager extends DataManager
     {
          return [
                     [
-                        'name'      => UsniAdaptor::t('weightclass', 'Kilogram'),
+                        'name'      => UsniAdaptor::t('weightclass', 'Kilogramo'),
                         'unit'     => 'kg',
                         'value'      => 1.00
                     ],
                     [
-                        'name'      => UsniAdaptor::t('weightclass', 'Gram'),
+                        'name'      => UsniAdaptor::t('weightclass', 'Gramo'),
                         'unit'     => 'g',
                         'value'      => 1000.00
                     ],
                     [
-                        'name'      => UsniAdaptor::t('weightclass', 'Ounce'),
+                        'name'      => UsniAdaptor::t('weightclass', 'Onza'),
                         'unit'     => 'oz',
                         'value'      => 35.27
                     ],
                     [
-                        'name'      => UsniAdaptor::t('weightclass', 'Pound'),
+                        'name'      => UsniAdaptor::t('weightclass', 'Libra'),
                         'unit'      => 'lb',
                         'value'     => 2.20
                     ],

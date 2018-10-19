@@ -9,10 +9,10 @@ use cart\widgets\ConfirmCartSubView;
 
 $cart   = ApplicationUtil::getCart();
 $this->params['breadcrumbs'][]  = [
-                                    'label' => UsniAdaptor::t('cart', 'Shopping Cart'),
+                                    'label' => UsniAdaptor::t('cart', 'Carrito de compras'),
                                     'url'   => UsniAdaptor::createUrl('cart/default/view')
                                   ];
-$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('cart', 'Confirm Order');
+$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('cart', 'Confirmar pedido');
 $order          = ApplicationUtil::getCheckoutFormModel('order');
 ?>
 <?php $form = ActiveForm::begin([
@@ -24,7 +24,7 @@ $order          = ApplicationUtil::getCheckoutFormModel('order');
 
         <div class="row">
             <div class="col-sm-3">
-                <legend><?php echo UsniAdaptor::t('customer', 'Billing Address');?></legend>
+                <legend><?php echo UsniAdaptor::t('customer', 'Dirección de facturación');?></legend>
                 <?php echo $reviewDTO->getBillingContent();?>
             </div>
             <?php
@@ -32,18 +32,18 @@ $order          = ApplicationUtil::getCheckoutFormModel('order');
             {
             ?>
                 <div class="col-sm-3">
-                    <legend><?php echo UsniAdaptor::t('customer', 'Shipping Address');?></legend>
+                    <legend><?php echo UsniAdaptor::t('customer', 'Dirección de envío');?></legend>
                     <?php echo $reviewDTO->getShippingContent();?>
                 </div>
                 <div class="col-sm-3">
-                    <legend><?php echo UsniAdaptor::t('shipping', 'Shipping Method');?></legend>
+                    <legend><?php echo UsniAdaptor::t('shipping', 'Método de envío');?></legend>
                     <?php echo $reviewDTO->getShippingName();?>
                 </div>
             <?php
             }
             ?>
             <div class="col-sm-3">
-                <legend><?php echo UsniAdaptor::t('payment', 'Payment Method');?></legend>
+                <legend><?php echo UsniAdaptor::t('payment', 'Método de pago');?></legend>
                 <?php echo $reviewDTO->getPaymentMethodName();?>
             </div>
         </div>

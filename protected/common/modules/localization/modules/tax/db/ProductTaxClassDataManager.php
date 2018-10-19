@@ -30,8 +30,8 @@ class ProductTaxClassDataManager extends DataManager
     {
          return [
                     [
-                        'name'          => UsniAdaptor::t('tax', 'taxable goods'),
-                        'description'   => UsniAdaptor::t('tax', 'Applied to goods on which tax has to be applied')
+                        'name'          => UsniAdaptor::t('tax', 'Bienes imponibles'),
+                        'description'   => UsniAdaptor::t('tax', 'Aplicado a bienes sobre los cuales se debe aplicar el impuesto')
                     ]
                 ];
     }

@@ -71,12 +71,12 @@ class ProductDownload extends TranslatableActiveRecord
     public function attributeLabels()
     {
         $labels = [
-                    'name'          => UsniAdaptor::t('application', 'Name'),
-                    'file'          => UsniAdaptor::t('application', 'File'),
-                    'number_of_days'=> UsniAdaptor::t('products', 'Number of Days'),
-                    'allowed_downloads' => UsniAdaptor::t('products', 'Allowed Downloads'),
-                    'type'              => UsniAdaptor::t('products', 'Download Type'),
-                    'size'              => UsniAdaptor::t('products', 'Size'),
+                    'name'          => UsniAdaptor::t('application', 'Nombre'),
+                    'file'          => UsniAdaptor::t('application', 'Archivo'),
+                    'number_of_days'=> UsniAdaptor::t('products', 'Número de días'),
+                    'allowed_downloads' => UsniAdaptor::t('products', 'Descargas permitidas'),
+                    'type'              => UsniAdaptor::t('products', 'Tipo de descarga'),
+                    'size'              => UsniAdaptor::t('products', 'Tamaño'),
                     ];
         return parent::getTranslatedAttributeLabels($labels);
     }
@@ -86,7 +86,7 @@ class ProductDownload extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Download') : UsniAdaptor::t('products', 'Downloads');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Descarga') : UsniAdaptor::t('products', 'Descargas');
     }
     
     /**

@@ -7,13 +7,13 @@ use usni\UsniAdaptor;
 
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' . UsniAdaptor::t('products', 'Products'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' . UsniAdaptor::t('products', 'Productos'),
                                         'url'   => ['/catalog/products/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Create')
+                                        'label' => UsniAdaptor::t('application', 'Agregar')
                                     ]
                                ];
 
-$this->title = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Product');
+$this->title = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Producto');
 echo $this->render('/_tabform', ['formDTO' => $formDTO]);

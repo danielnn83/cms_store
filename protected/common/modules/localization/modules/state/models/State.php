@@ -47,7 +47,7 @@ class State extends TranslatableActiveRecord
             if(($this->scenario == 'create') || ($this->scenario == 'update' && $this->id != $state['id']))
             {
                 $countryName = $state['country_name'];
-                $this->addError($attribute, UsniAdaptor::t('localization', "The combination $this->name - $this->language - $countryName of Name, Language and Country has already been taken."));
+                $this->addError($attribute, UsniAdaptor::t('localization', "La combinación $this->name - $this->language - $countryName de Nombre, Idioma y País ya ha sido tomado."));
             }
         }
     }
@@ -70,10 +70,10 @@ class State extends TranslatableActiveRecord
 	{
 		$labels = [
 			'id'            => UsniAdaptor::t('application', 'Id'),
-			'country_id'	=> UsniAdaptor::t('country', 'Country'),
-			'name'			=> UsniAdaptor::t('application', 'Name'),
-			'code'			=> UsniAdaptor::t('localization', 'Code'),
-			'status'		=> UsniAdaptor::t('application', 'Status'),
+			'country_id'	=> UsniAdaptor::t('country', 'País'),
+			'name'			=> UsniAdaptor::t('application', 'Nombre'),
+			'code'			=> UsniAdaptor::t('localization', 'Código'),
+			'status'		=> UsniAdaptor::t('application', 'Estatus'),
 		];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -83,7 +83,7 @@ class State extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('state', 'State') : UsniAdaptor::t('state', 'States');
+        return ($n == 1) ? UsniAdaptor::t('state', 'Estado') : UsniAdaptor::t('state', 'Estados');
     }
 
     /**

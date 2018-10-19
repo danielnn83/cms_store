@@ -23,6 +23,7 @@ class Manager extends \usni\library\business\Manager
     {
         parent::processEdit($formDTO);
         $parentDropdownOptions = $this->getMultiLevelSelectOptions($formDTO->getModel());
+        print_r($parentDropdownOptions);
         $formDTO->setParentDropdownOptions($parentDropdownOptions);
     }
     
@@ -68,12 +69,12 @@ class Manager extends \usni\library\business\Manager
         $model  = PageDAO::getById($id, $this->language);
         if (empty($model))
         {
-            throw new InvalidParamException("Object not found: $id");
+            throw new InvalidParamException("Objeto no encontrado: $id");
         }
         $parentName = PageDAO::getParentName($model['parent_id'], $this->language);
         if($model['parent_id'] == 0 || empty($parentName) )
         {
-            $model['parent'] = UsniAdaptor::t('application', '(not set)');
+            $model['parent'] = UsniAdaptor::t('application', '(No establecido/perteneciente)');
         }
         else
         {

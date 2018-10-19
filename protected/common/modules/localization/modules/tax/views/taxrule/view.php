@@ -12,11 +12,11 @@ use taxes\utils\TaxUtil;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('tax', 'Tax Rule') . ' #' . $model['id'];
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('tax', 'Regla de impuestos') . ' #' . $model['id'];
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('tax', 'Tax Rules'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('tax', 'Reglas de impuestos'),
                                         'url' => ['/localization/tax/rule/index']
                                     ],
                                     [
@@ -41,17 +41,17 @@ $widgetParams   = [
                                                 'value'     => TaxUtil::getBasedOnDisplayValue($model['based_on'])
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('customer', 'Customer Groups'),
+                                                'label'     => UsniAdaptor::t('customer', 'Grupos de clientes'),
                                                 'attribute' => 'customer_groups'
                                             ],
                                             [
-                                                'label'     => UsniAdaptor::t('tax', 'Product Tax Classes'),
+                                                'label'     => UsniAdaptor::t('tax', 'Clases de impuestos sobre productos'),
                                                 'attribute' => 'product_tax_classes'
                                             ],
                                             'type',
                                             'value',
                                             [
-                                                'label'     => UsniAdaptor::t('tax', 'Zones'),
+                                                'label'     => UsniAdaptor::t('tax', 'Zonas'),
                                                 'attribute' => 'tax_zones',
                                             ],
                                             [

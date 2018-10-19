@@ -6,7 +6,7 @@ if(UsniAdaptor::app()->user->can('access.manufacturer'))
 {
     return [    
                 [
-                    'label'       => MenuUtil::wrapLabel(UsniAdaptor::t('manufacturer', 'Manufacturers')),
+                    'label'       => MenuUtil::wrapLabel(UsniAdaptor::t('manufacturer', 'Fabricantes')),
                     'url'         => ['/manufacturer/default/index'],
                     'itemOptions' => ['class' => 'navblock-header']
                 ]

@@ -21,8 +21,8 @@ class TaxUtil
     public static function getTaxTypeDropdown()
     {
         return [
-                    TaxRule::TAX_TYPE_FLAT      => UsniAdaptor::t('tax', 'Flat'),
-                    TaxRule::TAX_TYPE_PERCENT   => UsniAdaptor::t('tax', 'Percent')
+                    TaxRule::TAX_TYPE_FLAT      => UsniAdaptor::t('tax', 'Plano'),
+                    TaxRule::TAX_TYPE_PERCENT   => UsniAdaptor::t('tax', 'Porciento')
                ];
     }
     
@@ -33,8 +33,8 @@ class TaxUtil
     public static function getBasedOnDropdown()
     {
         return [
-                    TaxRule::TAX_BASED_ON_SHIPPING  => UsniAdaptor::t('customer', 'Shipping Address'),
-                    TaxRule::TAX_BASED_ON_BILLING   => UsniAdaptor::t('customer', 'Billing Address')
+                    TaxRule::TAX_BASED_ON_SHIPPING  => UsniAdaptor::t('customer', 'Dirección de Envío'),
+                    TaxRule::TAX_BASED_ON_BILLING   => UsniAdaptor::t('customer', 'Dirección de facturación')
                ];
     }
     

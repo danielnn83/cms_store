@@ -16,7 +16,7 @@ $model          = new Page(['scenario' => 'bulkedit']);
 $form = BulkEditActiveForm::begin([
             'id'        => 'pagebulkeditview',
             'layout'    => 'horizontal',
-            'caption' => UsniAdaptor::t('cms', 'Page') . ' ' . UsniAdaptor::t('application', 'Bulk Edit')
+            'caption' => UsniAdaptor::t('cms', 'Página') . ' ' . UsniAdaptor::t('application', 'Edición masiva')
         ]);
 ?>
 <?= $form->field($model, 'status')->select2Input(DropdownUtil::getStatusSelectOptions(), false);?>

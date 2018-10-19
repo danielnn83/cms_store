@@ -10,11 +10,11 @@ use usni\library\widgets\DetailBrowseDropdown;
 /* @var $detailViewDTO \usni\library\dto\DetailViewDTO */
 /* @var $this \usni\library\web\AdminView */
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('products', 'Attribute Group') . ' #' . $model['id'];
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('products', 'Atributos de grupo') . ' #' . $model['id'];
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('products', 'Attribute Groups'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('products', 'Atributos de grupo'),
                                         'url' => ['/catalog/products/attribute-group/index']
                                     ],
                                     [

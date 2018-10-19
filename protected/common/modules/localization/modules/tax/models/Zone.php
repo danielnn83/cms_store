@@ -62,7 +62,7 @@ class Zone extends TranslatableActiveRecord
             {
                 $countryName    = $zone['country_name'];
                 $stateName      = $zone['state_name'];
-                $this->addError($attribute, UsniAdaptor::t('tax', "The combination $this->name - $countryName - $stateName - $this->zip - $this->language of Name, Country, State, Zip and Language has already been taken."));
+                $this->addError($attribute, UsniAdaptor::t('tax', "La combinación $this->name - $countryName - $stateName - $this->zip - $this->language de nombre, país, estado, código postal e idioma ya se ha tomado."));
             }
         }
     }
@@ -98,10 +98,10 @@ class Zone extends TranslatableActiveRecord
 	{
 		$labels = [
                         'id'					 => UsniAdaptor::t('application', 'Id'),
-                        'name'					 => UsniAdaptor::t('application', 'Name'),
-                        'country_id'			 => UsniAdaptor::t('country', 'Country'),
-                        'state_id'				 => UsniAdaptor::t('state', 'State'),
-                        'description'            => UsniAdaptor::t('application', 'Description'),
+                        'name'					 => UsniAdaptor::t('application', 'Nombre'),
+                        'country_id'			 => UsniAdaptor::t('country', 'País'),
+                        'state_id'				 => UsniAdaptor::t('state', 'Estado'),
+                        'description'            => UsniAdaptor::t('application', 'Descripción'),
                         'zip'                    => UsniAdaptor::t('tax', 'Zip'),
                         'is_zip_range'           => UsniAdaptor::t('tax', 'Is Zip Range'),
                         'from_zip'               => UsniAdaptor::t('tax', 'From zip'),
@@ -115,7 +115,7 @@ class Zone extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('tax', 'Zone') : UsniAdaptor::t('tax', 'Zones');
+        return ($n == 1) ? UsniAdaptor::t('tax', 'Zona') : UsniAdaptor::t('tax', 'Zonas');
     }
     
     /**

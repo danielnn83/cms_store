@@ -15,7 +15,7 @@ use common\modules\extension\grid\ModuleActionColumn;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Manage Modules');
+$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('application', 'Administrar módulos');
 
 $toolbarParams  = [
     'gridId' => 'modulegridview',
@@ -27,7 +27,7 @@ $widgetParams   = [
                         'id'            => 'modulegridview',
                         'dataProvider'  => $gridViewDTO->getDataProvider(),
                         'filterModel'   => $gridViewDTO->getSearchModel(),
-                        'caption'       => UsniAdaptor::t('payment', 'Manage Modules'),
+                        'caption'       => UsniAdaptor::t('payment', 'Administrar módulos'),
                         'modelClass'    => Extension::className(),
                         'columns' => [
                             ['class' => CheckboxColumn::className()],

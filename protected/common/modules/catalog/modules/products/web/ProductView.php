@@ -34,7 +34,7 @@ class ProductView extends \frontend\web\View
             $url = UsniAdaptor::createUrl('manufacturer/site/list', ['manufacturerId' => $this->product['manufacturer']]);
             return Html::a($this->product['manufacturerName'], $url);
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
 
     /**
@@ -171,9 +171,9 @@ class ProductView extends \frontend\web\View
         $discountToDisplay  = $this->product['discountToDisplay'];
         if($discountToDisplay != null)
         {
-            $orOrMore           = UsniAdaptor::t('products', 'or more');
-            $purchaseLabel      = UsniAdaptor::t('products', 'On purchase of');
-            $productPriceLabel  = UsniAdaptor::t('products', 'Products discounted price would be');
+            $orOrMore           = UsniAdaptor::t('products', 'o más');
+            $purchaseLabel      = UsniAdaptor::t('products', 'En la compra de');
+            $productPriceLabel  = UsniAdaptor::t('products', 'El precio con descuento de los productos sería');
             $formattedPrice     = $this->getFormattedPrice($discountToDisplay['priceIncludingTax']);
             $value              = $purchaseLabel . ' ' . $discountToDisplay['quantity'] . ' ' . $orOrMore  . ' ' . $productPriceLabel . ' ' . $formattedPrice;
             $discountStr = str_replace('{#discount#}', $value, '<li>{#discount#}</li>');

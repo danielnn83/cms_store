@@ -11,15 +11,15 @@ use usni\library\widgets\DetailBrowseDropdown;
 /* @var $this \usni\library\web\AdminView */
 
 $model          = $detailViewDTO->getModel();
-$this->title    = UsniAdaptor::t('application', 'View') . ' ' . UsniAdaptor::t('lengthclass', 'Length Class');
+$this->title    = UsniAdaptor::t('application', 'Ver') . ' ' . UsniAdaptor::t('lengthclass', 'Clase de longitud');
 $this->params['breadcrumbs'] =  [
                                     [
-                                        'label' => UsniAdaptor::t('application', 'Manage') . ' ' .
-                                        UsniAdaptor::t('lengthclass', 'Length Classes'),
+                                        'label' => UsniAdaptor::t('application', 'Administrar') . ' ' .
+                                        UsniAdaptor::t('lengthclass', 'Clases de longitud'),
                                         'url' => ['/localization/lengthclass/default/index']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('application', 'View') . ' ' . ' #' . $model['id']
+                                        'label' => UsniAdaptor::t('application', 'Ver') . ' ' . ' #' . $model['id']
                                     ]
                                 ];
 $editUrl        = UsniAdaptor::createUrl('localization/lengthclass/default/update', ['id' => $model['id']]);

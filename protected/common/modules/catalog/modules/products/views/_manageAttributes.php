@@ -9,7 +9,7 @@ use usni\UsniAdaptor;
 
 /* @var $formDTO \products\dto\FormDTO */
 /* @var $this \usni\library\web\AdminView */
-$editLabel  = FA::icon('pencil') . "\n" . UsniAdaptor::t('application','Edit');
+$editLabel  = FA::icon('pencil') . "\n" . UsniAdaptor::t('application','Editar');
 echo Html::a($editLabel, UsniAdaptor::createUrl("catalog/products/attribute/assign", ["productId" => $formDTO->model->id]), 
                                 ['class' => 'btn btn-default', 'id' => 'attributes-edit-link']);
 

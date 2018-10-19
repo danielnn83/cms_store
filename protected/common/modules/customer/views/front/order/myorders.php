@@ -10,12 +10,12 @@ use common\modules\order\grid\OrderStatusDataColumn;
 use usni\library\grid\FormattedDateTimeColumn;
 use common\modules\order\grid\MyOrderActionColumn;
 
-$title              = UsniAdaptor::t('order', 'My Orders');
+$title              = UsniAdaptor::t('order', 'Mis Pedidos');
 $this->title        = $title;
 $this->leftnavView  = '/front/_sidebar'; 
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('customer', 'My Account'),
+                                        'label' => UsniAdaptor::t('customer', 'Mi cuenta'),
                                         'url'   => ['/customer/site/my-account']
                                     ],
                                     [
@@ -26,11 +26,11 @@ $widgetParams   = [
                         'id'            => 'myordersgridview',
                         'dataProvider'  => $gridViewDTO->getDataProvider(),
                         'filterModel'   => $gridViewDTO->getSearchModel(),
-                        'caption'       => UsniAdaptor::t('order', 'My Orders'),
+                        'caption'       => UsniAdaptor::t('order', 'Mis pedidos'),
                         'modelClass'    => Order::className(),
                         'columns' => [
                                         [
-                                            'label'     => UsniAdaptor::t('order', 'Order Id'),
+                                            'label'     => UsniAdaptor::t('order', 'Pedido Id'),
                                             'attribute' => 'unique_id'
                                         ],
                                         [
@@ -39,11 +39,11 @@ $widgetParams   = [
                                             'filter'    => $gridViewDTO->getStatusData()
                                         ],
                                         [
-                                            'label'     => UsniAdaptor::t('products', 'Amount'),
+                                            'label'     => UsniAdaptor::t('products', 'Cantidad'),
                                             'attribute' => 'amount',
                                         ],
                                         [
-                                            'label'     => UsniAdaptor::t('order', 'Date Added'),
+                                            'label'     => UsniAdaptor::t('order', 'Fecha de registro'),
                                             'attribute' => 'created_datetime',
                                             'class'     => FormattedDateTimeColumn::className()
                                         ],

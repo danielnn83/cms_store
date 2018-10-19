@@ -51,7 +51,7 @@ class Manager extends \usni\library\business\Manager
         }
         elseif ($model['postcode_required'] == 1)
         {
-            return UsniAdaptor::t('application', 'Yes');
+            return UsniAdaptor::t('application', 'Si');
         }
     }
 }

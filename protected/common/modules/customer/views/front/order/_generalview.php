@@ -23,7 +23,7 @@ $widgetParams   = [
                                                 'format'    => 'raw' 
                                             ],
                                             [
-                                                'label'      => UsniAdaptor::t('stores', 'Store'),
+                                                'label'      => UsniAdaptor::t('stores', 'Tienda'),
                                                 'attribute'  => 'store_id',
                                                 'value'      => $model['store_name']
                                             ],

@@ -72,13 +72,13 @@ class TaxRule extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                        'name'                 => UsniAdaptor::t('application', 'Name'),
-                        'productTaxClass'      => UsniAdaptor::t('tax', 'Product Tax Classes'),
-                        'based_on'             => UsniAdaptor::t('tax', 'Based On'),
-                        'customerGroups'       => UsniAdaptor::t('customer', 'Customer Groups'),
-                        'type'				   => UsniAdaptor::t('application', 'Type'),
-                        'value'                => UsniAdaptor::t('application', 'Value'),
-                        'taxZones'             => UsniAdaptor::t('tax', 'Tax Zones')
+                        'name'                 => UsniAdaptor::t('application', 'Nombre'),
+                        'productTaxClass'      => UsniAdaptor::t('tax', 'Clases de impuestos al producto'),
+                        'based_on'             => UsniAdaptor::t('tax', 'Basado en'),
+                        'customerGroups'       => UsniAdaptor::t('customer', 'Grupos de clientes'),
+                        'type'				   => UsniAdaptor::t('application', 'Tipo'),
+                        'value'                => UsniAdaptor::t('application', 'Valor'),
+                        'taxZones'             => UsniAdaptor::t('tax', 'Zonas de impuestos')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -88,7 +88,7 @@ class TaxRule extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('tax', 'Tax Rule') : UsniAdaptor::t('tax', 'Tax Rules');
+        return ($n == 1) ? UsniAdaptor::t('tax', 'Regla de impuesto') : UsniAdaptor::t('tax', 'Reglas de impuestos');
     }
     
     /**

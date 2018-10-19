@@ -43,7 +43,7 @@ class ProductOptionValue extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Option Value') : UsniAdaptor::t('products', 'Option Values');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Valor de la opción') : UsniAdaptor::t('products', 'Valores de las opciones');
     }
     
     /**
@@ -88,7 +88,7 @@ class ProductOptionValue extends TranslatableActiveRecord
             $record         = ProductOptionDAO::getOptionValueRecord($this->value, $this->option_id, $language);
             if ($record !== false)
             {
-                $this->addError($attribute, UsniAdaptor::t('products', 'The combination "' . $this->value . '"-"' . $language . '" of Option Value and Language has already been taken for the option.'));
+                $this->addError($attribute, UsniAdaptor::t('products', 'La combinación "' . $this->value . '"-"' . $language . '" del valor de la opción y el idioma ya se ha tomado para la opción.'));
             }
         }
     }

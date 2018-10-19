@@ -73,7 +73,7 @@ class PriceWidget extends \yii\bootstrap\Widget
             $str      .= ' ' . Html::tag('span', $this->getFormattedPrice($this->defaultPrice + $this->tax, $currencyCode), ['class' => 'price-old']);
             if($this->tax > 0)
             {
-                $str  .= '<br/>' . Html::tag('span', UsniAdaptor::t('products', 'Ex. Tax') . ': ' . $this->getFormattedPrice($this->priceExcludingTax, $currencyCode), ['class' => 'price-tax']);
+                $str  .= '<br/>' . Html::tag('span', UsniAdaptor::t('products', 'Sin impuestos') . ': ' . $this->getFormattedPrice($this->priceExcludingTax, $currencyCode), ['class' => 'price-tax']);
             }
             return $str;
         }

@@ -44,7 +44,7 @@ class ProductAttribute extends TranslatableActiveRecord
      */
     public static function getLabel($n = 1)
     {
-        return ($n == 1) ? UsniAdaptor::t('products', 'Attribute') : UsniAdaptor::t('products', 'Attributes');
+        return ($n == 1) ? UsniAdaptor::t('products', 'Atributo') : UsniAdaptor::t('products', 'Atributos');
     }
     
     /**
@@ -53,9 +53,9 @@ class ProductAttribute extends TranslatableActiveRecord
 	public function attributeLabels()
 	{
 		$labels = [
-                    'name'              => UsniAdaptor::t('products', 'Attribute Name'),
-                    'sort_order'        => UsniAdaptor::t('application', 'Sort Order'),
-                    'attribute_group'   => UsniAdaptor::t('products', 'Attribute Group')
+                    'name'              => UsniAdaptor::t('products', 'Nombre del atributo'),
+                    'sort_order'        => UsniAdaptor::t('application', 'Ordenar'),
+                    'attribute_group'   => UsniAdaptor::t('products', 'Grupo de atributos')
                   ];
         return parent::getTranslatedAttributeLabels($labels);
 	}
@@ -104,11 +104,11 @@ class ProductAttribute extends TranslatableActiveRecord
             {
                 if($this->attribute_group == null)
                 {
-                    $this->addError($attribute, UsniAdaptor::t('products', 'The combination "' . $this->name . '"-"' . $language . '" of Name and Language has already been taken.'));
+                    $this->addError($attribute, UsniAdaptor::t('products', 'La combinación "' . $this->name . '"-"' . $language . '" de Nombre y Lenguaje ya ha sido tomado.'));
                 }
                 else
                 {
-                    $this->addError($attribute, UsniAdaptor::t('products', 'The combination "' . $this->name . '"-"' . $language . '" of Name and Language has already been taken with the associated group.'));
+                    $this->addError($attribute, UsniAdaptor::t('products', 'La combinación "' . $this->name . '"-"' . $language . '" de Nombre e Idioma ya se ha tomado con el grupo asociado.'));
                 }
             }
         }

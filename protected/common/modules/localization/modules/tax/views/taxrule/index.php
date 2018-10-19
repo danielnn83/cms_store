@@ -14,7 +14,7 @@ use taxes\utils\TaxUtil;
 /* @var $gridViewDTO \taxes\dto\TaxRuleGridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title              = UsniAdaptor::t('tax', 'Manage Tax Rules');
+$title              = UsniAdaptor::t('tax', 'Administrar regla de impuestos');
 $this->title        = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -25,7 +25,7 @@ $toolbarParams  = [
     'showBulkDelete'=> true,
     'gridId'        => 'taxrulegridview',
     'pjaxId'        => 'taxrulegridview-pjax',
-    'bulkEditFormTitle' => UsniAdaptor::t('tax', 'Tax Rule') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+    'bulkEditFormTitle' => UsniAdaptor::t('tax', 'Regla de impuestos') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
     'bulkEditActionUrl' => '/localization/tax/rule/bulk-edit',
     'bulkEditFormId'    => 'taxrulebulkeditview',
     'permissionPrefix'  => 'taxrule'
@@ -45,7 +45,7 @@ $widgetParams   = [
                                 'filter'    => TaxUtil::getBasedOnDropdown()
                             ],
                             [
-                                'label'     => UsniAdaptor::t('customer', 'Customer Groups'),
+                                'label'     => UsniAdaptor::t('customer', 'Grupos de clientes'),
                                 'attribute' => 'customer_group_id',
                                 'value'     => 'customer_group',
                             ],

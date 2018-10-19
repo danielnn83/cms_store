@@ -17,7 +17,7 @@ use customer\models\Customer;
 /* @var $gridViewDTO \usni\library\modules\users\dto\UserGridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$title          = UsniAdaptor::t('customer', 'Manage Customers');
+$title          = UsniAdaptor::t('customer', 'Administrar clientes');
 $this->title    = $this->params['breadcrumbs'][] = $title;
 
 $toolbarParams  = [
@@ -28,7 +28,7 @@ $toolbarParams  = [
                         'showBulkDelete'    => false,
                         'gridId'            => 'customergridview',
                         'pjaxId'            => 'customergridview-pjax',
-                        'bulkEditFormTitle' => UsniAdaptor::t('customer', 'Customer') . ' ' . UsniAdaptor::t('application', 'Bulk Edit'),
+                        'bulkEditFormTitle' => UsniAdaptor::t('customer', 'Cliente') . ' ' . UsniAdaptor::t('application', 'Edición masiva'),
                         'bulkEditActionUrl' => 'bulk-edit',
                         'bulkEditFormId'    => 'customerbulkeditview',
                         'groupList'         => $gridViewDTO->getGroupList(),
@@ -50,11 +50,11 @@ $widgetParams  = [
                                             'attribute' => 'email'
                                         ],
                                         [
-                                            'label'     => UsniAdaptor::t('users', 'First Name'),
+                                            'label'     => UsniAdaptor::t('users', 'Nombres'),
                                             'attribute' => 'firstname'
                                         ],
                                         [
-                                            'label'     => UsniAdaptor::t('users', 'Last Name'),
+                                            'label'     => UsniAdaptor::t('users', 'Apellidos'),
                                             'attribute' => 'lastname',
                                         ],
                                         [

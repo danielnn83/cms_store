@@ -5,15 +5,15 @@
  */
 use usni\UsniAdaptor;
 
-$title          = UsniAdaptor::t('users', 'Register');
+$title          = UsniAdaptor::t('users', 'Registrar');
 $this->title    = $title;
 $this->params['breadcrumbs'] = [    
                                     [
-                                        'label' => UsniAdaptor::t('customer', 'My Account'),
+                                        'label' => UsniAdaptor::t('customer', 'Mi cuenta'),
                                         'url'   => ['/customer/site/my-account']
                                     ],
                                     [
-                                        'label' => UsniAdaptor::t('users', 'Register')
+                                        'label' => UsniAdaptor::t('users', 'Registrar')
                                     ]
                                ];
 echo $this->render('/front/_tabform', ['formDTO' => $formDTO]);

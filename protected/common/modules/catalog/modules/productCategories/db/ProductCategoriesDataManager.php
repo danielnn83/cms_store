@@ -24,29 +24,29 @@ class ProductCategoriesDataManager extends DataManager
     {
         return [
                     [
-                        'name'              => UsniAdaptor::t('productCategories', 'Desktops'),
-                        'alias'             =>  UsniAdaptor::t('productCategories', 'desktops'),
+                        'name'              => UsniAdaptor::t('productCategories', 'Categoría 1'),
+                        'alias'             =>  UsniAdaptor::t('productCategories', 'categoría 1'),
                         'data_category_id'  => 1,
                         'displayintopmenu'  => 1,
-                        'description'       => UsniAdaptor::t('productCategories', 'Shop Desktop feature only the best desktop deals on the market'),
+                        'description'       => UsniAdaptor::t('productCategories', 'Presenta solo las mejores ofertas de Categoria1 en el mercado'),
                         'code'              => 'DT',
                         'image'             => $this->getProductCategoryImage('Desktops')
                     ],
                     [
-                        'name'              =>  UsniAdaptor::t('productCategories', 'Laptops & Notebooks'),
-                        'alias'             =>  UsniAdaptor::t('productCategories', 'laptops-notebooks'),
+                        'name'              =>  UsniAdaptor::t('productCategories', 'Categoría 2'),
+                        'alias'             =>  UsniAdaptor::t('productCategories', 'categoría 2'),
                         'data_category_id'  => 1,
                         'displayintopmenu'  => 1,
-                        'description'       => UsniAdaptor::t('productCategories', 'Shop Laptop feature only the best laptop deals on the market'),
+                        'description'       => UsniAdaptor::t('productCategories', 'Presenta solo las mejores ofertas de Categoria2 en el mercado'),
                         'code'              => 'LTNB',
                         'image'             => $this->getProductCategoryImage('Laptops & Notebooks')
                     ],
                     [
-                        'name'              =>  UsniAdaptor::t('productCategories', 'Camera'),
-                        'alias'             =>  UsniAdaptor::t('productCategories', 'camera'),
+                        'name'              =>  UsniAdaptor::t('productCategories', 'Categoría 3'),
+                        'alias'             =>  UsniAdaptor::t('productCategories', 'categoría 3'),
                         'data_category_id'  => 1,
                         'displayintopmenu'  => 1,
-                        'description'       => UsniAdaptor::t('productCategories', 'Shop Camera feature only the best laptop deals on the market'),
+                        'description'       => UsniAdaptor::t('productCategories', 'Presenta solo las mejores ofertas de Categori31 en el mercado'),
                         'code'              => 'CM',
                         'image'             => $this->getProductCategoryImage('Camera')
                     ]

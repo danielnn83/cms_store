@@ -168,7 +168,7 @@ class ProductOptionManager extends \common\business\Manager
             }
             return implode(', ', $values);
         }
-        return UsniAdaptor::t('application', '(not set)');
+        return UsniAdaptor::t('application', '(no establecido/perteneciente)');
     }
     
     /**

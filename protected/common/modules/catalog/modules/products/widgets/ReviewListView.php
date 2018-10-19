@@ -36,7 +36,7 @@ class ReviewListView extends \yii\widgets\ListView
     public function init()
     {
         parent::init();
-        $this->emptyText = UsniAdaptor::t('products', 'There are no reviews for the product') ;
+        $this->emptyText = UsniAdaptor::t('products', 'No hay comentarios para el producto') ;
         $this->viewParams['customerId'] = ApplicationUtil::getCustomerId();
         $this->getView()->attachBehavior('imageBehavior', ImageBehavior::className());
     }

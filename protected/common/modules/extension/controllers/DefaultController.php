@@ -74,7 +74,7 @@ class DefaultController extends \usni\library\web\Controller
         {
             return $this->redirect(UsniAdaptor::createUrl($controllerPath));
         }
-        FlashUtil::setMessage('error', UsniAdaptor::t('extensionflash', 'Settings route is missing in the configuration'));
+        FlashUtil::setMessage('error', UsniAdaptor::t('extensionflash', 'La ruta de configuración falta en la configuración'));
         return $this->redirect(UsniAdaptor::createUrl('extension/default/index'));
     }
 }

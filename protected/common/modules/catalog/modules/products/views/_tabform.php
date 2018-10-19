@@ -17,11 +17,11 @@ $model      = $formDTO->getModel();
 $scenario = $formDTO->model->scenario;
 if($scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('products', 'Product');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('products', 'Producto');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('products', 'Product');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('products', 'Producto');
 }
 echo TabbedActiveFormAlert::widget(['model' => $formDTO->getModel()]);
 $form = TabbedActiveForm::begin([
@@ -39,17 +39,17 @@ $form = TabbedActiveForm::begin([
             ];
             $items[] = [
                 'options' => ['id' => 'tabdata'],
-                'label' => UsniAdaptor::t('products', 'Data'),
+                'label' => UsniAdaptor::t('products', 'Datos'),
                 'content' => $this->render('/_dataedit', ['form' => $form, 'formDTO' => $formDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'tabspec'],
-                'label' => UsniAdaptor::t('products', 'Specifications'),
+                'label' => UsniAdaptor::t('products', 'Especificaciones'),
                 'content' => $this->render('/_specedit', ['form' => $form, 'formDTO' => $formDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'tabrelated'],
-                'label' => UsniAdaptor::t('products', 'Related'),
+                'label' => UsniAdaptor::t('products', 'Relacionado'),
                 'content' => $this->render('/_relatededit', ['form' => $form, 'formDTO' => $formDTO])
             ];
             $fieldConfig        = $form->fieldConfig;
@@ -59,12 +59,12 @@ $form = TabbedActiveForm::begin([
                                   ];
             $items[] = [
                 'options' => ['id' => 'tabdiscount'],
-                'label' => UsniAdaptor::t('products', 'Discounts'),
+                'label' => UsniAdaptor::t('products', 'Descuentos'),
                 'content' => $this->render('/_discountedit', ['form' => $form, 'formDTO' => $formDTO])
             ];
             $items[] = [
                 'options' => ['id' => 'tabspecial'],
-                'label' => UsniAdaptor::t('products', 'Specials'),
+                'label' => UsniAdaptor::t('products', 'Especiales'),
                 'content' => $this->render('/_specialedit', ['form' => $form, 'formDTO' => $formDTO])
             ];
             $form->fieldConfig  = [
@@ -73,19 +73,19 @@ $form = TabbedActiveForm::begin([
                                   ];
             $items[] = [
                 'options' => ['id' => 'tabimage'],
-                'label' => UsniAdaptor::t('products', 'Images'),
+                'label' => UsniAdaptor::t('products', 'Imagenes'),
                 'content' => $this->render('/_imageedit', ['form' => $form, 'formDTO' => $formDTO])
             ];
             if($scenario == 'update')
             {
                 $items[] = [
                     'options' => ['id' => 'taboptions'],
-                    'label' => UsniAdaptor::t('products', 'Options'),
+                    'label' => UsniAdaptor::t('products', 'Opciones'),
                     'content' => $this->render('/_manageOptionValues', ['formDTO' => $formDTO])
                 ];
                 $items[] = [
                     'options' => ['id' => 'tabattributes'],
-                    'label' => UsniAdaptor::t('products', 'Attributes'),
+                    'label' => UsniAdaptor::t('products', 'Atributos'),
                     'content' => $this->render('/_manageAttributes', ['formDTO' => $formDTO])
                 ];
             }

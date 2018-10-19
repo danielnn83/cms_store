@@ -16,11 +16,11 @@ $model              = $formDTO->getModel();
 $storeDropdownData  = $formDTO->getStoreDropdownData();
 if($model->scenario == 'create')
 {
-    $caption = UsniAdaptor::t('application', 'Create') . ' ' . UsniAdaptor::t('newsletter', 'Newsletter');
+    $caption = UsniAdaptor::t('application', 'Agregar') . ' ' . UsniAdaptor::t('newsletter', 'Boletín');
 }
 else
 {
-    $caption = UsniAdaptor::t('application', 'Update') . ' ' . UsniAdaptor::t('newsletter', 'Newsletter');
+    $caption = UsniAdaptor::t('application', 'Actualizar') . ' ' . UsniAdaptor::t('newsletter', 'Boletín');
 }
 $form = ActiveForm::begin([
         'id' => 'newslettereditview',

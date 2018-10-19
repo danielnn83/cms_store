@@ -33,7 +33,7 @@ class CustomerGroup extends Group
         $isAllowedToDelete = $this->checkIfCustomerGroupAllowedToDelete();
         if($isAllowedToDelete == false)
         {
-            throw new Exception('this group is associated with tax rule or customer or product discount or product special.');
+            throw new Exception('este grupo está asociado a la regla de impuestos o al cliente o al descuento de producto o producto especial.');
         }
         return parent::beforeDelete();
     }

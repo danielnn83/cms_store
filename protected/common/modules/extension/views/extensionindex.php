@@ -15,7 +15,7 @@ use common\modules\extension\widgets\ExtensionActionToolbar;
 /* @var $gridViewDTO \usni\library\dto\GridViewDTO */
 /* @var $this \usni\library\web\AdminView */
 
-$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('extension', 'Manage Extensions');
+$this->title    = $this->params['breadcrumbs'][] = UsniAdaptor::t('extension', 'Administrar extensiones');
 
 $toolbarParams  = [
     'gridId' => 'extensiongridview',
@@ -27,7 +27,7 @@ $widgetParams   = [
                         'id'            => 'extensiongridview',
                         'dataProvider'  => $gridViewDTO->getDataProvider(),
                         'filterModel'   => $gridViewDTO->getSearchModel(),
-                        'caption'       => UsniAdaptor::t('payment', 'Manage Extensions'),
+                        'caption'       => UsniAdaptor::t('payment', 'Administrar extensiones'),
                         'modelClass'    => Extension::className(),
                         'columns' => [
                             ['class' => CheckboxColumn::className()],
